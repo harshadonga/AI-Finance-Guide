@@ -11,9 +11,10 @@
   color-scheme: light;
 
   /* ---- Neutrals: cool, very slightly green-grey ("ledger paper") ---- */
-  --bg:          #f2f4f3;   /* page ground */
-  --surface:     #fbfcfb;   /* reading surface, lab bench */
-  --surface-2:   #e8ecea;   /* recessed wells, table stripes, inputs */
+  --bg:          #e9eeeb;   /* page ground and navigation chrome */
+  --surface:     #fbfdfc;   /* reading surface */
+  --surface-2:   #eef2f0;   /* recessed wells, table stripes, inputs */
+  --surface-3:   #e2e8e5;   /* stronger neutral bands */
   --ink:         #15201c;   /* primary text */
   --ink-2:       #3f4b47;   /* secondary text */
   --ink-3:       #5e6a66;   /* supporting text, axis labels (>= 4.5:1 on bg) */
@@ -26,6 +27,12 @@
   --accent-ink:   #ffffff;  /* text on solid accent */
   --accent-soft:  #e4e9f7;  /* intuition blocks, selected states */
   --accent-line:  #8ea0d8;
+
+  /* ---- Module thesis panel: structural ink, not a second accent ---- */
+  --hero:         #132c25;
+  --hero-ink:     #f1f6f3;
+  --hero-muted:   #b8c9c2;
+  --hero-rule:    #38584e;
 
   /* ---- Semantic (never decorative; always paired with icon + text) ---- */
   --pos:          #1b6e40;  --pos-soft:     #e3f1e8;
@@ -71,9 +78,9 @@
   --shadow-pop: 0 1px 2px rgb(21 32 28 / 0.08), 0 8px 28px rgb(21 32 28 / 0.14);
 
   /* ---- Layout ---- */
-  --rail-w:  17.5rem;
-  --bench-w: 60rem;
-  --topbar-h: 3.5rem;
+  --rail-w:  18.5rem;
+  --bench-w: 64rem;
+  --topbar-h: 4rem;
 
   /* ---- Motion (MOTION_INTENSITY 4): state changes and feedback only ---- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -90,10 +97,11 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #111715; --surface: #171f1c; --surface-2: #202a26;
+    --bg: #0d1411; --surface: #131d19; --surface-2: #1b2722; --surface-3: #25322c;
     --ink: #e4ebe8; --ink-2: #b9c4bf; --ink-3: #93a09a;
     --rule: #2c3733; --rule-strong: #46534e; --control: #68766f;
     --accent: #9db1f5; --accent-ink: #0f1a3d; --accent-soft: #1d2745; --accent-line: #4f63a3;
+    --hero: #16223f; --hero-ink: #f1f4ff; --hero-muted: #bdc7e3; --hero-rule: #40517d;
     --pos: #6fcf97; --pos-soft: #16291f;
     --neg: #f29b90; --neg-soft: #33191a;
     --caution: #e8b95e; --caution-soft: #2e2413;
@@ -104,10 +112,11 @@
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #111715; --surface: #171f1c; --surface-2: #202a26;
+  --bg: #0d1411; --surface: #131d19; --surface-2: #1b2722; --surface-3: #25322c;
   --ink: #e4ebe8; --ink-2: #b9c4bf; --ink-3: #93a09a;
   --rule: #2c3733; --rule-strong: #46534e; --control: #68766f;
   --accent: #9db1f5; --accent-ink: #0f1a3d; --accent-soft: #1d2745; --accent-line: #4f63a3;
+  --hero: #16223f; --hero-ink: #f1f4ff; --hero-muted: #bdc7e3; --hero-rule: #40517d;
   --pos: #6fcf97; --pos-soft: #16291f;
   --neg: #f29b90; --neg-soft: #33191a;
   --caution: #e8b95e; --caution-soft: #2e2413;

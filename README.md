@@ -32,6 +32,8 @@ Useful commands:
 
 Generated files in `dist/` are disposable and are intentionally ignored by Git. Edit the source under `src/`, then rebuild.
 
+Repository-wide agent and design-skill rules live in [`AGENTS.md`](AGENTS.md). UI work must use Impeccable, Design Taste, and Web Design Guidelines while keeping the curriculum documents and course-specific design system authoritative.
+
 ## Project structure
 
 ```text
@@ -51,4 +53,3 @@ finance-academy/
 ```
 
 See [`docs/README.md`](docs/README.md) for documentation governance and [`src/README.md`](src/README.md) for the module contract.
-

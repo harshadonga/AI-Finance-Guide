@@ -37,15 +37,17 @@ dist/          module-NN/index.html  preview.html                           ← 
 
 ## 2. Page shell
 
-- **Top bar** (`.topbar`): course mark, module crumb, progress meter (`[data-meter]`), Glossary button, three-state theme button. Sticky, respects the safe-area inset.
+- **Top bar** (`.topbar`): compact FA monogram and course mark, module crumb, semantic progress bar (`[data-meter][role="progressbar"]`), Glossary button, three-state theme button. Sticky, respects the safe-area inset.
 - **Module rail** (`nav.rail`): parts and lessons with syllabus numbers; `aria-current="page"`; a tick appears when a lesson's checks have all been answered. It becomes a drawer below 900px (Escape closes it and focus returns to the menu button).
 - **Lesson** (`article.lesson[data-lesson]`): one lesson visible at a time; the URL hash is the lesson id or a section id (`#l04`, `#l04-cagr`). On navigation, focus moves to the lesson's h1.
-- **Lesson navigation** (`[data-lesson-nav]`): previous and next cards, generated automatically.
+- **Lesson navigation** (`[data-lesson-nav]`): open, rule-led previous and next links, generated automatically.
 - **Skip link**, glossary dialog, toast (`role="status"`).
 
 ## 3. Lesson anatomy (order from Teaching Spec §4)
 
-`header.lesson-head` (kicker, h1, big idea, on-page links) → why → intuition → predict → core concepts → explorer → formal model → realistic example → misconceptions → where the model breaks → case → knowledge check → practice ladder → notes. Each block is a `<section id="lNN-slug" aria-labelledby>` with an h2.
+`header.lesson-head` (kicker, h1, big idea, on-page links) → why → intuition → predict → core concepts → explorer → formal model → realistic example → misconceptions → where the model breaks → case → knowledge check → practice ladder → notes. On wide screens the header becomes a two-column chapter plate, with the title and big idea sharing the opening field; it collapses to the same semantic order on mobile. Each block is a `<section id="lNN-slug" aria-labelledby>` with an h2.
+
+The Module 0 overview uses `.overview-opening`: an asymmetric title-and-metadata column beside `.overview-thesis`, a compact stocks/flows/buffers model. This is a teaching diagram with a text alternative, not decorative hero art.
 
 ## 4. Information blocks
 
@@ -68,7 +70,7 @@ dist/          module-NN/index.html  preview.html                           ← 
 
 **Assessment** (`[data-assessment]` with `data-revisit-<competency>` lesson lists) summarises checks by competency: Secure ≥ 80%, Developing 50–79%, Revisit < 50%. It recommends and never blocks (Spec §49).
 
-**Explorer / "lab bench"** (`section.bench[data-lab="name"]`). Structure: `.bench-head` (label, title, a one-line purpose that states what the learner should notice, data tag) → `.bench-body` (`.bench-controls` | `.bench-output`: `.readouts`, chart, `.insight` with `aria-live`) → optional `.bench-foot` "Try this". Contract for `LABS.name(root)`:
+**Explorer / "lab bench"** (`section.bench[data-lab="name"]`). The bench uses a stronger neutral ground and an inset ink rule so interactive work is structurally distinct without becoming another card. Structure: `.bench-head` (label, title, a one-line purpose that states what the learner should notice, data tag) → `.bench-body` (`.bench-controls` | `.bench-output`: `.readouts`, chart, `.insight` with `aria-live`) → optional `.bench-foot` "Try this". Contract for `LABS.name(root)`:
 1. controls are labelled `<input type=range>` with an `<output>` showing a formatted value, or selects, checkboxes and `.seg` toggle groups with `aria-pressed`;
 2. every number comes from the module's tested engine (`finance.js`), never from ad-hoc arithmetic in the lab;
 3. readouts must never show NaN, Infinity or undefined (the QA script sweeps every control to its minimum and maximum);
@@ -91,4 +93,4 @@ Browser storage is used only for per-viewer conveniences: theme, progress, notes
 
 ## 8. Accessibility checklist (release-blocking, Spec §53 and §71.6)
 
-Semantic landmarks and one h1 per lesson; no skipped heading levels; a label on every control; visible `:focus-visible` everywhere (sliders show a thumb ring); touch targets ≥ 44px; `aria-live` on feedback and insights; charts have a text description plus a data table; no meaning carried by colour alone; reduced motion honoured; no horizontal overflow at 390px or at 200% zoom; no text below 13px.
+Semantic landmarks and one h1 per lesson; no skipped heading levels; a label on every control; visible `:focus-visible` everywhere (sliders show a thumb ring and the skip-link destination is outlined); touch targets ≥ 44px; `aria-live` on feedback and insights; charts have a text description plus a data table; external new-tab links carry an icon and hidden explanatory text; no meaning carried by colour alone; reduced motion honoured; no horizontal overflow at 390px or at 200% zoom; no text below 13px.

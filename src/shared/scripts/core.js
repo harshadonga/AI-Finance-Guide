@@ -148,8 +148,9 @@
     const done = lessonIds.filter(lessonComplete).length;
     $$("[data-meter]").forEach((m) => {
       const fill = m.querySelector(".meter-fill"); const label = m.querySelector(".meter-label");
-      if (fill) fill.style.width = `${(done / lessonIds.length) * 100}%`;
+      if (fill) fill.style.transform = `scaleX(${done / lessonIds.length})`;
       if (label) label.textContent = `${done} of ${lessonIds.length} complete`;
+      m.setAttribute("aria-valuenow", String(done));
     });
   }
   FA.refreshProgress = () => { updateRail(); updateMeter(); };

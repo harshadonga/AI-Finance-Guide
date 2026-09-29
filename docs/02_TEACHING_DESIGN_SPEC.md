@@ -2358,6 +2358,7 @@ The course may use specialized frontend-design skills to improve visual quality,
 
 The currently approved frontend skills are:
 
+- `impeccable`
 - `design-taste-frontend`
 - `web-design-guidelines`
 
@@ -2422,7 +2423,16 @@ Once created, the project's approved:
 
 must remain consistent across modules.
 
-### Priority 6 — `design-taste-frontend`
+### Priority 6 — External Visual Design Skills
+
+Use `impeccable` to improve:
+
+- durable product and design context;
+- design direction and surface classification;
+- interface craft and coherence;
+- bounded visual verification;
+- reusable design-system extraction;
+- finish quality.
 
 Use `design-taste-frontend` to improve:
 
@@ -2553,7 +2563,9 @@ Accessibility defects are release-blocking when they prevent meaningful use of t
 
 ---
 
-# 71.7 TASTE AUDIT
+# 71.7 IMPECCABLE AND TASTE AUDIT
+
+Use `impeccable` to establish product context, classify lesson surfaces primarily as `Read` and interactive laboratories as `Operate`, and perform a bounded finish pass. Impeccable must inherit this specification's authority order, project-specific design dials and standalone-module architecture.
 
 After functional and accessibility correctness is established, perform a `design-taste-frontend` audit for:
 

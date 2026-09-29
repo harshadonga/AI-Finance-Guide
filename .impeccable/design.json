@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T14:00:31Z",
+  "title": "Design System: Finance Academy",
+  "extensions": {
+    "colorMeta": {
+      "ledger-paper": {
+        "role": "neutral",
+        "displayName": "Ledger Paper",
+        "canonical": "#e9eeeb",
+        "tonalRamp": ["color-mix(in srgb, #e9eeeb 35%, black)", "color-mix(in srgb, #e9eeeb 55%, black)", "color-mix(in srgb, #e9eeeb 75%, black)", "#e9eeeb", "color-mix(in srgb, #e9eeeb 80%, white)", "color-mix(in srgb, #e9eeeb 60%, white)", "color-mix(in srgb, #e9eeeb 40%, white)", "color-mix(in srgb, #e9eeeb 18%, white)"]
+      },
+      "reading-paper": {
+        "role": "neutral",
+        "displayName": "Reading Paper",
+        "canonical": "#fbfdfc",
+        "tonalRamp": ["color-mix(in srgb, #fbfdfc 35%, black)", "color-mix(in srgb, #fbfdfc 55%, black)", "color-mix(in srgb, #fbfdfc 75%, black)", "#fbfdfc", "color-mix(in srgb, #fbfdfc 80%, white)", "color-mix(in srgb, #fbfdfc 60%, white)", "color-mix(in srgb, #fbfdfc 40%, white)", "color-mix(in srgb, #fbfdfc 18%, white)"]
+      },
+      "recessed-paper": {
+        "role": "neutral",
+        "displayName": "Recessed Paper",
+        "canonical": "#eef2f0",
+        "tonalRamp": ["color-mix(in srgb, #eef2f0 35%, black)", "color-mix(in srgb, #eef2f0 55%, black)", "color-mix(in srgb, #eef2f0 75%, black)", "#eef2f0", "color-mix(in srgb, #eef2f0 80%, white)", "color-mix(in srgb, #eef2f0 60%, white)", "color-mix(in srgb, #eef2f0 40%, white)", "color-mix(in srgb, #eef2f0 18%, white)"]
+      },
+      "band-paper": {
+        "role": "neutral",
+        "displayName": "Band Paper",
+        "canonical": "#e2e8e5",
+        "tonalRamp": ["color-mix(in srgb, #e2e8e5 35%, black)", "color-mix(in srgb, #e2e8e5 55%, black)", "color-mix(in srgb, #e2e8e5 75%, black)", "#e2e8e5", "color-mix(in srgb, #e2e8e5 80%, white)", "color-mix(in srgb, #e2e8e5 60%, white)", "color-mix(in srgb, #e2e8e5 40%, white)", "color-mix(in srgb, #e2e8e5 18%, white)"]
+      },
+      "household-ink": {
+        "role": "neutral",
+        "displayName": "Household Ink",
+        "canonical": "#15201c",
+        "tonalRamp": ["color-mix(in srgb, #15201c 35%, black)", "color-mix(in srgb, #15201c 55%, black)", "color-mix(in srgb, #15201c 75%, black)", "#15201c", "color-mix(in srgb, #15201c 80%, white)", "color-mix(in srgb, #15201c 60%, white)", "color-mix(in srgb, #15201c 40%, white)", "color-mix(in srgb, #15201c 18%, white)"]
+      },
+      "secondary-ink": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "#3f4b47",
+        "tonalRamp": ["color-mix(in srgb, #3f4b47 35%, black)", "color-mix(in srgb, #3f4b47 55%, black)", "color-mix(in srgb, #3f4b47 75%, black)", "#3f4b47", "color-mix(in srgb, #3f4b47 80%, white)", "color-mix(in srgb, #3f4b47 60%, white)", "color-mix(in srgb, #3f4b47 40%, white)", "color-mix(in srgb, #3f4b47 18%, white)"]
+      },
+      "supporting-ink": {
+        "role": "neutral",
+        "displayName": "Supporting Ink",
+        "canonical": "#5e6a66",
+        "tonalRamp": ["color-mix(in srgb, #5e6a66 35%, black)", "color-mix(in srgb, #5e6a66 55%, black)", "color-mix(in srgb, #5e6a66 75%, black)", "#5e6a66", "color-mix(in srgb, #5e6a66 80%, white)", "color-mix(in srgb, #5e6a66 60%, white)", "color-mix(in srgb, #5e6a66 40%, white)", "color-mix(in srgb, #5e6a66 18%, white)"]
+      },
+      "ledger-rule": {
+        "role": "neutral",
+        "displayName": "Ledger Rule",
+        "canonical": "#d3dad7",
+        "tonalRamp": ["color-mix(in srgb, #d3dad7 35%, black)", "color-mix(in srgb, #d3dad7 55%, black)", "color-mix(in srgb, #d3dad7 75%, black)", "#d3dad7", "color-mix(in srgb, #d3dad7 80%, white)", "color-mix(in srgb, #d3dad7 60%, white)", "color-mix(in srgb, #d3dad7 40%, white)", "color-mix(in srgb, #d3dad7 18%, white)"]
+      },
+      "strong-rule": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#aeb8b4",
+        "tonalRamp": ["color-mix(in srgb, #aeb8b4 35%, black)", "color-mix(in srgb, #aeb8b4 55%, black)", "color-mix(in srgb, #aeb8b4 75%, black)", "#aeb8b4", "color-mix(in srgb, #aeb8b4 80%, white)", "color-mix(in srgb, #aeb8b4 60%, white)", "color-mix(in srgb, #aeb8b4 40%, white)", "color-mix(in srgb, #aeb8b4 18%, white)"]
+      },
+      "control-gray": {
+        "role": "neutral",
+        "displayName": "Control Gray",
+        "canonical": "#858f8b",
+        "tonalRamp": ["color-mix(in srgb, #858f8b 35%, black)", "color-mix(in srgb, #858f8b 55%, black)", "color-mix(in srgb, #858f8b 75%, black)", "#858f8b", "color-mix(in srgb, #858f8b 80%, white)", "color-mix(in srgb, #858f8b 60%, white)", "color-mix(in srgb, #858f8b 40%, white)", "color-mix(in srgb, #858f8b 18%, white)"]
+      },
+      "instrument-blue": {
+        "role": "primary",
+        "displayName": "Instrument Blue",
+        "canonical": "#2344a6",
+        "tonalRamp": ["color-mix(in srgb, #2344a6 35%, black)", "color-mix(in srgb, #2344a6 55%, black)", "color-mix(in srgb, #2344a6 75%, black)", "#2344a6", "color-mix(in srgb, #2344a6 80%, white)", "color-mix(in srgb, #2344a6 60%, white)", "color-mix(in srgb, #2344a6 40%, white)", "color-mix(in srgb, #2344a6 18%, white)"]
+      },
+      "instrument-blue-ink": {
+        "role": "primary",
+        "displayName": "Instrument Blue Ink",
+        "canonical": "#ffffff",
+        "tonalRamp": ["color-mix(in srgb, #ffffff 35%, black)", "color-mix(in srgb, #ffffff 55%, black)", "color-mix(in srgb, #ffffff 75%, black)", "#ffffff", "color-mix(in srgb, #ffffff 80%, white)", "color-mix(in srgb, #ffffff 60%, white)", "color-mix(in srgb, #ffffff 40%, white)", "color-mix(in srgb, #ffffff 18%, white)"]
+      },
+      "instrument-blue-soft": {
+        "role": "primary",
+        "displayName": "Instrument Blue Soft",
+        "canonical": "#e4e9f7",
+        "tonalRamp": ["color-mix(in srgb, #e4e9f7 35%, black)", "color-mix(in srgb, #e4e9f7 55%, black)", "color-mix(in srgb, #e4e9f7 75%, black)", "#e4e9f7", "color-mix(in srgb, #e4e9f7 80%, white)", "color-mix(in srgb, #e4e9f7 60%, white)", "color-mix(in srgb, #e4e9f7 40%, white)", "color-mix(in srgb, #e4e9f7 18%, white)"]
+      },
+      "instrument-blue-line": {
+        "role": "primary",
+        "displayName": "Instrument Blue Line",
+        "canonical": "#8ea0d8",
+        "tonalRamp": ["color-mix(in srgb, #8ea0d8 35%, black)", "color-mix(in srgb, #8ea0d8 55%, black)", "color-mix(in srgb, #8ea0d8 75%, black)", "#8ea0d8", "color-mix(in srgb, #8ea0d8 80%, white)", "color-mix(in srgb, #8ea0d8 60%, white)", "color-mix(in srgb, #8ea0d8 40%, white)", "color-mix(in srgb, #8ea0d8 18%, white)"]
+      },
+      "working-green": {
+        "role": "secondary",
+        "displayName": "Working Green",
+        "canonical": "#132c25",
+        "tonalRamp": ["color-mix(in srgb, #132c25 35%, black)", "color-mix(in srgb, #132c25 55%, black)", "color-mix(in srgb, #132c25 75%, black)", "#132c25", "color-mix(in srgb, #132c25 80%, white)", "color-mix(in srgb, #132c25 60%, white)", "color-mix(in srgb, #132c25 40%, white)", "color-mix(in srgb, #132c25 18%, white)"]
+      },
+      "working-green-ink": {
+        "role": "secondary",
+        "displayName": "Working Green Ink",
+        "canonical": "#f1f6f3",
+        "tonalRamp": ["color-mix(in srgb, #f1f6f3 35%, black)", "color-mix(in srgb, #f1f6f3 55%, black)", "color-mix(in srgb, #f1f6f3 75%, black)", "#f1f6f3", "color-mix(in srgb, #f1f6f3 80%, white)", "color-mix(in srgb, #f1f6f3 60%, white)", "color-mix(in srgb, #f1f6f3 40%, white)", "color-mix(in srgb, #f1f6f3 18%, white)"]
+      },
+      "working-green-muted": {
+        "role": "secondary",
+        "displayName": "Working Green Muted",
+        "canonical": "#b8c9c2",
+        "tonalRamp": ["color-mix(in srgb, #b8c9c2 35%, black)", "color-mix(in srgb, #b8c9c2 55%, black)", "color-mix(in srgb, #b8c9c2 75%, black)", "#b8c9c2", "color-mix(in srgb, #b8c9c2 80%, white)", "color-mix(in srgb, #b8c9c2 60%, white)", "color-mix(in srgb, #b8c9c2 40%, white)", "color-mix(in srgb, #b8c9c2 18%, white)"]
+      },
+      "working-green-rule": {
+        "role": "secondary",
+        "displayName": "Working Green Rule",
+        "canonical": "#38584e",
+        "tonalRamp": ["color-mix(in srgb, #38584e 35%, black)", "color-mix(in srgb, #38584e 55%, black)", "color-mix(in srgb, #38584e 75%, black)", "#38584e", "color-mix(in srgb, #38584e 80%, white)", "color-mix(in srgb, #38584e 60%, white)", "color-mix(in srgb, #38584e 40%, white)", "color-mix(in srgb, #38584e 18%, white)"]
+      },
+      "positive": {
+        "role": "tertiary",
+        "displayName": "Positive",
+        "canonical": "#1b6e40",
+        "tonalRamp": ["color-mix(in srgb, #1b6e40 35%, black)", "color-mix(in srgb, #1b6e40 55%, black)", "color-mix(in srgb, #1b6e40 75%, black)", "#1b6e40", "color-mix(in srgb, #1b6e40 80%, white)", "color-mix(in srgb, #1b6e40 60%, white)", "color-mix(in srgb, #1b6e40 40%, white)", "color-mix(in srgb, #1b6e40 18%, white)"]
+      },
+      "positive-soft": {
+        "role": "tertiary",
+        "displayName": "Positive Soft",
+        "canonical": "#e3f1e8",
+        "tonalRamp": ["color-mix(in srgb, #e3f1e8 35%, black)", "color-mix(in srgb, #e3f1e8 55%, black)", "color-mix(in srgb, #e3f1e8 75%, black)", "#e3f1e8", "color-mix(in srgb, #e3f1e8 80%, white)", "color-mix(in srgb, #e3f1e8 60%, white)", "color-mix(in srgb, #e3f1e8 40%, white)", "color-mix(in srgb, #e3f1e8 18%, white)"]
+      },
+      "negative": {
+        "role": "tertiary",
+        "displayName": "Negative",
+        "canonical": "#b3261e",
+        "tonalRamp": ["color-mix(in srgb, #b3261e 35%, black)", "color-mix(in srgb, #b3261e 55%, black)", "color-mix(in srgb, #b3261e 75%, black)", "#b3261e", "color-mix(in srgb, #b3261e 80%, white)", "color-mix(in srgb, #b3261e 60%, white)", "color-mix(in srgb, #b3261e 40%, white)", "color-mix(in srgb, #b3261e 18%, white)"]
+      },
+      "negative-soft": {
+        "role": "tertiary",
+        "displayName": "Negative Soft",
+        "canonical": "#f9e6e4",
+        "tonalRamp": ["color-mix(in srgb, #f9e6e4 35%, black)", "color-mix(in srgb, #f9e6e4 55%, black)", "color-mix(in srgb, #f9e6e4 75%, black)", "#f9e6e4", "color-mix(in srgb, #f9e6e4 80%, white)", "color-mix(in srgb, #f9e6e4 60%, white)", "color-mix(in srgb, #f9e6e4 40%, white)", "color-mix(in srgb, #f9e6e4 18%, white)"]
+      },
+      "caution": {
+        "role": "tertiary",
+        "displayName": "Caution",
+        "canonical": "#845400",
+        "tonalRamp": ["color-mix(in srgb, #845400 35%, black)", "color-mix(in srgb, #845400 55%, black)", "color-mix(in srgb, #845400 75%, black)", "#845400", "color-mix(in srgb, #845400 80%, white)", "color-mix(in srgb, #845400 60%, white)", "color-mix(in srgb, #845400 40%, white)", "color-mix(in srgb, #845400 18%, white)"]
+      },
+      "caution-soft": {
+        "role": "tertiary",
+        "displayName": "Caution Soft",
+        "canonical": "#f8eed8",
+        "tonalRamp": ["color-mix(in srgb, #f8eed8 35%, black)", "color-mix(in srgb, #f8eed8 55%, black)", "color-mix(in srgb, #f8eed8 75%, black)", "#f8eed8", "color-mix(in srgb, #f8eed8 80%, white)", "color-mix(in srgb, #f8eed8 60%, white)", "color-mix(in srgb, #f8eed8 40%, white)", "color-mix(in srgb, #f8eed8 18%, white)"]
+      },
+      "chart-blue": {
+        "role": "tertiary",
+        "displayName": "Chart Blue",
+        "canonical": "#2a78d6",
+        "tonalRamp": ["color-mix(in srgb, #2a78d6 35%, black)", "color-mix(in srgb, #2a78d6 55%, black)", "color-mix(in srgb, #2a78d6 75%, black)", "#2a78d6", "color-mix(in srgb, #2a78d6 80%, white)", "color-mix(in srgb, #2a78d6 60%, white)", "color-mix(in srgb, #2a78d6 40%, white)", "color-mix(in srgb, #2a78d6 18%, white)"]
+      },
+      "chart-orange": {
+        "role": "tertiary",
+        "displayName": "Chart Orange",
+        "canonical": "#eb6834",
+        "tonalRamp": ["color-mix(in srgb, #eb6834 35%, black)", "color-mix(in srgb, #eb6834 55%, black)", "color-mix(in srgb, #eb6834 75%, black)", "#eb6834", "color-mix(in srgb, #eb6834 80%, white)", "color-mix(in srgb, #eb6834 60%, white)", "color-mix(in srgb, #eb6834 40%, white)", "color-mix(in srgb, #eb6834 18%, white)"]
+      },
+      "chart-aqua": {
+        "role": "tertiary",
+        "displayName": "Chart Aqua",
+        "canonical": "#1baf7a",
+        "tonalRamp": ["color-mix(in srgb, #1baf7a 35%, black)", "color-mix(in srgb, #1baf7a 55%, black)", "color-mix(in srgb, #1baf7a 75%, black)", "#1baf7a", "color-mix(in srgb, #1baf7a 80%, white)", "color-mix(in srgb, #1baf7a 60%, white)", "color-mix(in srgb, #1baf7a 40%, white)", "color-mix(in srgb, #1baf7a 18%, white)"]
+      },
+      "chart-muted": {
+        "role": "neutral",
+        "displayName": "Chart Muted",
+        "canonical": "#a9b3af",
+        "tonalRamp": ["color-mix(in srgb, #a9b3af 35%, black)", "color-mix(in srgb, #a9b3af 55%, black)", "color-mix(in srgb, #a9b3af 75%, black)", "#a9b3af", "color-mix(in srgb, #a9b3af 80%, white)", "color-mix(in srgb, #a9b3af 60%, white)", "color-mix(in srgb, #a9b3af 40%, white)", "color-mix(in srgb, #a9b3af 18%, white)"]
+      },
+      "chart-grid": {
+        "role": "neutral",
+        "displayName": "Chart Grid",
+        "canonical": "#e1e6e4",
+        "tonalRamp": ["color-mix(in srgb, #e1e6e4 35%, black)", "color-mix(in srgb, #e1e6e4 55%, black)", "color-mix(in srgb, #e1e6e4 75%, black)", "#e1e6e4", "color-mix(in srgb, #e1e6e4 80%, white)", "color-mix(in srgb, #e1e6e4 60%, white)", "color-mix(in srgb, #e1e6e4 40%, white)", "color-mix(in srgb, #e1e6e4 18%, white)"]
+      },
+      "chart-axis": {
+        "role": "neutral",
+        "displayName": "Chart Axis",
+        "canonical": "#b9c2be",
+        "tonalRamp": ["color-mix(in srgb, #b9c2be 35%, black)", "color-mix(in srgb, #b9c2be 55%, black)", "color-mix(in srgb, #b9c2be 75%, black)", "#b9c2be", "color-mix(in srgb, #b9c2be 80%, white)", "color-mix(in srgb, #b9c2be 60%, white)", "color-mix(in srgb, #b9c2be 40%, white)", "color-mix(in srgb, #b9c2be 18%, white)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Module and lesson titles, with the overview allowed one larger chapter-plate expression." },
+      "headline": { "displayName": "Headline", "purpose": "Major lesson sections and the largest instructional landmarks." },
+      "title": { "displayName": "Title", "purpose": "Subsections, laboratory titles, and compact teaching structures." },
+      "body": { "displayName": "Body", "purpose": "Sustained reading in the 68ch lesson measure." },
+      "label": { "displayName": "Label", "purpose": "Information types, tags, metadata, and chart axes; never smaller than 13px." },
+      "value": { "displayName": "Value", "purpose": "Tabular financial values, formula variables, lesson numbers, and control outputs." }
+    },
+    "shadows": [
+      { "name": "popover-light", "value": "0 1px 2px rgb(21 32 28 / 0.08), 0 8px 28px rgb(21 32 28 / 0.14)", "purpose": "The single light-theme elevation for popovers, dialogs, tooltips, the mobile rail, and toasts." },
+      { "name": "popover-dark", "value": "0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.45)", "purpose": "The designed dark-theme counterpart to the popover elevation." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Orientation, reveal, and structural state transitions." },
+      { "name": "duration-fast", "value": "140ms", "purpose": "Control color changes and the 1px press response." },
+      { "name": "duration-mid", "value": "260ms", "purpose": "Lesson entry, reveal panels, progress, and the mobile rail." }
+    ],
+    "breakpoints": [
+      { "name": "bench-stack", "value": "1080px" },
+      { "name": "rail-drawer", "value": "900px" },
+      { "name": "single-column", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The decisive action for starting a lesson, checking work, or confirming a financial task.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Check answer <span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:var(--s2); min-height:2.75rem; padding:0 var(--s4); border:1px solid var(--accent); border-radius:var(--r-control); background:var(--accent); color:var(--accent-ink); font:500 var(--t-small)/1 var(--font-body); cursor:pointer; transition:background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast); } .ds-btn-primary:hover { background:color-mix(in srgb, var(--accent) 88%, var(--ink)); border-color:color-mix(in srgb, var(--accent) 88%, var(--ink)); } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "A low-emphasis shell control for glossary, theme, and utility actions.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Glossary</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; justify-content:center; min-height:2.75rem; padding:0 var(--s4); border:1px solid transparent; border-radius:var(--r-control); background:transparent; color:var(--ink); font:500 var(--t-small)/1 var(--font-body); cursor:pointer; transition:background var(--dur-fast) var(--ease-out), transform var(--dur-fast); } .ds-btn-ghost:hover { background:var(--surface-2); } .ds-btn-ghost:active { transform:translateY(1px); } .ds-btn-ghost:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }"
+    },
+    {
+      "name": "Financial Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A labeled numeric field with explicit guidance and tabular financial figures.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-income\">Monthly take-home <span class=\"ds-field-value\">₹1,10,000</span></label><input class=\"ds-input\" id=\"ds-income\" inputmode=\"decimal\" value=\"110000\"><span class=\"ds-field-hint\">Enter the amount that reaches your bank account.</span></div>",
+      "css": ".ds-field { display:grid; gap:var(--s1); min-width:0; font-family:var(--font-body); } .ds-field-label { display:flex; justify-content:space-between; gap:var(--s2); align-items:baseline; color:var(--ink-2); font-size:var(--t-small); font-weight:500; } .ds-field-value { color:var(--ink); font:500 var(--t-small)/1.4 var(--font-mono); white-space:nowrap; } .ds-input { width:100%; min-height:2.75rem; padding:var(--s2) var(--s3); border:1px solid var(--control); border-radius:var(--r-control); background:var(--surface); color:var(--ink); font:inherit; font-variant-numeric:tabular-nums; } .ds-input:hover { border-color:var(--ink-3); } .ds-input:focus-visible { border-color:var(--accent); outline:2px solid var(--accent); outline-offset:0; } .ds-field-hint { color:var(--ink-3); font-size:var(--t-micro); }"
+    },
+    {
+      "name": "Lesson Rail Item",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "A numbered ledger row that preserves lesson position and makes the current destination unmistakable.",
+      "html": "<a class=\"ds-rail-item\" href=\"#l04\" aria-current=\"page\"><span class=\"ds-rail-no\">0.4</span><span class=\"ds-rail-copy\">Compounding</span><span class=\"ds-rail-status\" aria-label=\"Complete\">✓</span></a>",
+      "css": ".ds-rail-item { display:grid; grid-template-columns:2.25rem 1fr auto; align-items:baseline; gap:var(--s1); min-height:2.5rem; padding:var(--s2) var(--s3); border-radius:var(--r-control); color:var(--ink-2); font:400 var(--t-small)/1.35 var(--font-body); text-decoration:none; } .ds-rail-item:hover { background:var(--surface-2); color:var(--ink); } .ds-rail-item[aria-current=\"page\"] { background:var(--accent-soft); color:var(--ink); font-weight:600; box-shadow:inset 0 0 0 1px var(--accent-line); } .ds-rail-item:focus-visible { outline:2px solid var(--accent); outline-offset:2px; } .ds-rail-no { color:var(--ink-3); font:400 var(--t-micro)/1.35 var(--font-mono); } .ds-rail-item[aria-current=\"page\"] .ds-rail-no { color:var(--accent); } .ds-rail-status { color:var(--pos); }"
+    },
+    {
+      "name": "Current Data Tag",
+      "kind": "chip",
+      "refersTo": "data-tag",
+      "description": "A dated, non-ambiguous marker for current facts that have been checked against an official source.",
+      "html": "<span class=\"ds-tag-current\"><svg class=\"ds-tag-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"m8 12 2.5 2.5L16 9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Current · verified</span>",
+      "css": ".ds-tag-current { display:inline-flex; align-items:center; gap:.35em; padding:.15em .6em; border:1px solid transparent; border-radius:var(--r-pill); background:var(--pos-soft); color:var(--pos); font:600 var(--t-micro)/1.5 var(--font-body); white-space:nowrap; } .ds-tag-icon { width:.95em; height:.95em; flex:none; }"
+    },
+    {
+      "name": "Worked Example Block",
+      "kind": "card",
+      "refersTo": "information-block",
+      "description": "A flat, ruled teaching container that separates example data from interpretation without decorative elevation.",
+      "html": "<section class=\"ds-example\"><div class=\"ds-example-head\"><span class=\"ds-example-label\">Worked example</span><span class=\"ds-example-tag\">Hypothetical</span></div><p class=\"ds-example-copy\"><strong>Saving this month:</strong> ₹1,10,000 income − ₹82,000 spending = ₹28,000.</p><p class=\"ds-example-note\">The ₹28,000 flow can become a larger stock only if it remains invested over time.</p></section>",
+      "css": ".ds-example { padding:var(--s4) var(--s5); border:1px solid var(--rule); border-radius:var(--r-block); background:var(--surface); color:var(--ink); font:400 var(--t-body)/var(--lh-body) var(--font-body); } .ds-example:hover { border-color:var(--rule-strong); } .ds-example-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:var(--s2); margin-bottom:var(--s3); } .ds-example-label { color:var(--ink-2); font-size:var(--t-micro); font-weight:600; letter-spacing:.06em; text-transform:uppercase; } .ds-example-tag { padding:.15em .6em; border:1px dashed currentColor; border-radius:var(--r-pill); color:var(--ink-2); font-size:var(--t-micro); font-weight:600; } .ds-example-copy { margin:0; } .ds-example-note { margin:var(--s3) 0 0; color:var(--ink-3); font-size:var(--t-small); }"
+    },
+    {
+      "name": "Lab Bench",
+      "kind": "custom",
+      "refersTo": "lab-bench",
+      "description": "The signature Operate surface: a bounded control, live readouts, and an explanatory insight on a recessed working ground.",
+      "html": "<section class=\"ds-bench\"><header class=\"ds-bench-head\"><span class=\"ds-bench-label\">Try it</span><h3 class=\"ds-bench-title\">Savings-rate explorer</h3><p class=\"ds-bench-purpose\">Notice how a monthly flow changes the stock built after one year.</p></header><div class=\"ds-bench-body\"><label class=\"ds-bench-control\" for=\"ds-rate\">Savings rate <output>25%</output><input id=\"ds-rate\" type=\"range\" min=\"0\" max=\"50\" value=\"25\"></label><div class=\"ds-readouts\"><div class=\"ds-readout\"><span class=\"ds-readout-label\">Monthly saving</span><strong class=\"ds-readout-value\">₹27,500</strong></div><div class=\"ds-readout\"><span class=\"ds-readout-label\">One-year flow</span><strong class=\"ds-readout-value\">₹3.30 lakh</strong></div></div></div><p class=\"ds-bench-insight\">At 25%, one quarter of take-home becomes a future stock instead of current spending.</p></section>",
+      "css": ".ds-bench { padding:var(--s6); border-radius:var(--r-block); background:var(--surface-2); color:var(--ink); box-shadow:inset 0 3px 0 var(--ink); font-family:var(--font-body); } .ds-bench-head { padding-bottom:var(--s4); border-bottom:1px solid var(--rule-strong); } .ds-bench-label { color:var(--accent); font-size:var(--t-micro); font-weight:600; letter-spacing:.06em; text-transform:uppercase; } .ds-bench-title { margin:var(--s1) 0 0; font:600 var(--t-h3)/var(--lh-tight) var(--font-display); } .ds-bench-purpose { margin:var(--s2) 0 0; color:var(--ink-2); font-size:var(--t-small); } .ds-bench-body { display:grid; grid-template-columns:minmax(13rem, 18rem) 1fr; gap:var(--s6); align-items:start; margin-top:var(--s5); } .ds-bench-control { display:grid; gap:var(--s2); color:var(--ink-2); font-size:var(--t-small); font-weight:500; } .ds-bench-control output { justify-self:end; margin-top:-2rem; color:var(--ink); font:500 var(--t-small)/1 var(--font-mono); } .ds-bench-control input { width:100%; accent-color:var(--accent); min-height:2.75rem; } .ds-bench-control input:focus-visible { outline:2px solid var(--accent); outline-offset:2px; } .ds-readouts { display:grid; grid-template-columns:repeat(2,minmax(8rem,1fr)); gap:var(--s3); } .ds-readout { padding:var(--s3) 0; border-top:2px solid var(--rule-strong); } .ds-readout-label { display:block; color:var(--ink-3); font-size:var(--t-micro); } .ds-readout-value { display:block; margin-top:2px; font:650 1.5rem/1.2 var(--font-display); font-variant-numeric:tabular-nums; } .ds-bench-insight { margin:var(--s4) 0 0; font-size:1.0625rem; line-height:1.5; } @media (max-width:700px) { .ds-bench { padding:var(--s4); } .ds-bench-body { grid-template-columns:1fr; gap:var(--s4); } }"
+    },
+    {
+      "name": "Household Thesis Panel",
+      "kind": "custom",
+      "refersTo": "thesis-panel",
+      "description": "The rare high-contrast teaching panel for a governing financial model, never decorative hero art.",
+      "html": "<section class=\"ds-thesis\"><p class=\"ds-thesis-label\">One household. One connected system.</p><div class=\"ds-thesis-row\"><span>Flows</span><strong>income − spending = saving</strong></div><div class=\"ds-thesis-row\"><span>Stocks</span><strong>assets − liabilities = net worth</strong></div><div class=\"ds-thesis-row\"><span>Buffers</span><strong>liquidity + insurance</strong></div><p class=\"ds-thesis-note\">Time turns flows into stocks; buffers protect the conversion.</p></section>",
+      "css": ".ds-thesis { display:grid; gap:var(--s4); padding:var(--s6); border-radius:var(--r-block); background:var(--hero); color:var(--hero-ink); font-family:var(--font-body); } .ds-thesis-label { margin:0; color:var(--hero-muted); font-size:var(--t-small); font-weight:600; } .ds-thesis-row { display:grid; grid-template-columns:4.25rem 1fr; gap:var(--s3); align-items:baseline; padding:var(--s3) 0; border-top:1px solid var(--hero-rule); } .ds-thesis-row span { color:var(--hero-muted); font:500 var(--t-micro)/1.4 var(--font-mono); } .ds-thesis-row strong { color:var(--hero-ink); font-size:var(--t-small); font-weight:600; } .ds-thesis-note { margin:0; padding-top:var(--s4); border-top:1px solid var(--hero-rule); color:var(--hero-ink); font:500 1.2rem/1.35 var(--font-display); } @media (max-width:520px) { .ds-thesis { padding:var(--s5); } .ds-thesis-row { grid-template-columns:1fr; gap:2px; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Household Ledger",
+    "overview": "Finance Academy is guided by The Household Ledger: a calm, analytical, precise, editorial environment for serious adult learning. It feels trustworthy and exacting without institutional coldness, combining ledger-paper neutrals, Household Ink, tabular numerals, and structural rules with open space for sustained reading.\n\nThe system behaves like an analyst's field guide to one household system rather than a collection of generic cards. Open ledgers, ruled bands, working benches, and one high-contrast teaching panel establish hierarchy; diagrams, charts, and interactive figures carry the visual argument because every visual must teach.",
+    "keyCharacteristics": [
+      "Calm, adult editorial tone with a 68ch reading measure.",
+      "Flat, structural hierarchy built from rules, tonal surfaces, and deliberate scale.",
+      "One Instrument Blue interaction accent plus semantic colors that always carry non-color cues.",
+      "Persistent ledger navigation and wide working benches connecting reading to calculation.",
+      "Purposeful motion only: variance 6, motion 4, density 5."
+    ],
+    "rules": [
+      { "name": "The One Instrument Rule", "body": "Instrument Blue is the only interaction accent; semantic colors are never decorative and always pair with icon, text, or pattern.", "section": "colors" },
+      { "name": "The Designed Dark Rule", "body": "Dark mode is a deliberate token mapping, not an automatic inversion.", "section": "colors" },
+      { "name": "The 13-Pixel Floor Rule", "body": "Labels and axis ticks may use 13px; no text may be smaller.", "section": "typography" },
+      { "name": "The Editorial Case Rule", "body": "Module and lesson titles use title case; section headings, controls, and labels use sentence case.", "section": "typography" },
+      { "name": "The Read-Then-Operate Rule", "body": "Lessons stay within 68ch, while explorers, cases, and diagrams may widen to the 64rem bench.", "section": "layout" },
+      { "name": "The Flat Ledger Rule", "body": "Rules and tonal surfaces create hierarchy; shadows are reserved for true overlays, the mobile rail, tooltips, and toasts.", "section": "elevation" },
+      { "name": "The Three-Radius Rule", "body": "Controls use 6px, blocks use 10px, and tags use a full pill; no other radii belong in shared components.", "section": "shapes" },
+      { "name": "The Working Instrument Rule", "body": "Components must teach, control, compare, or report state; they must never become decorative card chrome.", "section": "components" },
+      { "name": "The Explained Motion Rule", "body": "Motion must explain state, feedback, or orientation; perpetual loops and decorative scroll effects do not belong.", "section": "components" }
+    ],
+    "dos": [
+      "Do use open ledgers, ruled bands, and generous measure before adding another boxed container.",
+      "Do keep lesson prose at 68ch and let genuine laboratories, cases, and diagrams widen to the 64rem bench.",
+      "Do pair every semantic color with an icon, label, border, or pattern so meaning never depends on hue alone.",
+      "Do keep controls touch-friendly at a minimum 44px and preserve visible `:focus-visible` treatment.",
+      "Do use diagrams, charts, and interactive figures when a visual clarifies a financial relationship.",
+      "Do make dark mode, reduced motion, mobile layout, 200% zoom, and data-table chart alternatives part of the component contract."
+    ],
+    "donts": [
+      "Don't add warm cream, serif editorial styling, purple gradients, neon-on-black treatments, or generic AI-generated aesthetics.",
+      "Don't use photography or raster decoration unless it directly teaches; no generated raster assets belong in this system.",
+      "Don't use shadows to make ordinary content blocks look elevated.",
+      "Don't invent radii, spacing steps, z-index values, or module-specific colors outside the shared tokens.",
+      "Don't reduce labels below 13px or body copy below 17px.",
+      "Don't turn study into gamification or animate anything that does not explain state, feedback, or orientation."
+    ]
+  }
+}

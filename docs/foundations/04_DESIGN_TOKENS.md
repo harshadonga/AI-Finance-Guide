@@ -11,7 +11,7 @@ Implementation: `src/shared/styles/tokens.css` (tokens), `src/shared/styles/comp
 
 **Dials** (project calibration, Teaching Spec §71.2): DESIGN_VARIANCE 6 · MOTION_INTENSITY 4 · VISUAL_DENSITY 5. Labs may run denser (around 6); reading sections are airier (around 4).
 
-**Concept.** *A reading desk.* A fixed module rail on the left, a 68-character reading column, and wider bench breakouts for explorers, cases and diagrams.
+**Concept.** *An analyst's field guide.* A fixed module ledger on the left, a 68-character reading column, open chapter plates and wider working-bench breakouts for explorers, cases and diagrams. Module openings may introduce one high-contrast thesis panel when it teaches the system's governing model rather than decorating the page.
 
 ## 2. Colour
 
@@ -19,9 +19,10 @@ Cool, very slightly green-grey neutrals ("ledger paper") with one ink-blue accen
 
 | Token | Light | Dark | Role |
 |---|---|---|---|
-| `--bg` | #f2f4f3 | #111715 | Page ground |
-| `--surface` | #fbfcfb | #171f1c | Reading surface, benches, cards |
-| `--surface-2` | #e8ecea | #202a26 | Wells, stripes, code |
+| `--bg` | #e9eeeb | #0d1411 | Page ground and navigation chrome |
+| `--surface` | #fbfdfc | #131d19 | Reading surface |
+| `--surface-2` | #eef2f0 | #1b2722 | Working benches, wells, stripes, code |
+| `--surface-3` | #e2e8e5 | #25322c | Stronger neutral bands |
 | `--ink` | #15201c | #e4ebe8 | Primary text |
 | `--ink-2` | #3f4b47 | #b9c4bf | Secondary text |
 | `--ink-3` | #5e6a66 | #93a09a | Supporting text, axis labels (≥ 4.7:1 on every surface) |
@@ -29,6 +30,8 @@ Cool, very slightly green-grey neutrals ("ledger paper") with one ink-blue accen
 | `--control` | #858f8b | #68766f | Form-control borders and slider tracks (≥ 3:1, WCAG 1.4.11) |
 | `--accent` | #2344a6 | #9db1f5 | The single accent: interaction, focus, emphasis (8.3:1 on surface) |
 | `--accent-soft` | #e4e9f7 | #1d2745 | Intuition blocks, selected states |
+| `--hero` / `--hero-ink` | #132c25 / #f1f6f3 | #16223f / #f1f4ff | Structural thesis panel and its text; not a second interaction accent |
+| `--hero-muted` / `--hero-rule` | #b8c9c2 / #38584e | #bdc7e3 / #40517d | Supporting labels and ledger rules inside thesis panels |
 | `--pos` / `--pos-soft` | #1b6e40 / #e3f1e8 | #6fcf97 / #16291f | Semantic: on track, gain, correct |
 | `--neg` / `--neg-soft` | #b3261e / #f9e6e4 | #f29b90 / #33191a | Semantic: act, loss, incorrect, misconception |
 | `--caution` / `--caution-soft` | #845400 / #f8eed8 | #e8b95e / #2e2413 | Semantic: caution blocks, watch |
@@ -71,7 +74,7 @@ The reading measure is 68ch. Headings use `text-wrap: balance`, paragraphs `pret
 - **Shape rule:** controls 6px (`--r-control`), blocks and benches 10px (`--r-block`), tags and chips fully rounded (`--r-pill`). No other radii.
 - Elevation: one shadow (`--shadow-pop`), used only for popovers, the glossary dialog, chart tooltips, the mobile rail and toasts. Blocks are separated by rules and tints, not shadows.
 - Z-index scale: `--z-sticky` 10 (top bar), `--z-rail` 30 (mobile rail), `--z-pop` 40 (popovers, tooltips), `--z-toast` 50. No other z-index values.
-- Layout: `--rail-w` 17.5rem, `--bench-w` 60rem, `--topbar-h` 3.5rem. Below 900px the rail becomes a drawer; below 1080px benches stack their controls above the output; below 560px everything is one column with a 16px gutter.
+- Layout: `--rail-w` 18.5rem, `--bench-w` 64rem, `--topbar-h` 4rem. Below 900px the rail becomes a drawer; below 1080px benches stack their controls above the output; below 560px everything is one column with a 16px gutter.
 
 ## 5. Motion (MOTION_INTENSITY 4)
 
@@ -82,7 +85,7 @@ Every animation must explain a state change, give feedback, or aid orientation (
 - controls: 140ms colour transitions and a 1px press;
 - charts update instantly while a slider moves, because a delay would hide the relationship between input and output.
 
-`prefers-reduced-motion` removes all of it. No perpetual loops and no scroll-triggered effects.
+`prefers-reduced-motion` removes the named transitions and animations without globally collapsing browser timing. No perpetual loops and no scroll-triggered effects.
 
 ## 6. Information-type encoding (Teaching Spec §8)
 
@@ -90,15 +93,15 @@ Every type is recognisable from its label, icon and shape, not from colour alone
 
 | Type | Shape cue | Icon |
 |---|---|---|
-| Intuition | Accent tint, 3px left rule | lightbulb |
+| Intuition | Accent tint with a fine top rule | lightbulb |
 | Worked example | Surface card, header row with data tag | calculator |
 | Formula | Ruled "ledger" box with a variables table | function |
 | Caution | Amber wash | warning |
-| Common misconception | Striped (diagonal-hatch) left edge, three parts: claim, why it fails, better question | prohibit |
+| Common misconception | Red-tinted field with a strong top rule, three parts: claim, why it fails, better question | prohibit |
 | Investor / Quant / AI lens | Open aside between hairlines | binoculars / chart-line / robot |
 | Advanced note | Dashed border, collapsed | book-open |
 | Historical case | Heavy top rule, two columns: "at the time" and "afterwards" (hindsight discipline, Spec §38) | clock-counter-clockwise |
-| Try it (explorer) | Wide bench with controls, readouts, chart, one-sentence insight | sliders-horizontal |
+| Try it (explorer) | Wide neutral working bench with an inset ink rule, controls, readouts, chart and one-sentence insight | sliders-horizontal |
 | Predict first / Knowledge check | Surface card with accent label | brain / question |
 | Data tags | Hypothetical (dashed pill), Historical (outlined pill), Current · verified (green pill with date) | flask / clock / seal-check |
 
