@@ -1,0 +1,332 @@
+<article class="lesson" id="l08" data-lesson data-title="0.8 Debt" data-nav-title="0.8 Debt" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.8 · Part IV · Threats to the system</p>
+    <h1>Debt</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Debt is compounding working against you. It is a useful tool when it buys an asset or capability worth more than its cost, and a trap when it funds consumption at high rates.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l08-why">Why borrow</a><a href="#l08-kinds">Kinds of debt</a><a href="#l08-emi">EMI</a><a href="#l08-amort">Amortisation</a><a href="#l08-lab">Loan lab</a><a href="#l08-flat">Flat vs reducing</a><a href="#l08-cards">Credit cards</a><a href="#l08-home">Home loans</a><a href="#l08-refi">Refinancing</a><a href="#l08-prepay">Prepayment</a><a href="#l08-quant">Quant lab</a><a href="#l08-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l08-why" aria-labelledby="l08-why-h">
+    <h2 id="l08-why-h">Why people borrow, and when it makes sense</h2>
+    <p>Borrowing moves spending from the future to the present. That is genuinely valuable when the thing bought produces value over time: a home you would otherwise rent, an education that raises your earnings, a vehicle you need for work. It is costly when it pays for consumption that is gone before the loan is. The interest is the price of having it now.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>A loan is <strong>renting money</strong>. The interest rate is the rent. Rent is worth paying for something that earns or saves you more than it costs. Paying 42% a year to rent money for a phone upgrade is renting at a price almost nothing you buy can justify.</p>
+    </aside>
+    <p>Lesson 0.4 showed compounding working for you. Debt is the same mathematics facing the other way: an unpaid balance grows at the loan's rate, and every rupee of interest paid is a rupee that cannot compound in your favour.</p>
+  </section>
+
+  <section id="l08-kinds" aria-labelledby="l08-kinds-h">
+    <h2 id="l08-kinds-h">Secured and unsecured debt</h2>
+    <p>[[secured-debt|Secured debt]] is backed by [[collateral|collateral]]: an asset the lender can take and sell if you do not repay. Home loans (secured by the house), car loans and gold loans are secured. Because the lender's risk is lower, rates are lower. [[unsecured-debt|Unsecured debt]] has no collateral: personal loans, credit-card balances, most app-based loans. The lender relies only on your promise and your credit record, so it charges more.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Typical features of common Indian loan types (illustrative ranges; actual terms vary by lender and borrower)</caption>
+        <thead><tr><th scope="col">Loan</th><th scope="col">Secured?</th><th scope="col">Usual structure</th><th scope="col">Relative cost</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Home loan</th><td>Yes, by the property</td><td>EMI over 15 to 30 years, usually floating rate</td><td>Lowest</td></tr>
+          <tr><th scope="row">Education loan</th><td>Sometimes</td><td>Moratorium during study, then EMIs</td><td>Low to moderate</td></tr>
+          <tr><th scope="row">Car loan</th><td>Yes, by the vehicle</td><td>EMI over 3 to 7 years, often fixed rate</td><td>Moderate</td></tr>
+          <tr><th scope="row">Gold loan</th><td>Yes, by the gold</td><td>Short term; bullet or EMI</td><td>Moderate</td></tr>
+          <tr><th scope="row">Personal loan</th><td>No</td><td>EMI over 1 to 5 years, fixed rate</td><td>High</td></tr>
+          <tr><th scope="row">Credit-card balance</th><td>No</td><td>Revolving; minimum payment each month</td><td>Highest</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="l08-predict" aria-labelledby="l08-predict-h">
+    <h2 id="l08-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p08-->
+? The Nairs take a ₹50 lakh home loan at 8.5% a year for 20 years. Their EMI is ₹43,391. In the very first month, roughly how much of that EMI goes to interest?
+- About 20%, since the loan runs for 20 years || The split is not spread evenly across the years.
+- About half || The first EMIs are far more interest-heavy than that.
++ About 80% || Month-1 interest = ₹50,00,000 × 8.5% ÷ 12 = ₹35,417, which is 82% of the EMI.
+> <p><strong>₹35,417 of ₹43,391 is interest: 82%.</strong> Only ₹7,974 reduces the loan. In the whole first year the Nairs pay ₹4.21 lakh of interest and repay just ₹1.0 lakh of principal. Half the original loan is not repaid until month 166, almost 14 years in.</p>
+> <p>Over 20 years they pay <strong>₹54.1 lakh of interest</strong>, more than the ₹50 lakh they borrowed. The mechanism is called reducing-balance amortisation, and it is explained next.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l08-emi" aria-labelledby="l08-emi-h">
+    <h2 id="l08-emi-h">The EMI</h2>
+    <p>An [[emi|EMI]] (equated monthly instalment) is a fixed monthly payment that covers the month's interest and repays some principal, set so that the loan reaches exactly zero at the end. It is an annuity (Lesson 0.4): the lender hands you a lump sum today in exchange for a series of equal payments whose present value, at the loan rate, equals that lump sum.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · EMI</p>
+      <div class="fx"><math display="block"><mi>EMI</mi><mo>=</mo><mfrac><mrow><mi>P</mi><mo>×</mo><mi>i</mi><mo>×</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup></mrow><mrow><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></math></div>
+      <dl class="vars"><dt>P</dt><dd>Principal borrowed, in ₹.</dd><dt>i</dt><dd>Monthly interest rate = annual rate ÷ 12, by lending convention (8.5% a year → 0.7083% a month).</dd><dt>n</dt><dd>Number of monthly instalments (20 years = 240).</dd></dl>
+      <div class="fx-meta">
+        <p><b>Where it comes from.</b> Set the present value of n payments of EMI equal to P: P = EMI × [1 − (1 + i)<sup>−n</sup>] ÷ i. Solve for EMI.</p>
+        <p><b>Worked example.</b> P = ₹50,00,000, i = 0.085 ÷ 12, n = 240: EMI = <strong>₹43,391</strong>.</p>
+        <p><b>Sensitivity.</b> A longer tenure lowers the EMI but raises total interest sharply: at 30 years, the EMI falls to ₹38,446 but total interest rises to ₹88.4 lakh. A 1-point higher rate (9.5%) raises the 20-year EMI to ₹46,607.</p>
+        <p><b>Convention note.</b> Lenders divide the annual rate by 12 rather than using the effective monthly rate of Lesson 0.4. The true effective annual cost of "8.5% a year" charged monthly is (1 + 0.085/12)<sup>12</sup> − 1 = 8.84%.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l08-amort" aria-labelledby="l08-amort-h">
+    <h2 id="l08-amort-h">Amortisation and reducing balance</h2>
+    <p>[[amortisation|Amortisation]] is the gradual repayment of a loan through scheduled payments. Under [[reducing-balance|reducing-balance]] interest, each month's interest is charged only on what is still owed. Early on the balance is large, so interest takes most of the EMI. As the balance shrinks, interest falls and more of each (unchanged) EMI repays principal. The split reverses over the life of the loan.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · One month of an amortising loan</p>
+      <div class="fx"><math display="block"><msub><mtext>Interest</mtext><mi>m</mi></msub><mo>=</mo><msub><mi>B</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>×</mo><mi>i</mi><mspace width="1.5em"></mspace><msub><mtext>Principal</mtext><mi>m</mi></msub><mo>=</mo><mi>EMI</mi><mo>−</mo><msub><mtext>Interest</mtext><mi>m</mi></msub><mspace width="1.5em"></mspace><msub><mi>B</mi><mi>m</mi></msub><mo>=</mo><msub><mi>B</mi><mrow><mi>m</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mtext>Principal</mtext><mi>m</mi></msub></math></div>
+      <dl class="vars"><dt>B<sub>m</sub></dt><dd>Outstanding balance after month m, in ₹. B<sub>0</sub> = P.</dd></dl>
+      <div class="fx-meta"><p><b>Interpretation.</b> This three-line loop is the whole schedule. The Quant Lab below asks you to build it yourself and check it against the formula.</p></div>
+    </div>
+  </section>
+
+  <section id="l08-lab" aria-labelledby="l08-lab-h" class="bench" data-lab="loan">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Loan lab</p>
+      <h3 id="l08-lab-h">See where each EMI goes, and what a prepayment does</h3>
+      <p class="bench-purpose">Purpose: see the interest-heavy start of an amortising loan, how tenure changes total cost, and the difference between using a prepayment to shorten the loan or to lower the EMI. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="ln-p">Loan amount <output id="ln-p-o" for="ln-p"></output></label><input id="ln-p" type="range" min="100000" max="20000000" step="100000" value="5000000"></div>
+        <div class="field"><label for="ln-r">Interest rate per year <output id="ln-r-o" for="ln-r"></output></label><input id="ln-r" type="range" min="6" max="24" step="0.25" value="8.5"></div>
+        <div class="field"><label for="ln-n">Tenure <output id="ln-n-o" for="ln-n"></output></label><input id="ln-n" type="range" min="1" max="30" step="1" value="20"></div>
+        <div class="field"><label for="ln-pp">One-off prepayment <output id="ln-pp-o" for="ln-pp"></output></label><input id="ln-pp" type="range" min="0" max="5000000" step="50000" value="500000"></div>
+        <div class="field"><label for="ln-pm">Prepay in year <output id="ln-pm-o" for="ln-pm"></output></label><input id="ln-pm" type="range" min="1" max="29" step="1" value="3"></div>
+        <div class="field"><span class="field-label" id="ln-mode-l">Use the prepayment to</span>
+          <div class="seg" role="group" aria-labelledby="ln-mode-l"><button type="button" aria-pressed="true" data-mode="tenure">Shorten the loan (keep EMI)</button><button type="button" aria-pressed="false" data-mode="emi">Lower the EMI (keep tenure)</button></div></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">EMI</span><span class="readout-value" id="ln-emi"></span><span class="readout-sub" id="ln-emi-sub"></span></div>
+          <div class="readout"><span class="readout-label">Total interest, no prepayment</span><span class="readout-value" id="ln-ti"></span><span class="readout-sub" id="ln-ti-sub"></span></div>
+          <div class="readout"><span class="readout-label">Interest saved by the prepayment</span><span class="readout-value" id="ln-sv"></span><span class="readout-sub" id="ln-sv-sub"></span></div>
+        </div>
+        <div id="ln-chart"></div>
+        <p class="insight" id="ln-insight" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="bench-foot"><p>Try this: set the prepayment to zero and move the tenure from 20 to 30 years. The EMI falls by about ₹5,000 while total interest rises by over ₹34 lakh. Then restore a ₹5 lakh prepayment in year 3 and switch between the two modes.</p></div>
+  </section>
+
+  <section id="l08-flat" aria-labelledby="l08-flat-h">
+    <h2 id="l08-flat-h">Flat rate vs reducing balance: the personal-loan trap</h2>
+    <p>Some lenders, particularly for consumer durables, two-wheelers and some personal loans, quote a [[flat-rate|flat rate]]: interest calculated on the <em>original</em> amount for the whole term, even though you repay part of it every month. A flat rate looks roughly half as expensive as it really is.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · "Only 10% flat"</p>{{tag:hyp}}</div>
+      <p>A ₹3 lakh personal loan for 3 years at "10% flat". Interest = 3,00,000 × 10% × 3 = ₹90,000. EMI = (3,00,000 + 90,000) ÷ 36 = <strong>₹10,833</strong>.</p>
+      <p>The reducing-balance rate that produces the same EMI is <strong>17.9% a year</strong>. You are paying interest on money you have already repaid.</p>
+      <p><strong>Interpretation.</strong> Always ask for the reducing-balance rate (or the annual percentage rate, including fees) before comparing loans. Two quotes of "10%" can differ by 8 percentage points.</p>
+    </div>
+  </section>
+
+  <section id="l08-cards" aria-labelledby="l08-cards-h">
+    <h2 id="l08-cards-h">Credit cards: free if cleared, ruinous if not</h2>
+    <p>A credit card is [[revolving-credit|revolving credit]]: you can borrow up to a limit, repay, and borrow again. Used well it is a free payment tool: pay the full statement balance by the due date and there is usually no interest at all. Used as a loan it is the most expensive mainstream borrowing available, typically around 3% to 3.75% a month on revolving balances (check your card's terms), which compounds to over 40% a year.</p>
+    <p>Two features make it dangerous. First, once you carry any balance forward, the interest-free period on new purchases is usually suspended, so new spending starts accruing interest immediately. Second, the [[minimum-due|minimum amount due]] is set so that the balance does shrink, but only slowly, which makes paying the minimum feel responsible while it keeps you in debt for years.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current rules · RBI Master Direction on credit cards</p>{{tag:curr:29 Sep 2026}}</div>
+      <ul>
+        <li>The minimum amount due must be set so that there is <strong>no negative amortisation</strong>: paying it must not let the balance grow.</li>
+        <li>The card's terms must state that the <strong>interest-free period is suspended</strong> if any balance from the previous bill is outstanding.</li>
+        <li>Late-payment charges may be levied only on the <strong>amount outstanding after the due date</strong>, not on the total amount due, and an account can be reported as past due or charged late fees only when it has been past due for <strong>more than three days</strong>.</li>
+        <li>Interest may be charged only on the outstanding amount, adjusted for payments, refunds and reversed transactions.</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Source: <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" rel="noopener" target="_blank">RBI Master Direction: Credit Card and Debit Card, Issuance and Conduct, para 9(b)</a></p>
+    </div>
+  </section>
+
+  <section id="l08-cardlab" aria-labelledby="l08-cardlab-h" class="bench" data-lab="mindue">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Minimum-due simulator</p>
+      <h3 id="l08-cardlab-h">How long does "paying the minimum" take?</h3>
+      <p class="bench-purpose">Purpose: see why the minimum payment keeps a balance alive for years, and how a fixed payment changes everything. The card rate and minimum rule are assumptions; check your own card's terms. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="md-b">Card balance <output id="md-b-o" for="md-b"></output></label><input id="md-b" type="range" min="10000" max="500000" step="5000" value="100000"></div>
+        <div class="field"><label for="md-r">Interest per month <output id="md-r-o" for="md-r"></output></label><input id="md-r" type="range" min="1" max="4.5" step="0.05" value="3.5"></div>
+        <div class="field"><label for="md-m">Minimum due (% of balance, floor ₹500) <output id="md-m-o" for="md-m"></output></label><input id="md-m" type="range" min="4" max="10" step="0.5" value="5"></div>
+        <div class="field"><label for="md-f">Or pay a fixed amount each month <output id="md-f-o" for="md-f"></output></label><input id="md-f" type="range" min="0" max="50000" step="1000" value="0"><span class="hint">Set above zero to replace the minimum with a fixed payment.</span></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Time to clear</span><span class="readout-value" id="md-t"></span></div>
+          <div class="readout"><span class="readout-label">Total interest paid</span><span class="readout-value" id="md-i"></span><span class="readout-sub" id="md-i-sub"></span></div>
+          <div class="readout"><span class="readout-label">Effective annual rate</span><span class="readout-value" id="md-e"></span></div>
+        </div>
+        <div id="md-chart"></div>
+        <p class="insight" id="md-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l08-home" aria-labelledby="l08-home-h">
+    <h2 id="l08-home-h">Home loans and floating rates</h2>
+    <p>Most Indian home loans carry a <em>floating</em> rate linked to an external benchmark, so the rate moves when the benchmark moves (how the RBI's policy rate feeds through is Lesson 6.8). When rates change mid-loan, the lender either changes the EMI or changes the remaining tenure.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · A rate rise in year 3</p>{{tag:hyp}}</div>
+      <p>After three years of EMIs, the Nairs owe ₹46.74 lakh with 204 months left. Their rate rises from 8.5% to 9.5%.</p>
+      <ul>
+        <li><strong>Keep the tenure:</strong> the EMI rises from ₹43,391 to <strong>₹46,265</strong>.</li>
+        <li><strong>Keep the EMI:</strong> the loan runs <strong>39 months longer</strong>, over three extra years of payments.</li>
+      </ul>
+      <p><strong>Interpretation.</strong> Tenure extension feels painless because nothing changes this month, but it quietly adds years of interest. Borrowers who can afford it are usually better off accepting the higher EMI. Lenders are required to inform borrowers of such changes; ask which option has been applied to your loan.</p>
+    </div>
+    <p>A useful stress test before borrowing: could you still pay the EMI if the rate rose two percentage points? For the Nairs' original loan, 10.5% would mean an EMI of about ₹49,900.</p>
+  </section>
+
+  <section id="l08-refi" aria-labelledby="l08-refi-h">
+    <h2 id="l08-refi-h">Refinancing</h2>
+    <p>[[refinancing|Refinancing]] replaces an existing loan with a new one on better terms, usually by moving the balance to another lender (a balance transfer) or renegotiating with your current lender. It is worth doing when the interest saved exceeds the cost of switching.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Refinancing break-even</p>
+      <div class="fx"><math display="block"><mtext>Break-even months</mtext><mo>=</mo><mfrac><mtext>Switching cost</mtext><mrow><msub><mi>EMI</mi><mtext>old</mtext></msub><mo>−</mo><msub><mi>EMI</mi><mtext>new</mtext></msub></mrow></mfrac></math></div>
+      <dl class="vars"><dt>Switching cost</dt><dd>Processing fees, legal and valuation charges, stamp duty where applicable, in ₹.</dd><dt>EMI<sub>old</sub> − EMI<sub>new</sub></dt><dd>Monthly saving at the same remaining tenure, in ₹.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> ₹40 lakh outstanding, 17 years (204 months) left, rate falls from 9.25% to 8.40%, switching cost ₹15,000. EMI falls from ₹38,969 to ₹36,890, a saving of ₹2,080 a month. Break-even ≈ <strong>7 months</strong>; total saving over the remaining term ≈ ₹4.1 lakh after costs.</p>
+        <p><b>Limitations.</b> Ignores differences in service, reset terms and the time spent switching. Ask your current lender first: many will reprice to keep you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l08-prepay" aria-labelledby="l08-prepay-h">
+    <h2 id="l08-prepay-h">Prepayment: shorten, lower, or invest instead?</h2>
+    <p>[[prepayment|Prepaying]] means repaying principal ahead of schedule. Every prepaid rupee earns a guaranteed return equal to the loan's interest rate, because it stops that rupee from being charged interest.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · ₹5 lakh after year 3</p>{{tag:hyp}}</div>
+      <ul>
+        <li><strong>Shorten the loan (keep EMI):</strong> the loan ends in month 199 instead of 240; total interest ₹40.9 lakh instead of ₹54.1 lakh. <strong>Saving ≈ ₹13.2 lakh.</strong></li>
+        <li><strong>Lower the EMI (keep tenure):</strong> the EMI falls to ₹38,750; total interest ₹49.7 lakh. <strong>Saving ≈ ₹4.5 lakh</strong>, plus ₹4,640 a month of breathing room.</li>
+      </ul>
+      <p><strong>Interpretation.</strong> Shortening saves far more interest, because the whole EMI keeps attacking a smaller balance. Lowering the EMI makes sense when cash flow is tight or income is uncertain: it improves resilience at the cost of interest.</p>
+    </div>
+    <h3>Prepay or invest?</h3>
+    <p>The comparison is between the loan's rate after tax and the investment's expected return after tax, with two adjustments. The prepayment's return is certain; the investment's is not. And prepaid money is gone: you cannot get it back in an emergency. A reasonable order: build the emergency fund first (Lesson 0.7), then clear any debt above roughly 12% to 15% (card balances, personal loans) as a near-certain high return, then weigh prepaying low-rate secured debt against long-term investing in light of your goals and risk tolerance. There is no single right answer for the last step; there is a clear right answer for the 42% card.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current rule · Prepayment charges</p>{{tag:curr:29 Sep 2026}}</div>
+      <p>Under the RBI's Pre-payment Charges on Loans Directions, 2025, for loans sanctioned or renewed on or after <strong>1 January 2026</strong>, regulated lenders (commercial banks other than payments banks, co-operative banks, NBFCs and all-India financial institutions) may not levy prepayment charges on <strong>floating-rate loans to individuals for non-business purposes</strong>, with or without co-borrowers. Fixed-rate loans and business loans follow different rules; check your loan agreement.</p>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Source: RBI (Pre-payment Charges on Loans) Directions, 2025, issued 2 July 2025</p>
+    </div>
+    <h3>Several debts: avalanche or snowball</h3>
+    <p>With several debts and spare cash, the <strong>avalanche</strong> method pays the highest-rate debt first while paying minimums on the rest; it minimises total interest. The <strong>snowball</strong> method pays the smallest balance first for a quick sense of progress; it costs more in interest but some people find it easier to stick with. Mathematically, avalanche wins. Behaviourally, the best method is the one you will actually follow, which is a first glimpse of Lesson 9's theme.</p>
+  </section>
+
+  <section id="l08-quant" aria-labelledby="l08-quant-h" class="wide">
+    <h2 id="l08-quant-h">Quant lab · Build and audit an amortisation schedule</h2>
+    <div class="quantlab">
+      <div class="ql-item"><h3>{{i:target}} Financial objective</h3><p>Understand the EMI as a present-value identity by building the schedule month by month, and verify it with independent checks.</p></div>
+      <div class="ql-item"><h3>{{i:database}} Data</h3><p>The Nairs' loan: ₹50,00,000, 8.5% a year, 240 months. {{tag:hyp}}</p></div>
+      <div class="ql-item ql-wide"><h3>{{i:table}} Build it in a spreadsheet</h3>
+        <ol>
+          <li>Put the inputs in cells: <code>B1</code> = 5000000, <code>B2</code> = 0.085, <code>B3</code> = 240.</li>
+          <li>EMI in <code>B4</code>: <code>=PMT(B2/12, B3, -B1)</code>. The minus sign is the spreadsheet's convention that money received is positive and money paid is negative.</li>
+          <li>Columns from row 7: <code>Month</code>, <code>Opening balance</code>, <code>Interest</code> = opening × $B$2/12, <code>Principal</code> = $B$4 − interest, <code>Closing balance</code> = opening − principal. Each row's opening balance is the previous row's closing balance.</li>
+          <li>Fill down to month 240.</li>
+        </ol>
+      </div>
+      <div class="ql-item"><h3>{{i:check-circle}} Failure checks</h3>
+        <ul>
+          <li>Closing balance in month 240 is zero (within a rupee).</li>
+          <li>Sum of the principal column equals ₹50,00,000.</li>
+          <li>Month-1 interest equals P × i = ₹35,417.</li>
+          <li>Common errors: using the annual rate as monthly (EMI far too high), forgetting the minus sign in PMT (negative EMI), rounding each row so the final balance drifts from zero.</li>
+        </ul>
+      </div>
+      <div class="ql-item"><h3>{{i:lightbulb}} Interpretation</h3><p>Plot interest and principal per year. The crossing point, where principal first exceeds interest, arrives in year 13. Before it, you are mostly paying rent on money; after it, mostly buying back your house.</p></div>
+      <div class="ql-item ql-wide"><h3>{{i:arrow-bend-up-right}} Extension</h3><p>Add a column for an extra payment and put ₹5,00,000 in month 36. Keep the EMI fixed and let the balance hit zero early: you should reproduce the loan ending in month 199 and interest of about ₹40.9 lakh. Then recompute the EMI on the remaining balance for 204 months and confirm ₹38,750.</p></div>
+    </div>
+    <details class="block block--advanced col">
+      <summary>{{i:code}} Optional preview · The same schedule in Python (Level 13 teaches this properly) {{i:caret-right}}</summary>
+      <div class="adv-body">
+        <p>Not required for this module. Shown so you can see that code expresses the same three-line loop.</p>
+        <pre class="code" id="l08-py"><code>principal, annual_rate, months = 5_000_000, 0.085, 240
+i = annual_rate / 12
+emi = principal * i * (1 + i) ** months / ((1 + i) ** months - 1)
+
+balance, total_interest = principal, 0.0
+for m in range(1, months + 1):
+    interest = balance * i            # interest on what is still owed
+    repaid = emi - interest           # the rest reduces the loan
+    balance -= repaid
+    total_interest += interest
+
+print(f"EMI: {emi:,.0f}")                       # 43,391
+print(f"Total interest: {total_interest:,.0f}") # 5,413,879
+print(f"Final balance: {balance:,.2f}")         # ~0.00  (check)</code></pre>
+        <button type="button" class="btn" data-copy="l08-py">{{i:copy}} Copy code</button>
+      </div>
+    </details>
+  </section>
+
+  <section id="l08-mistakes" aria-labelledby="l08-mistakes-h">
+    <h2 id="l08-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“A lower EMI means a cheaper loan.”</p>
+      <p><span class="mistake-part">Why this fails</span>EMIs fall when tenure rises, and total interest rises much faster. A 30-year loan has an EMI 11% lower than a 20-year loan at 8.5%, with 63% more interest.</p>
+      <p><span class="mistake-part">Better question</span>What is the total interest, and what is the effective annual rate including fees?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“No-cost EMI means no cost.”</p>
+      <p><span class="mistake-part">Why this fails</span>"No-cost" EMI offers typically work by giving a discount equal to the interest, so the interest is still charged by the lender; there may be processing fees, GST on the interest component, and loss of a cash discount you could otherwise have negotiated.</p>
+      <p><span class="mistake-part">Better question</span>What is the lowest price I could pay today in cash, and what is the total I will pay through the EMI?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“All debt is bad, so I should never borrow.”</p>
+      <p><span class="mistake-part">Why this fails</span>A home loan instead of rent, or an education loan that raises earnings, can improve a household's long-run position. The question is always the rate, the purpose, and whether the payments fit comfortably inside free cash flow with a buffer.</p>
+      <p><span class="mistake-part">Better question</span>Does this debt buy something worth more than its cost, and can I carry it through a bad year?</p>
+    </div>
+  </section>
+
+  <section id="l08-limits" aria-labelledby="l08-limits-h">
+    <h2 id="l08-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Rates are not fixed.</strong> Floating-rate schedules change whenever the benchmark changes; any projection beyond a year or two is illustrative.</li>
+      <li><strong>Affordability heuristics are rough.</strong> A common rule of thumb is to keep total EMIs below about 40% to 50% of take-home. It ignores dependants, job security and other commitments. It is a ceiling, not a target.</li>
+      <li><strong>Hidden costs.</strong> Processing fees, insurance bundled with loans, and late-payment charges raise the effective cost above the quoted rate.</li>
+      <li><strong>Co-signing is borrowing.</strong> Guaranteeing someone else's loan makes you liable for it (a contingent liability, Lesson 0.3).</li>
+    </ul>
+  </section>
+
+  <section id="l08-check" aria-labelledby="l08-check-h">
+    <h2 id="l08-check-h">Knowledge check</h2>
+<!--numeric id=q08-1 comp=Calculation answer=15362 tol=5 text="₹15,362" label="EMI (₹)"-->
+? Meera's education loan: suppose she borrowed ₹6,00,000 at 10.5% a year for 4 years. What is the EMI, to the nearest rupee?
+= i = 0.105 ÷ 12 = 0.875%, n = 48. EMI = 6,00,000 × 0.00875 × 1.00875<sup>48</sup> ÷ (1.00875<sup>48</sup> − 1) = <strong>₹15,362</strong>.
+<!--/numeric-->
+<!--quiz id=q08-2 comp=Interpretation-->
+? Why does a prepayment made early in a loan save much more interest than the same prepayment made late?
++ Because an early prepayment removes principal that would otherwise have been charged interest for many more months || Each prepaid rupee saves interest for every remaining month of the loan.
+- Because lenders give a bonus for early prepayment || There is no bonus; the saving is simply interest that is never charged.
+- Because EMIs are higher early in the loan || The EMI is constant; what changes is the interest share within it.
+<!--/quiz-->
+<!--quiz id=q08-3 comp=Application-->
+? Farhan has ₹2 lakh spare. He has a credit-card balance of ₹1.2 lakh at 3.5% a month, a home loan at 8.4%, no emergency fund, and essential costs of ₹50,000 a month. What is the most sensible use of the ₹2 lakh?
+- Prepay the home loan, because it is the largest debt || The home loan is the cheapest debt. Size is not the priority; cost is.
+- Invest all of it for long-term growth || Investing while paying 51% a year on a card is almost certainly a losing trade.
++ Clear the card, and keep the remaining ₹80,000 as the start of an emergency fund || Clearing the card is a near-certain return of over 40% a year, and the buffer stops the next shock from going back on the card.
+- Keep it all in savings for safety || Holding cash at 3% while carrying a 51% balance costs far more than the safety is worth.
+<!--/quiz-->
+  </section>
+
+  <section id="l08-practice" aria-labelledby="l08-practice-h">
+    <h2 id="l08-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Secured or unsecured: (a) a loan against fixed deposit, (b) a buy-now-pay-later purchase, (c) a two-wheeler loan, (d) a salary-advance app loan.
+A: (a) secured (by the deposit), (b) usually unsecured, (c) secured (by the vehicle, hypothecated to the lender), (d) unsecured.
+# B A ₹10 lakh car loan at 9% for 5 years. Compute the EMI and total interest.
+A: i = 0.75%, n = 60. EMI = <strong>₹20,758</strong>. Total paid = 20,758 × 60 = ₹12,45,501; total interest ≈ <strong>₹2.46 lakh</strong>.
+# C A friend proudly says she "always pays the minimum on time, so she has never paid a late fee." What is she missing?
+A: Paying the minimum avoids late fees but not interest. The unpaid balance accrues interest at around 3.5% a month, and the interest-free period on new purchases is usually suspended while any balance is carried. On ₹1 lakh this can mean over a decade of payments and interest nearly double the original balance.
+# D The Nairs could refinance their ₹46.7 lakh balance from 9.5% to 8.75% for a ₹25,000 fee, with 204 months left. Is it worth it?
+A: EMI at 9.5% ≈ ₹46,262; at 8.75% ≈ ₹44,099. Saving ≈ ₹2,164 a month. Break-even ≈ 25,000 ÷ 2,164 ≈ 12 months. Over 204 months, net saving ≈ ₹4.2 lakh. Yes, unless there are other costs or they plan to repay within a year.
+# E A loan agent argues: "Take a 30-year loan instead of 20 years. The EMI is lower, and you can always prepay later." Evaluate this carefully.
+A: Partly reasonable: the longer tenure gives flexibility and a lower mandatory payment, and with no prepayment charges on floating-rate individual loans, prepaying is possible. Risks: the discipline to prepay often fades; total interest rises sharply if you do not; the lender may price longer tenures higher; and the loan runs further into later life. It is a sound strategy only with an explicit prepayment plan and the discipline to follow it.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l08-notes-h">
+    <h2 id="l08-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l08">Your debts: balance, rate, EMI and remaining tenure, highest rate first</label><textarea class="input" id="notes-l08" data-notes="l08"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

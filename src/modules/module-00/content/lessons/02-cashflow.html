@@ -1,0 +1,215 @@
+<article class="lesson" id="l02" data-lesson data-title="0.2 Personal cash flow" data-nav-title="0.2 Personal cash flow" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.2 · Part I · The household as a system</p>
+    <h1>Personal Cash Flow</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Saving should be a line in the budget, not whatever is left by accident. Its rate matters more than its rupee amount, and what you do with each raise decides where that rate goes.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l02-why">Why it matters</a><a href="#l02-waterfall">The waterfall</a><a href="#l02-kinds">Three kinds of spending</a><a href="#l02-rate">Savings rate</a><a href="#l02-fcf">Free cash flow</a><a href="#l02-lifestyle">Lifestyle inflation</a><a href="#l02-lab">Explorer</a><a href="#l02-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l02-why" aria-labelledby="l02-why-h">
+    <h2 id="l02-why-h">Why track cash flow at all</h2>
+    <p>Lesson 0.1 showed that wealth is built from the gap between two flows. This lesson measures those flows. Most people can state their salary to the rupee and have only a vague idea of their spending. That asymmetry is expensive: you cannot manage a gap you cannot see.</p>
+    <p>A cash-flow statement answers three practical questions. How much actually arrives each month? How much of what leaves is committed and hard to change? And how much is genuinely a choice?</p>
+  </section>
+
+  <section id="l02-waterfall" aria-labelledby="l02-waterfall-h" class="wide">
+    <h2 id="l02-waterfall-h">The mental model: a waterfall</h2>
+    <aside class="block block--intuition col">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Money falls through levels. Your gross salary loses tax and provident-fund contributions before it reaches you. Of what arrives, commitments take the first share, necessities the next, and choices the rest. Saving is whatever you decide to catch <em>before</em> the choices, or whatever happens to be left after them.</p>
+    </aside>
+    <figure class="wf" data-lab="waterfall" aria-labelledby="l02-wf-cap">
+      <div class="wf-head"><p class="chart-title">Meera's month, from gross pay to saving</p>{{tag:hyp}}</div>
+      <div class="wf-rows" id="wf-rows" role="table" aria-label="Meera's monthly cash-flow waterfall"></div>
+      <figcaption id="l02-wf-cap" class="chart-desc">What to notice: half of Meera's take-home is committed before she makes a single choice, and ₹3,000 a month goes to interest on past spending.</figcaption>
+    </figure>
+  </section>
+
+  <section id="l02-kinds" aria-labelledby="l02-kinds-h">
+    <h2 id="l02-kinds-h">Income, and three kinds of spending</h2>
+    <h3>Gross pay vs take-home</h3>
+    <p>Income on an offer letter is usually <em>cost to company</em> or gross salary. What reaches your account is [[take-home|take-home pay]], after tax deducted at source, your provident-fund contribution and small items such as professional tax. Budget from take-home, because that is what you can spend. Remember, though, that your EPF contribution is saving too: it just happens before you see it.</p>
+
+    <h3>Fixed, variable, discretionary</h3>
+    <div class="table-wrap">
+      <table>
+        <caption>Meera's monthly spending, classified</caption>
+        <thead><tr><th scope="col">Type</th><th scope="col">What defines it</th><th scope="col">Meera's lines</th><th scope="col" class="r">₹ per month</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">[[fixed-expense|Fixed]]</th><td>Same each month, contractually hard to change quickly</td><td>Rent 28,000 · education-loan EMI 6,800 · insurance premiums (monthly share) 1,500 · phone and internet 1,200</td><td class="r">37,500</td></tr>
+          <tr><th scope="row">[[variable-expense|Variable, necessary]]</th><td>Needed, but the amount moves with use</td><td>Groceries 9,000 · electricity and gas 2,500 · commute 4,500 · household help 1,500</td><td class="r">17,500</td></tr>
+          <tr><th scope="row">[[discretionary-expense|Discretionary]]</th><td>A choice, not a need</td><td>Eating out and delivery 9,000 · shopping 6,000 · travel fund 4,000 · subscriptions 1,000</td><td class="r">20,000</td></tr>
+          <tr><th scope="row">Cost of past spending</th><td>Interest on debt used for consumption</td><td>Credit-card interest on an ₹85,000 balance</td><td class="r">3,000</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">Total spending</td><td class="r">78,000</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="source-note">{{tag:hyp}} Classifications are judgement calls: a gym membership is fixed for someone locked into a contract and discretionary for someone paying monthly. What matters is being honest about which costs you could cut within a month.</p>
+    <div class="block block--lens">
+      <p class="block-label">{{i:binoculars}} Investor lens</p>
+      <p>Fixed costs are to a household what operating leverage is to a company (Lesson 4.5): they make the good months better and the bad months much worse. A household with 70% of take-home in fixed costs has almost no room to absorb an income shock. Before chasing a higher return, ask how much of your spending would continue if your salary stopped next month.</p>
+    </div>
+  </section>
+
+  <section id="l02-predict" aria-labelledby="l02-predict-h">
+    <h2 id="l02-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p02-->
+? Meera saves ₹32,000 of her ₹1,10,000 take-home, a savings rate of 29.1%. Her take-home rises by ₹20,000 and she lets her spending rise by ₹15,000. What happens to her savings rate?
+- It rises, because she now saves more rupees || She does save more rupees (₹37,000 instead of ₹32,000), but the rate compares saving with a larger income.
++ It falls slightly || She kept only 25% of the raise, less than her existing 29.1% rate, so the average rate is pulled down.
+- It stays exactly the same || It would stay the same only if she saved exactly 29.1% of the raise.
+> <p><strong>New savings rate: ₹37,000 ÷ ₹1,30,000 = 28.5%, down from 29.1%.</strong> More rupees saved, a lower rate.</p>
+> <p>The rule: <em>your savings rate rises only if you save a larger share of each raise than you already save of your income.</em> Meera spent 75% of the raise, and 75% is more than her 70.9% spending share, so the rate fell. This is the mechanism behind lifestyle inflation, and the explorer below plays it forward.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l02-rate" aria-labelledby="l02-rate-h">
+    <h2 id="l02-rate-h">Savings rate</h2>
+    <p>The [[savings-rate|savings rate]] is the share of income you keep. It is more useful than a rupee amount because it scales: a 25% savings rate means the same discipline on ₹60,000 or ₹6 lakh a month, and it tells you directly how many months of living costs each month of work buys.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Savings rate</p>
+      <div class="fx"><math display="block"><mi>s</mi><mo>=</mo><mfrac><mrow><mi>Y</mi><mo>−</mo><mi>C</mi></mrow><mi>Y</mi></mfrac></math></div>
+      <dl class="vars">
+        <dt>s</dt><dd>Savings rate, a percentage of income.</dd>
+        <dt>Y</dt><dd>Income for the period, in ₹. State which income: take-home (common for budgeting) or gross.</dd>
+        <dt>C</dt><dd>Spending (consumption) for the same period, in ₹, including interest paid on consumer debt.</dd>
+      </dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> Meera: (1,10,000 − 78,000) ÷ 1,10,000 = 29.1% of take-home. Counting her ₹6,000 EPF contribution as saving and using gross pay: (32,000 + 6,000) ÷ 1,25,000 = 30.4% of gross.</p>
+        <p><b>Interpretation.</b> Both numbers are correct. Mixing them is the error: comparing your take-home rate with someone else's gross rate, or with last year's figure computed the other way.</p>
+        <p><b>Sensitivity.</b> Cutting ₹5,000 of monthly spending raises Meera's rate by 4.5 percentage points. The same ₹5,000 as extra income raises it by only about 3.1 points (to 32.2%), even if all of it is saved, because income sits in the denominator too.</p>
+        <p><b>Limitations.</b> A monthly snapshot misses annual costs (insurance renewals, school fees, festivals) and irregular income. Use a 12-month view.</p>
+      </div>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution</p>
+      <p>Paying down debt is saving too, because it raises net worth by the same amount. Counting it avoids a common distortion: a household that uses its surplus to clear a 42% credit-card balance is doing the best possible thing with that money, even though its "savings" line looks low.</p>
+    </div>
+  </section>
+
+  <section id="l02-fcf" aria-labelledby="l02-fcf-h">
+    <h2 id="l02-fcf-h">Free cash flow: the money you actually control</h2>
+    <p>Personal [[free-cash-flow|free cash flow]] is take-home minus essential commitments (fixed plus necessary variable costs). For Meera: 1,10,000 − 37,500 − 17,500 = <strong>₹55,000 a month</strong>. That is the pool from which every real choice is made: discretionary spending, saving, extra debt repayment.</p>
+    <p>The name is borrowed from company analysis, where free cash flow is operating cash flow minus the capital spending needed to keep the business running (Lesson 3.12). The idea is the same: cash left after the non-negotiable claims on it.</p>
+    <p>Two things make free cash flow more useful than the savings rate for planning. It shows how much room exists to save more. And it is the number that determines how much debt you can safely carry (Lesson 0.8) and how large an emergency fund must be (Lesson 0.7), since an emergency fund is sized from essential costs, not total spending.</p>
+    <h3>Irregular costs and sinking funds</h3>
+    <p>Annual and occasional costs are the most common reason a budget "fails". Meera's ₹18,000 health and term premiums are paid once a year; she budgets ₹1,500 a month and moves it to a separate account. That practice, setting aside a monthly share of a known future bill, is called a sinking fund. It turns a lumpy cost into a fixed one and stops it from being mistaken for an emergency.</p>
+  </section>
+
+  <section id="l02-lifestyle" aria-labelledby="l02-lifestyle-h">
+    <h2 id="l02-lifestyle-h">Lifestyle inflation</h2>
+    <p>[[lifestyle-inflation|Lifestyle inflation]] is spending that rises with income, so that higher earnings do not produce higher saving. It is not a moral failing. Some spending should rise with income: a safer flat, better health care, time bought back. The problem is when it happens by default rather than by decision, because rising spending also raises the income you need forever after, and the emergency fund and retirement corpus that depend on it.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Savings rate after a raise</p>
+      <div class="fx"><math display="block"><msub><mi>s</mi><mtext>new</mtext></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mi>Y</mi><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>k</mi><mo>)</mo><mi>Δ</mi><mi>Y</mi></mrow><mrow><mi>Y</mi><mo>+</mo><mi>Δ</mi><mi>Y</mi></mrow></mfrac></math></div>
+      <dl class="vars">
+        <dt>s</dt><dd>Savings rate before the raise.</dd>
+        <dt>Y, ΔY</dt><dd>Income before the raise, and the raise itself, in ₹ per month.</dd>
+        <dt>k</dt><dd>Share of the raise that is spent (0 to 1).</dd>
+      </dl>
+      <div class="fx-meta">
+        <p><b>Key relationship.</b> The savings rate rises if <i>1 − k &gt; s</i>, that is, if you save a larger share of the raise than you already save of your income. It falls if <i>k &gt; 1 − s</i>.</p>
+        <p><b>Worked example.</b> Meera: s = 29.1%, Y = 1,10,000, ΔY = 20,000, k = 0.75. New rate = (32,000 + 5,000) ÷ 1,30,000 = 28.5%.</p>
+        <p><b>Practical rule.</b> A common discipline is to decide the split of each raise before it arrives, for example saving half of every increase. Half is more than 29.1%, so Meera's rate would climb with every raise.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l02-lab" aria-labelledby="l02-lab-h" class="bench" data-lab="lifestyle">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Lifestyle inflation explorer</p>
+      <h3 id="l02-lab-h">Play the next 15 years of raises forward</h3>
+      <p class="bench-purpose">Purpose: see how the share of each raise you spend compounds into a very different savings rate and a very different pile of savings. The baseline holds spending growth to inflation (5% a year). {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="ls-inc">Take-home per month today <output id="ls-inc-o" for="ls-inc"></output></label><input id="ls-inc" type="range" min="30000" max="300000" step="5000" value="110000"></div>
+        <div class="field"><label for="ls-sp">Spending per month today <output id="ls-sp-o" for="ls-sp"></output></label><input id="ls-sp" type="range" min="20000" max="300000" step="1000" value="78000"></div>
+        <div class="field"><label for="ls-raise">Raise per year <output id="ls-raise-o" for="ls-raise"></output></label><input id="ls-raise" type="range" min="0" max="15" step="0.5" value="8"></div>
+        <div class="field"><label for="ls-k">Share of each raise spent <output id="ls-k-o" for="ls-k"></output></label><input id="ls-k" type="range" min="0" max="100" step="5" value="75"></div>
+        <div class="field"><label for="ls-yr">Years <output id="ls-yr-o" for="ls-yr"></output></label><input id="ls-yr" type="range" min="3" max="30" step="1" value="15"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-1)"></i>Your savings rate at the end</span><span class="readout-value" id="ls-rate"></span><span class="readout-sub" id="ls-rate-sub"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-2)"></i>Baseline savings rate at the end</span><span class="readout-value" id="ls-base"></span><span class="readout-sub">spending grows 5% a year</span></div>
+          <div class="readout"><span class="readout-label">Saved over the period, you vs baseline</span><span class="readout-value" id="ls-cum"></span><span class="readout-sub" id="ls-cum-sub"></span></div>
+        </div>
+        <div id="ls-chart"></div>
+        <p class="insight" id="ls-insight" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="bench-foot"><p>Try this: find the share of each raise you can spend while keeping the savings rate flat. It equals your current spending share, 1 − s. For Meera's starting numbers that is about 71%.</p></div>
+  </section>
+
+  <section id="l02-mistakes" aria-labelledby="l02-mistakes-h">
+    <h2 id="l02-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Budgeting means cutting coffee and small treats.”</p>
+      <p><span class="mistake-part">Why this fails</span>Meera's ₹9,000 of eating out matters less than her ₹28,000 rent and ₹3,000 of card interest. The largest lines, usually housing, transport and debt, decide most of the outcome and are decided rarely.</p>
+      <p><span class="mistake-part">Better question</span>Which three lines are the largest, and when do I next get to decide each of them?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“I will save what is left at the end of the month.”</p>
+      <p><span class="mistake-part">Why this fails</span>Spending expands to fill available money, especially with digital payments. What is left at the end of the month is a residual, and residuals are unreliable.</p>
+      <p><span class="mistake-part">Better question</span>What amount moves to savings on salary day, before any discretionary spending?</p>
+    </div>
+  </section>
+
+  <section id="l02-limits" aria-labelledby="l02-limits-h">
+    <h2 id="l02-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Irregular income.</strong> Freelancers and commission earners should compute savings rates on a trailing 12-month basis and budget from their lowest normal month, not their average.</li>
+      <li><strong>One month is noise.</strong> A wedding or a laptop purchase makes one month meaningless. Look at quarters and years.</li>
+      <li><strong>Categories blur.</strong> The classification is a tool for deciding what is flexible in a crisis, not an accounting standard.</li>
+      <li><strong>Couples and joint finances.</strong> Household cash flow may need to combine two incomes and split costs; the concepts are unchanged, the bookkeeping is harder.</li>
+    </ul>
+  </section>
+
+  <section id="l02-check" aria-labelledby="l02-check-h">
+    <h2 id="l02-check-h">Knowledge check</h2>
+<!--quiz id=q02-1 comp=Understanding-->
+? Which item is best classified as a fixed expense?
+- Groceries || Groceries are necessary but vary with use: variable.
++ A home-loan EMI || The amount is contractual and the same each month.
+- A weekend trip || A choice: discretionary.
+- Electricity || Necessary, but the bill varies: variable.
+<!--/quiz-->
+<!--numeric id=q02-2 comp=Calculation answer=25 tol=0.1 text="25%" label="Savings rate (%)" unit="%"-->
+? Rohan's take-home is ₹80,000 a month. His fixed costs are ₹32,000, necessary variable costs ₹14,000 and discretionary spending ₹14,000. What is his savings rate as a percentage of take-home?
+= Spending = 32,000 + 14,000 + 14,000 = ₹60,000. Saving = ₹20,000. Rate = 20,000 ÷ 80,000 = <strong>25%</strong>. His free cash flow is 80,000 − 46,000 = ₹34,000, of which he spends ₹14,000 by choice.
+<!--/numeric-->
+<!--quiz id=q02-3 comp=Application-->
+? Ananya saves 40% of her take-home. She gets a raise. Which choice keeps her savings rate from falling?
+- Spend 70% of the raise || She would save 30% of the raise, less than her 40% rate: the rate falls.
++ Spend 60% of the raise or less || Saving 40% or more of the raise keeps the rate at or above 40%.
+- Spend any share, because more income always raises the savings rate || The rate compares saving with income; a raise can lower it.
+<!--/quiz-->
+  </section>
+
+  <section id="l02-practice" aria-labelledby="l02-practice-h">
+    <h2 id="l02-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Classify for a salaried renter: (a) mobile recharge on a 1-year plan, (b) fuel, (c) a streaming subscription, (d) a car-loan EMI, (e) a child's school fees.
+A: (a) fixed (prepaid commitment), (b) variable necessary, (c) discretionary, (d) fixed, (e) fixed, and annual or termly, so it needs a sinking fund.
+# B Meera clears her ₹85,000 card balance, removing the ₹3,000 monthly interest. With nothing else changed, what is her new savings rate?
+A: Spending falls to ₹75,000, saving rises to ₹35,000. Rate = 35,000 ÷ 1,10,000 = <strong>31.8%</strong>. (While she is paying the balance down, the repayments count as saving, because they raise net worth.)
+# C Two colleagues both save ₹30,000 a month. One takes home ₹60,000, the other ₹2,00,000. Which is financially more resilient, and why?
+A: The first saves 50% and lives on ₹30,000; the second saves 15% and lives on ₹1,70,000. The first needs a far smaller emergency fund and retirement corpus to maintain her lifestyle, and each month of her work funds a month of living. Rupee saving is the same; resilience is not.
+# D A freelancer earned ₹0, ₹2.4 lakh, ₹60,000, ₹1.8 lakh, ₹90,000 and ₹1.2 lakh over six months and spends ₹75,000 a month. What is his savings rate for the period, and what monthly figure should he budget from?
+A: Income = ₹6.9 lakh; spending = ₹4.5 lakh; saving rate = 2.4 ÷ 6.9 = <strong>34.8%</strong>. But his monthly income ranged from zero to ₹2.4 lakh, so he should budget from a conservative figure (well below the ₹1.15 lakh average) and keep a larger buffer (Lesson 0.7).
+# E An app advertises: "Round up every UPI payment to the next ₹10 and invest the change. Build wealth without thinking!" Evaluate the claim using this lesson.
+A: It helps slightly by automating a small saving, but the amounts are tiny relative to fixed costs and raises. A ₹4 average round-up on 60 payments is about ₹240 a month. The decisions that move the savings rate are rent, debt, vehicle purchases and what happens to each raise. Automation is valuable when it is applied to the large decision (saving a share of salary on payday), not as a substitute for it.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l02-notes-h">
+    <h2 id="l02-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l02">Your own three largest spending lines, and when you next decide them</label><textarea class="input" id="notes-l02" data-notes="l02"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

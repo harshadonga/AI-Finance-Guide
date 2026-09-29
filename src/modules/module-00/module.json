@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "module-00",
+  "number": "0",
+  "label": "Module 0",
+  "title": "Personal Finance & Wealth Foundations",
+  "shortTitle": "Personal Finance Foundations",
+  "homeHash": "m0",
+  "lessonCount": 15,
+  "head": "content/head.html",
+  "navigation": "content/navigation.html",
+  "lessonDirectory": "content/lessons",
+  "styles": [
+    "styles/module.css"
+  ],
+  "scripts": [
+    "scripts/finance.js",
+    "scripts/labs.js",
+    "scripts/project0.js"
+  ]
+}
+

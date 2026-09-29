@@ -1,0 +1,117 @@
+/* =====================================================================
+   AI-Powered Finance Academy: Course Design Tokens v1.0
+   Source of truth: foundations/04_DESIGN_TOKENS.md
+   Layout concept: a reading desk. A module rail on the left, a 68ch
+   reading column, and wider "lab bench" breakouts for explorers.
+   Every module imports this file unchanged. Modules never define
+   their own colours or type sizes.
+   ===================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Neutrals: cool, very slightly green-grey ("ledger paper") ---- */
+  --bg:          #f2f4f3;   /* page ground */
+  --surface:     #fbfcfb;   /* reading surface, lab bench */
+  --surface-2:   #e8ecea;   /* recessed wells, table stripes, inputs */
+  --ink:         #15201c;   /* primary text */
+  --ink-2:       #3f4b47;   /* secondary text */
+  --ink-3:       #5e6a66;   /* supporting text, axis labels (>= 4.5:1 on bg) */
+  --rule:        #d3dad7;   /* hairlines */
+  --rule-strong: #aeb8b4;   /* decorative strong rules, baselines */
+  --control:     #858f8b;   /* form-control borders and slider tracks: >= 3:1 on bg and surface (WCAG 1.4.11) */
+
+  /* ---- The one accent: ink blue. Interaction, focus, emphasis. ---- */
+  --accent:       #2344a6;
+  --accent-ink:   #ffffff;  /* text on solid accent */
+  --accent-soft:  #e4e9f7;  /* intuition blocks, selected states */
+  --accent-line:  #8ea0d8;
+
+  /* ---- Semantic (never decorative; always paired with icon + text) ---- */
+  --pos:          #1b6e40;  --pos-soft:     #e3f1e8;
+  --neg:          #b3261e;  --neg-soft:     #f9e6e4;
+  --caution:      #845400;  --caution-soft: #f8eed8;
+  --info:         var(--accent);
+
+  /* ---- Chart series (validated categorical order, reference palette) ---- */
+  --series-1: #2a78d6;  /* blue   */
+  --series-2: #eb6834;  /* orange */
+  --series-3: #1baf7a;  /* aqua   */
+  --series-muted: #a9b3af;
+  --grid:     #e1e6e4;
+  --axis:     #b9c2be;
+
+  /* ---- Typography ---- */
+  --font-display: "Schibsted Grotesk", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", "Noto Sans", sans-serif;
+  --font-mono:    "IBM Plex Mono", "IBM Plex Sans", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Type scale (Teaching Spec §12). Never shrink below --t-small for content. */
+  --t-module:  clamp(2.25rem, 1.7rem + 2.2vw, 3rem);    /* 36-48px */
+  --t-h2:      clamp(1.625rem, 1.4rem + 0.9vw, 2rem);   /* 26-32px */
+  --t-h3:      clamp(1.25rem, 1.15rem + 0.45vw, 1.5rem);/* 20-24px */
+  --t-h4:      1.125rem;                                 /* 18px */
+  --t-body:    1.0625rem;                                /* 17px */
+  --t-small:   0.9375rem;                                /* 15px */
+  --t-micro:   0.8125rem;                                /* 13px: labels, tags only */
+  --lh-body:   1.65;
+  --lh-tight:  1.2;
+  --measure:   68ch;
+
+  /* ---- Space (4px base) ---- */
+  --s1: 0.25rem; --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem;
+  --s5: 1.5rem;  --s6: 2rem;   --s7: 3rem;    --s8: 4.5rem;
+
+  /* ---- Shape rule: controls 6px, blocks 10px, tags pill. Nothing else. ---- */
+  --r-control: 6px;
+  --r-block:   10px;
+  --r-pill:    999px;
+
+  /* ---- Elevation: used only for popovers and the mobile rail ---- */
+  --shadow-pop: 0 1px 2px rgb(21 32 28 / 0.08), 0 8px 28px rgb(21 32 28 / 0.14);
+
+  /* ---- Layout ---- */
+  --rail-w:  17.5rem;
+  --bench-w: 60rem;
+  --topbar-h: 3.5rem;
+
+  /* ---- Motion (MOTION_INTENSITY 4): state changes and feedback only ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-mid:  260ms;
+
+  /* ---- Z-index scale (documented; nothing else may use z-index) ---- */
+  --z-sticky: 10;
+  --z-rail:   30;
+  --z-pop:    40;
+  --z-toast:  50;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111715; --surface: #171f1c; --surface-2: #202a26;
+    --ink: #e4ebe8; --ink-2: #b9c4bf; --ink-3: #93a09a;
+    --rule: #2c3733; --rule-strong: #46534e; --control: #68766f;
+    --accent: #9db1f5; --accent-ink: #0f1a3d; --accent-soft: #1d2745; --accent-line: #4f63a3;
+    --pos: #6fcf97; --pos-soft: #16291f;
+    --neg: #f29b90; --neg-soft: #33191a;
+    --caution: #e8b95e; --caution-soft: #2e2413;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-muted: #5b6863;
+    --grid: #25302c; --axis: #3d4a45;
+    --shadow-pop: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.45);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111715; --surface: #171f1c; --surface-2: #202a26;
+  --ink: #e4ebe8; --ink-2: #b9c4bf; --ink-3: #93a09a;
+  --rule: #2c3733; --rule-strong: #46534e; --control: #68766f;
+  --accent: #9db1f5; --accent-ink: #0f1a3d; --accent-soft: #1d2745; --accent-line: #4f63a3;
+  --pos: #6fcf97; --pos-soft: #16291f;
+  --neg: #f29b90; --neg-soft: #33191a;
+  --caution: #e8b95e; --caution-soft: #2e2413;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-muted: #5b6863;
+  --grid: #25302c; --axis: #3d4a45;
+  --shadow-pop: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.45);
+}

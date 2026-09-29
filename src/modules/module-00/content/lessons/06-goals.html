@@ -1,0 +1,228 @@
+<article class="lesson" id="l06" data-lesson data-title="0.6 Financial goals" data-nav-title="0.6 Financial goals" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.6 · Part III · Plans and buffers</p>
+    <h1>Financial Goals</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>A goal is a future cost in future rupees. Its horizon decides how much short-term volatility you can live with, and the start date is the most powerful lever you control.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l06-why">Why goals</a><a href="#l06-horizons">Horizons</a><a href="#l06-method">The method</a><a href="#l06-education">Education</a><a href="#l06-lab">Goal planner</a><a href="#l06-retirement">Retirement</a><a href="#l06-housing">Housing and purchases</a><a href="#l06-gbi">Goal-based investing</a><a href="#l06-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l06-why" aria-labelledby="l06-why-h">
+    <h2 id="l06-why-h">Why name your goals</h2>
+    <p>"Save as much as possible" is not a plan. It gives no way to know whether you are saving enough, too much, or into the wrong things. A goal with an amount and a date turns saving into arithmetic: you can compute what is needed, check progress, and see the cost of changing your mind.</p>
+    <p>Goals also answer a question Lesson 0.1 left open: saving decides how much, but <em>when</em> the money is needed decides what it should be doing. Money needed in eighteen months and money needed in thirty years should not be invested the same way.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Treat each goal as a dated bill you owe your future self. Like any bill, it has an amount and a due date. Unlike most bills, its amount keeps growing with inflation until it is paid, and you can pay it in instalments that earn a return while they wait.</p>
+    </aside>
+  </section>
+
+  <section id="l06-horizons" aria-labelledby="l06-horizons-h" class="wide">
+    <h2 id="l06-horizons-h">Short, medium and long-term goals</h2>
+    <p>The [[goal-horizon|horizon]] is the time between today and the date the money is needed. The boundaries below are a teaching convention, not a rule; what matters is the logic behind them.</p>
+    <div class="horizons">
+      <div class="hz"><p class="hz-t">{{i:timer}} Short term <span>under about 3 years</span></p><p>A trip, a car, a wedding contribution. There is no time to recover from a fall in value, so <strong>stability of capital</strong> matters most. Expected return is secondary.</p></div>
+      <div class="hz"><p class="hz-t">{{i:calendar}} Medium term <span>about 3 to 7 years</span></p><p>A down payment, a career break, a master's degree. Some volatility can be tolerated, but a bad year near the date could force a delay. A <strong>blend</strong> of stable and growth assets is common.</p></div>
+      <div class="hz"><p class="hz-t">{{i:mountains}} Long term <span>more than about 7 years</span></p><p>A child's education, retirement. There is time for bad years to be followed by recoveries, and inflation does the most damage, so <strong>purchasing power growth</strong> matters most.</p></div>
+    </div>
+    <p>Which assets suit each horizon is the subject of Levels 2 and 8 (asset classes, then allocation). Here we build the arithmetic that any of those choices must satisfy.</p>
+    <figure class="goalbars" aria-labelledby="l06-tl-cap">
+      <div class="gb-head"><p class="chart-title">Meera's goals: years until each is due, to scale</p>{{tag:hyp}}</div>
+      <div class="gb-row"><span class="gb-l"><strong>Travel fund</strong><span>₹1.2 lakh</span></span><span class="gb-track" aria-hidden="true"><span class="gb-bar" style="width:3.2%"></span></span><span class="gb-v">1 yr</span></div>
+      <div class="gb-row"><span class="gb-l"><strong>Car</strong><span>₹8 lakh today</span></span><span class="gb-track" aria-hidden="true"><span class="gb-bar" style="width:6.5%"></span></span><span class="gb-v">2 yr</span></div>
+      <div class="gb-row"><span class="gb-l"><strong>Flat down payment</strong><span>20% of ₹90 lakh today</span></span><span class="gb-track" aria-hidden="true"><span class="gb-bar" style="width:16.1%"></span></span><span class="gb-v">5 yr</span></div>
+      <div class="gb-row"><span class="gb-l"><strong>Retirement at 60</strong><span>₹60,000 a month, today's money</span></span><span class="gb-track" aria-hidden="true"><span class="gb-bar gb-bar--far" style="width:100%"></span></span><span class="gb-v">31 yr</span></div>
+      <figcaption id="l06-tl-cap" class="chart-desc">What to notice: three goals sit inside the next five years and are small and fairly certain; one goal is six times further away, far larger and far less certain. Each is worked through below.</figcaption>
+    </figure>
+  </section>
+
+  <section id="l06-predict" aria-labelledby="l06-predict-h">
+    <h2 id="l06-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p06-->
+? The Nairs want to fund their daughter's higher education in 15 years, saving a fixed amount every month. If they start 5 years late instead of today, how much larger must the monthly amount be?
+- About a third larger, because they have a third less time || Time and money do not trade one for one when returns compound. The lost years are the ones that would have compounded longest.
++ About twice as large || Starting today needs about ₹15,900 a month; starting 5 years late needs about ₹31,700.
+- About the same, because the target does not change || The target is unchanged, but fewer contributions each have less time to grow.
+> <p><strong>Roughly double: ₹15,923 a month now, or ₹31,743 a month from year 5.</strong> They would also contribute more in total: ₹38.1 lakh instead of ₹28.7 lakh. The worked example below shows where these numbers come from.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l06-method" aria-labelledby="l06-method-h">
+    <h2 id="l06-method-h">The method: three steps</h2>
+    <ol class="steps">
+      <li><strong>Price the goal today.</strong> What would it cost if you paid now? Use a realistic quote, not a guess.</li>
+      <li><strong>Inflate it to the due date.</strong> Future cost = today's cost × (1 + goal inflation)<sup>years</sup>. Choose the inflation rate for this kind of expense, which may differ from CPI (Lesson 0.5).</li>
+      <li><strong>Work out the saving needed.</strong> Subtract what existing savings for this goal will grow to, then solve for the monthly contribution with the annuity formula from Lesson 0.4.</li>
+    </ol>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Required monthly contribution</p>
+      <div class="fx"><math display="block"><mi>C</mi><mo>=</mo><mfrac><mrow><mo>(</mo><msub><mi>G</mi><mn>0</mn></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>g</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>−</mo><mi>S</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>)</mo><mo>×</mo><mi>i</mi></mrow><mrow><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mrow><mn>12</mn><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow></mfrac></math></div>
+      <dl class="vars">
+        <dt>G<sub>0</sub></dt><dd>Cost of the goal in today's rupees.</dd>
+        <dt>g</dt><dd>Annual inflation rate for this goal.</dd>
+        <dt>n</dt><dd>Years until the goal.</dd>
+        <dt>S</dt><dd>Savings already set aside for this goal, in ₹.</dd>
+        <dt>r, i</dt><dd>Assumed annual return, and the equivalent monthly rate i = (1 + r)<sup>1/12</sup> − 1.</dd>
+        <dt>C</dt><dd>Level monthly contribution needed, in ₹, paid at the end of each month.</dd>
+      </dl>
+      <div class="fx-meta">
+        <p><b>Interpretation.</b> The numerator is the gap: future cost minus what existing savings will become. The rest spreads that gap over 12n monthly contributions that each earn a return until the due date.</p>
+        <p><b>Sensitivity.</b> The result is most sensitive to n (through both the inflated cost and the number of compounding months), then to r − g, the real return. A higher assumed return lowers C only if it is realistic for the horizon.</p>
+        <p><b>Limitations.</b> Assumes a constant return and constant inflation. Real outcomes vary; the plan must be reviewed yearly and adjusted.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l06-education" aria-labelledby="l06-education-h">
+    <h2 id="l06-education-h">Worked example: education</h2>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · The Nairs' education goal</p>{{tag:hyp}}</div>
+      <p>The Nairs' daughter is 3. A four-year degree they have in mind would cost about <strong>₹20 lakh today</strong>. Education costs have tended to rise faster than general prices, so they assume <strong>8% a year</strong> education inflation. The money is needed in <strong>15 years</strong>. They assume a <strong>10% a year</strong> return on long-term savings. They have nothing set aside yet.</p>
+      <ol>
+        <li>Future cost = 20,00,000 × 1.08<sup>15</sup> = <strong>₹63.44 lakh</strong>.</li>
+        <li>Monthly rate i = 1.10<sup>1/12</sup> − 1 = 0.797%. Months = 180.</li>
+        <li>C = 63,44,338 × 0.00797 ÷ (1.00797<sup>180</sup> − 1) = <strong>₹15,923 a month</strong>. Total contributed: ₹28.7 lakh. Growth supplies the other ₹34.8 lakh.</li>
+        <li>If they start in 5 years (120 months): C = <strong>₹31,743 a month</strong>, and ₹38.1 lakh contributed.</li>
+      </ol>
+      <p><strong>Interpretation.</strong> Delay doubles the monthly burden. The 8% inflation assumption also matters enormously: at 6%, the future cost would be ₹47.9 lakh and the monthly amount about ₹12,000.</p>
+    </div>
+    <div class="block block--lens">
+      <p class="block-label">{{i:chart-line}} Quant lens · Planning in real terms</p>
+      <p>An equivalent method works in today's rupees throughout. The real return is 1.10 ÷ 1.08 − 1 = 1.85% a year. Saving towards ₹20 lakh (in today's money) at 1.85% a year needs about ₹9,660 a month <em>in today's rupees</em>, with the amount raised each year by education inflation. It starts lower than ₹15,923 and ends much higher, which is how a "step-up" SIP works. Both paths reach the same goal; they spread the effort differently across time.</p>
+    </div>
+  </section>
+
+  <section id="l06-lab" aria-labelledby="l06-lab-h" class="bench" data-lab="goal">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Goal planner</p>
+      <h3 id="l06-lab-h">Price a goal and see the cost of waiting</h3>
+      <p class="bench-purpose">Purpose: turn a goal into a monthly number, and see how each year of delay raises it. Returns here are pre-tax assumptions; Lesson 0.10 returns to this with tax. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="gp-c">Cost of the goal today <output id="gp-c-o" for="gp-c"></output></label><input id="gp-c" type="range" min="100000" max="20000000" step="100000" value="2000000"></div>
+        <div class="field"><label for="gp-n">Years until needed <output id="gp-n-o" for="gp-n"></output></label><input id="gp-n" type="range" min="1" max="35" step="1" value="15"></div>
+        <div class="field"><label for="gp-g">Goal inflation <output id="gp-g-o" for="gp-g"></output></label><input id="gp-g" type="range" min="0" max="12" step="0.5" value="8"></div>
+        <div class="field"><label for="gp-r">Assumed annual return <output id="gp-r-o" for="gp-r"></output></label><input id="gp-r" type="range" min="0" max="14" step="0.5" value="10"><span class="hint" id="gp-r-hint"></span></div>
+        <div class="field"><label for="gp-s">Already saved for this goal <output id="gp-s-o" for="gp-s"></output></label><input id="gp-s" type="range" min="0" max="5000000" step="25000" value="0"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Cost when needed</span><span class="readout-value" id="gp-fv"></span></div>
+          <div class="readout"><span class="readout-label">Monthly saving, starting now</span><span class="readout-value" id="gp-m"></span><span class="readout-sub" id="gp-m-sub"></span></div>
+          <div class="readout"><span class="readout-label">If you start 5 years later</span><span class="readout-value" id="gp-d"></span><span class="readout-sub" id="gp-d-sub"></span></div>
+        </div>
+        <div id="gp-chart"></div>
+        <p class="insight" id="gp-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l06-retirement" aria-labelledby="l06-retirement-h">
+    <h2 id="l06-retirement-h">Retirement: the largest and least certain goal</h2>
+    <p>Retirement is different from other goals in two ways. It is not one payment but decades of spending with no salary, so the target is itself a present value (Lesson 0.4). And it is so far away that small changes in assumptions move the answer by crores. The right attitude is an order-of-magnitude estimate, revisited every year.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · Meera's rough retirement number</p>{{tag:hyp}}</div>
+      <p><strong>Assumptions, all debatable:</strong> she wants ₹60,000 a month of spending in today's money from 60, for 25 years. Inflation 5% a year. In retirement, her savings earn 2% a year above inflation. Before retirement, 10% a year nominal.</p>
+      <ol>
+        <li>Annual spending in today's money: ₹7.2 lakh.</li>
+        <li>Corpus needed at 60, in today's money: the present value of ₹7.2 lakh a year for 25 years at a 2% real rate = <strong>₹1.41 crore</strong>.</li>
+        <li>In rupees of the year she turns 60 (31 years away): 1.41 crore × 1.05<sup>31</sup> ≈ <strong>₹6.4 crore</strong>. Her monthly spending then would be about ₹2.7 lakh in that year's rupees.</li>
+        <li>Her existing EPF and funds (₹5.5 lakh) might grow to about ₹1.06 crore at 10%. The rest needs about <strong>₹23,000 a month</strong> for 31 years, before counting her continuing EPF contributions, which would reduce it.</li>
+      </ol>
+      <p><strong>Interpretation.</strong> The ₹6.4 crore figure sounds impossible; the ₹23,000 a month looks achievable for someone saving ₹32,000 today. Both describe the same plan. What would break it: lower returns, higher inflation, retiring earlier, or living longer. Lessons 8.28 (lifecycle investing) and 9.7 (scenario analysis) return to these risks.</p>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution</p>
+      <p>Retirement calculators produce precise-looking numbers from assumptions that are anything but precise. Change the real return in retirement from 2% to 0% and the corpus rises by about 28%. Treat any single figure as the centre of a wide range.</p>
+    </div>
+  </section>
+
+  <section id="l06-housing" aria-labelledby="l06-housing-h">
+    <h2 id="l06-housing-h">Housing and major purchases</h2>
+    <h3>A down payment</h3>
+    <p>Meera wants to buy a ₹90 lakh flat (today's price) in 5 years with a 20% down payment. If flat prices rise 6% a year, the flat will cost ₹1.20 crore and the down payment ₹24.1 lakh. With a medium horizon she assumes a more conservative 7% return: that needs about <strong>₹33,800 a month</strong>, more than she saves today. The arithmetic forces a real decision: raise saving, extend the date, choose a cheaper flat, or reconsider buying now.</p>
+    <p>Whether to rent or buy is a genuine question with no universal answer. It depends on the price-to-rent ratio, how long you will stay, the interest rate, and how much flexibility is worth to you. The tools here let you compute the cost of each path; they do not decide which is better.</p>
+    <h3>A car in two years</h3>
+    <p>A car costing ₹8 lakh today, rising 5% a year, will cost ₹8.82 lakh in two years. At 6.5% in a deposit, that needs about <strong>₹34,600 a month</strong> for 24 months. With a two-year horizon, the return barely matters; the saving does. That is the signature of a short-term goal.</p>
+  </section>
+
+  <section id="l06-gbi" aria-labelledby="l06-gbi-h">
+    <h2 id="l06-gbi-h">Goal-based investing</h2>
+    <p>[[goal-based-investing|Goal-based investing]] organises saving around specific dated goals, each with its own amount, horizon and tolerance for volatility, instead of one undifferentiated pot. Its strengths are practical: it makes progress measurable, and it stops short-term money from being exposed to long-term risks.</p>
+    <p>A commonly used order of priorities, before goal saving begins, is: an emergency fund (Lesson 0.7), adequate insurance (Lesson 0.9), and paying off expensive consumer debt (Lesson 0.8). A goal plan built on top of a 42% credit-card balance is not a plan.</p>
+    <div class="block block--lens">
+      <p class="block-label">{{i:binoculars}} Investor lens</p>
+      <p>Separate "buckets" are a mental convenience; money is interchangeable. Treating goals separately can lead to odd results, such as holding a low-yielding deposit for one goal while paying high interest on a loan for another. Lesson 9 calls this mental accounting. Use goals to organise the plan, and check the whole balance sheet for contradictions.</p>
+    </div>
+  </section>
+
+  <section id="l06-mistakes" aria-labelledby="l06-mistakes-h">
+    <h2 id="l06-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Education will cost ₹20 lakh, so I need to save ₹20 lakh.”</p>
+      <p><span class="mistake-part">Why this fails</span>₹20 lakh is today's price. At 8% education inflation over 15 years, it becomes ₹63 lakh. Planning in today's prices while investing in future rupees leaves a gap of two-thirds.</p>
+      <p><span class="mistake-part">Better question</span>What will this cost in the year I pay for it?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“If I assume a 15% return, the monthly amount becomes affordable.”</p>
+      <p><span class="mistake-part">Why this fails</span>The assumed return must be realistic for the horizon and the assets that can actually deliver it, with their volatility. Raising the assumption lowers the number on the screen, not the risk in the world.</p>
+      <p><span class="mistake-part">Better question</span>What return is reasonable for this horizon, and what do I do if actual returns fall short?</p>
+    </div>
+  </section>
+
+  <section id="l06-limits" aria-labelledby="l06-limits-h">
+    <h2 id="l06-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Returns are not constant.</strong> A bad market just before the goal date can leave a gap with no time to recover (sequence risk). This is why money for near goals should move to stable assets as the date approaches (Lesson 8.28).</li>
+      <li><strong>Goals change.</strong> Children choose different courses, families move cities. Plans must be revised, not merely followed.</li>
+      <li><strong>Tax is ignored here.</strong> After-tax returns are lower; Lesson 0.10 shows by how much.</li>
+      <li><strong>Competing goals.</strong> The monthly amounts for all goals must fit inside free cash flow (Lesson 0.2). When they do not, priorities have to be set explicitly.</li>
+    </ul>
+  </section>
+
+  <section id="l06-check" aria-labelledby="l06-check-h">
+    <h2 id="l06-check-h">Knowledge check</h2>
+<!--numeric id=q06-1 comp=Calculation answer=16.29 tol=0.05 text="₹16.29 lakh" label="Future cost (₹ lakh)"-->
+? A wedding that would cost ₹12 lakh today is planned in 5 years. Assuming costs rise 6.3% a year, what will it cost then, in ₹ lakh (two decimals)?
+= 12 × 1.063<sup>5</sup> = 12 × 1.3572 = <strong>₹16.29 lakh</strong>.
+<!--/numeric-->
+<!--quiz id=q06-2 comp=Understanding-->
+? For money needed in 18 months, which matters most?
++ Stability of the amount, because there is no time to recover from a fall || Short horizons cannot absorb volatility.
+- The highest possible expected return, because time is short || A higher expected return usually comes with volatility you cannot afford over 18 months.
+- Inflation protection above all || Over 18 months inflation matters less than the risk of a sharp fall in value.
+<!--/quiz-->
+<!--quiz id=q06-3 comp=Application-->
+? At an assumed 10% return, two plans each reach about ₹50 lakh in 12 years. Plan A saves a fixed ₹18,700 a month. Plan B starts at ₹13,500 and raises the amount 7% every year. Which is true?
+- Plan B must be worse because it starts lower || Starting lower is offset by larger later contributions.
++ Both can be valid; B spreads more of the effort into later years, when income is usually higher || A step-up plan front-loads less and back-loads more; the choice depends on expected income growth.
+- Plan A always contributes less in total || It does here (about ₹26.9 lakh against ₹29 lakh, because B adds more money later, when it has less time to grow), but "always" is too strong, and total contributions are not the test: both plans reach the goal.
+<!--/quiz-->
+  </section>
+
+  <section id="l06-practice" aria-labelledby="l06-practice-h">
+    <h2 id="l06-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Classify by horizon (short, medium, long): (a) a laptop next year, (b) a sabbatical in 5 years, (c) a child's postgraduate study in 20 years, (d) parents' medical buffer needed any time.
+A: (a) short, (b) medium, (c) long, (d) short: money that might be needed at any moment is treated as short term, like an emergency fund.
+# B A goal costs ₹6 lakh today, due in 4 years, with 5% inflation. You have ₹1.5 lakh set aside. Assuming 7% returns, what monthly contribution is needed?
+A: Future cost = 6 × 1.05<sup>4</sup> = ₹7.29 lakh. Existing savings grow to 1.5 × 1.07<sup>4</sup> = ₹1.97 lakh. Gap = ₹5.33 lakh. Monthly i = 1.07<sup>1/12</sup> − 1 = 0.565%; 48 months. C = 5,33,000 × 0.00565 ÷ (1.00565<sup>48</sup> − 1) ≈ <strong>₹9,690 a month</strong>.
+# C A friend says her retirement plan needs "only" ₹12,000 a month because her calculator assumed 14% returns and 4% inflation for 30 years. What would you check?
+A: Whether a 14% nominal (about 9.6% real) return is realistic for her mix of assets over 30 years; whether 4% inflation is reasonable given India's history and target; whether fees and tax are included; and what the plan looks like at, say, 10% and 6%. The monthly figure is only as reliable as those assumptions.
+# D Meera's down-payment plan needs ₹33,800 a month but she can save ₹32,000 in total and has other goals. List three ways to close the gap and the trade-off of each.
+A: (1) Delay the purchase by 2 years: lower monthly need, but she pays rent longer and prices may rise. (2) Choose a cheaper flat or a larger loan: lower down payment, but a bigger EMI or less space (Lesson 0.8). (3) Raise saving: clear the card to free ₹3,000 a month, direct a larger share of raises (Lesson 0.2). Assuming a higher return is not on the list: it changes the forecast, not the plan.
+# E A sales pitch: "Buy this child plan: it guarantees ₹10 lakh when your son turns 18, for ₹40,000 a year for 15 years." Evaluate it using this lesson.
+A: Total premiums: ₹6 lakh over 15 years for ₹10 lakh in 18 years. The implied return is only about 4.6% a year (the rate at which the premiums grow into ₹10 lakh). And ₹10 lakh in 18 years at 8% education inflation is worth about ₹2.5 lakh in today's education costs. The guarantee is real but small in purchasing-power terms. Compare with the cost of the goal in future rupees and with alternatives (Lesson 0.9 separates insurance from investment).
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l06-notes-h">
+    <h2 id="l06-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l06">Your goals: amount today, year needed, monthly saving required</label><textarea class="input" id="notes-l06" data-notes="l06"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

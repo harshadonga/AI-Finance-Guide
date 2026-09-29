@@ -1,0 +1,275 @@
+<article class="lesson" id="l11" data-lesson data-title="0.11 Fraud and financial safety" data-nav-title="0.11 Fraud &amp; financial safety" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.11 · Part IV · Threats to the system</p>
+    <h1>Financial Fraud and Safety</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Every return comes with risk. A high return with no risk is not an investment offer; it is a description of fraud. Most modern fraud does not defeat your intelligence. It defeats your verification habits.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l11-why">Why fraud works</a><a href="#l11-test">The guarantee test</a><a href="#l11-ponzi">Ponzi mechanics</a><a href="#l11-lab">Ponzi simulator</a><a href="#l11-madoff">Case: Madoff</a><a href="#l11-saradha">Case: Saradha</a><a href="#l11-patterns">Scam patterns</a><a href="#l11-security">Account security</a><a href="#l11-report">Verify and report</a><a href="#l11-drill">Red-flag drill</a>
+    </nav>
+  </header>
+
+  <section id="l11-why" aria-labelledby="l11-why-h">
+    <h2 id="l11-why-h">Why fraud works on intelligent people</h2>
+    <p>Everything in this module builds a household's stock of wealth slowly. Fraud removes it quickly, and often permanently: money sent to a fraudster is usually hard or impossible to recover. It works not because victims are foolish but because it targets predictable human responses: trust in authority, fear of missing out, urgency, embarrassment, and the wish for a shortcut.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Almost every scam combines some of four levers: <strong>authority</strong> (a bank, the police, a famous investor), <strong>urgency</strong> (act in the next hour), <strong>secrecy</strong> (don't tell your family, don't hang up) and <strong>reward or fear</strong> (a guaranteed return, or an arrest). When you notice two of them at once, stop. The defence is not cleverness; it is a habit of verifying through a channel the other party does not control.</p>
+    </aside>
+  </section>
+
+  <section id="l11-predict" aria-labelledby="l11-predict-h">
+    <h2 id="l11-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p11-->
+? A scheme promises "3% a month, guaranteed, capital fully safe." What annual return is that, and how does it compare with the safest rupee investments?
+- 36% a year, about the same as a good equity fund || 36% is simple annualisation, and no diversified fund reliably earns anything like it, let alone with a guarantee.
++ About 42.6% a year, several times what the safest investments pay || 1.03<sup>12</sup> − 1 = 42.6% (Lesson 0.4). Bank deposits and government securities pay a small fraction of that.
+- 3% a year, similar to a savings account || The promise is 3% per month, not per year.
+> <p><strong>42.6% a year, guaranteed.</strong> Safe rupee assets pay a small fraction of that; risky assets can earn more in some years and lose heavily in others. A guarantee of 42.6% would have to come from an investment that beats every market with no risk, and no such investment is known. The simpler explanation is that early "returns" are paid from later investors' money. The next sections show why that must end.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l11-test" aria-labelledby="l11-test-h">
+    <h2 id="l11-test-h">The guarantee test</h2>
+    <p>You now have enough finance to test any offer in a minute:</p>
+    <ol class="steps">
+      <li><strong>Annualise it.</strong> Convert "2% a month" or "double in 3 years" to an effective annual rate (Lesson 0.4). Doubling in 3 years is 26% a year.</li>
+      <li><strong>Compare it with the safe rate.</strong> What do insured deposits and government securities pay today? Anything far above that must carry risk.</li>
+      <li><strong>Ask where the return comes from.</strong> A real business, loan or asset must be named, and must plausibly earn that much. "Proprietary trading", "forex arbitrage", "crypto mining" or "a secret strategy" are not answers.</li>
+      <li><strong>Look for a guarantee.</strong> A guaranteed high return is the single strongest warning sign. Outside insured deposits and government securities, genuine investments do not guarantee high returns.</li>
+      <li><strong>Check registration.</strong> Is the entity registered with the right regulator for <em>this</em> activity? A company being registered under company law does not make it authorised to take deposits or manage investments.</li>
+    </ol>
+    <p>The [[guaranteed-return|guaranteed-return claim]] fails at step 4 in almost every fraud. It is worth memorising the pairing: <em>high return plus no risk means something is being hidden.</em></p>
+  </section>
+
+  <section id="l11-ponzi" aria-labelledby="l11-ponzi-h">
+    <h2 id="l11-ponzi-h">How a Ponzi scheme works, and why it must collapse</h2>
+    <p>A [[ponzi|Ponzi scheme]] (named after Charles Ponzi, who ran one in Boston in 1920) pays "returns" to existing investors using money from new investors. Nothing is actually earned. For a while this looks exactly like a successful investment: statements show steady gains, early investors are paid on time and recruit friends, and the operator appears generous.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · A Ponzi scheme's cash each month</p>
+      <div class="fx"><math display="block"><msub><mi>C</mi><mi>t</mi></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mtext>new money</mtext><mi>t</mi></msub><mo>−</mo><msub><mtext>promised payouts</mtext><mi>t</mi></msub><mo>−</mo><msub><mtext>withdrawals</mtext><mi>t</mi></msub><mo>−</mo><msub><mtext>operator's take</mtext><mi>t</mi></msub></math></div>
+      <dl class="vars"><dt>C<sub>t</sub></dt><dd>Cash the scheme actually holds at month t.</dd><dt>Promised payouts</dt><dd>The "return" paid to all existing investors: the promised rate × total money owed. It grows as the scheme grows.</dd><dt>New money</dt><dd>Deposits from new investors, the only real inflow.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Why collapse is certain.</b> Payouts grow with the total owed, which grows with every new investor. To keep cash positive, new money must grow at least as fast as the promised rate, forever. But the pool of new investors is finite. When recruitment slows, or when a shock makes many investors ask for their money back at once, cash goes negative and the scheme collapses.</p>
+        <p><b>Interpretation.</b> Early investors who withdraw may profit, paid with later investors' money. That is exactly what makes Ponzi schemes spread: the testimonials are real.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l11-lab" aria-labelledby="l11-lab-h" class="bench" data-lab="ponzi">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Ponzi simulator</p>
+      <h3 id="l11-lab-h">Keep the scheme alive as long as you can</h3>
+      <p class="bench-purpose">Purpose: see that a scheme paying returns from new money survives only while recruitment outpaces its promises, and that the gap between what it owes and what it holds grows every month. A simplified model, not a reconstruction of any real scheme. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="pz-r">Promised return per month <output id="pz-r-o" for="pz-r"></output></label><input id="pz-r" type="range" min="0.5" max="6" step="0.25" value="3"></div>
+        <div class="field"><label for="pz-g">New investors per month (as % of current) <output id="pz-g-o" for="pz-g"></output></label><input id="pz-g" type="range" min="0" max="20" step="0.5" value="8"></div>
+        <div class="field"><label for="pz-s">Months before recruitment slows <output id="pz-s-o" for="pz-s"></output></label><input id="pz-s" type="range" min="3" max="48" step="1" value="24"></div>
+        <div class="field"><label for="pz-w">Investors withdrawing principal each month <output id="pz-w-o" for="pz-w"></output></label><input id="pz-w" type="range" min="0" max="5" step="0.25" value="1"></div>
+        <div class="field"><label for="pz-k">Operator's take of new money <output id="pz-k-o" for="pz-k"></output></label><input id="pz-k" type="range" min="0" max="40" step="5" value="10"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Collapses in</span><span class="readout-value" id="pz-c"></span><span class="readout-sub" id="pz-c-sub"></span></div>
+          <div class="readout"><span class="readout-label">Investors at the end</span><span class="readout-value" id="pz-n"></span></div>
+          <div class="readout"><span class="readout-label">Owed vs cash at the end</span><span class="readout-value" id="pz-o"></span><span class="readout-sub" id="pz-o-sub"></span></div>
+        </div>
+        <div id="pz-chart"></div>
+        <p class="insight" id="pz-insight" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="bench-foot"><p>Try this: set recruitment to 20% a month and the slow-down to 48 months. The scheme lasts longer and grows enormous, so far more people lose money when it ends. Then set the promised return to 0.5% a month: even a modest promise fails once new money stops.</p></div>
+  </section>
+
+  <section id="l11-madoff" aria-labelledby="l11-madoff-h" class="case">
+    <div class="case-head">
+      <p class="block-label">{{i:clock-counter-clockwise}} Historical case · Bernard L. Madoff Investment Securities</p>
+      <h3 id="l11-madoff-h">The largest Ponzi scheme on record</h3>
+      {{tag:hist:1990s to 2008}}
+    </div>
+    <div class="case-grid">
+      <div class="case-col">
+        <h4>{{i:eye}} What an investor could have noticed at the time</h4>
+        <ul>
+          <li><strong>Returns that were too smooth.</strong> Reported returns were steady, around 1% a month, with remarkably few losing months through years when markets were volatile.</li>
+          <li><strong>A strategy that did not add up.</strong> The stated options-based strategy could not plausibly produce those returns at that scale, as the analyst Harry Markopolos repeatedly argued to the US regulator.</li>
+          <li><strong>No independent custody.</strong> Madoff's own firm held client assets and executed the trades, so statements were produced by the same people running the money.</li>
+          <li><strong>A tiny auditor</strong> for a very large operation, and secrecy presented as exclusivity.</li>
+        </ul>
+        <p><em>Decision problem:</em> the manager had an excellent reputation and had been chairman of the NASDAQ stock market. Many sophisticated institutions invested through feeder funds. Trusting reputation felt safe.</p>
+      </div>
+      <div class="case-col">
+        <h4>{{i:clock-clockwise}} What we learned afterwards</h4>
+        <ul>
+          <li>As investors sought to withdraw money during the 2008 financial crisis, the scheme ran out of cash. Madoff was arrested on <strong>11 December 2008</strong>.</li>
+          <li>The US SEC's own Inspector General found that the agency received <strong>six substantive complaints</strong> between June 1992 and December 2008 and conducted three examinations and two investigations, yet "a thorough and competent investigation or examination was never performed."</li>
+          <li>A court-appointed trustee has since recovered about <strong>$15.5 billion</strong> for victims (as of 21 August 2026), an unusually high recovery for a Ponzi scheme.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-lessons">
+      <p class="block-label">{{i:lightbulb}} Lessons</p>
+      <ul>
+        <li>Returns that are too consistent are a warning sign, not a comfort. Real investments have bad months.</li>
+        <li>Independent custody and a credible auditor matter more than reputation.</li>
+        <li>Regulators can miss fraud. Your own checks are not optional.</li>
+        <li>Shocks that trigger withdrawals (the 2008 crisis here) are what usually expose a Ponzi scheme, exactly as the simulator shows.</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} Sources: <a href="https://www.sec.gov/files/oig-509-exec-summary.pdf" rel="noopener" target="_blank">SEC Office of Inspector General, Report OIG-509, executive summary</a> · <a href="https://www.madofftrustee.com/" rel="noopener" target="_blank">Madoff SIPA Trustee, recoveries (viewed 29 Sep 2026)</a></p>
+    </div>
+  </section>
+
+  <section id="l11-saradha" aria-labelledby="l11-saradha-h" class="case">
+    <div class="case-head">
+      <p class="block-label">{{i:clock-counter-clockwise}} Historical case · Saradha Group, eastern India</p>
+      <h3 id="l11-saradha-h">A deposit scheme run through agents</h3>
+      {{tag:hist:2008 to 2013}}
+    </div>
+    <div class="case-grid">
+      <div class="case-col">
+        <h4>{{i:eye}} What investors saw at the time</h4>
+        <p>The group collected money from a very large number of small investors, mostly in West Bengal and neighbouring states, through networks of local agents paid commissions, with promises of high returns. Collection was often framed as buying real-estate or other products rather than as deposits, which blurred which regulator, if any, was responsible. For many investors, the agent was a familiar local person, which made trust easy.</p>
+      </div>
+      <div class="case-col">
+        <h4>{{i:clock-clockwise}} What happened</h4>
+        <p>On <strong>23 April 2013</strong>, SEBI ordered Saradha Realty India Ltd to wind up its collective investment schemes and refund the money collected, with the returns due under the offer terms, within three months, and barred the company and its managing director from the securities market. The group collapsed that month, leaving many small investors unpaid, and the case led to prolonged investigations and litigation.</p>
+      </div>
+    </div>
+    <div class="case-lessons">
+      <p class="block-label">{{i:lightbulb}} Lessons</p>
+      <ul>
+        <li>Check that the entity is registered with the right regulator for the activity: SEBI for investment schemes, the RBI for deposit-taking.</li>
+        <li>When the salesperson earns a commission on your money, their trustworthiness as a person does not make the product sound.</li>
+        <li>Disguising deposits as purchases is a common way to escape regulation; ask what exactly you will own.</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} Source: <a href="https://www.sebi.gov.in/sebi_data/docfiles/25683_t.html" rel="noopener" target="_blank">SEBI order in the matter of Saradha Realty India Ltd, 23 April 2013</a></p>
+    </div>
+  </section>
+
+  <section id="l11-patterns" aria-labelledby="l11-patterns-h">
+    <h2 id="l11-patterns-h">Modern scam patterns</h2>
+    <h3>Investment scams</h3>
+    <p>Messaging-app groups share "tips" and screenshots of profits, then invite you to a paid "VIP" group or a trading app that shows gains you can never withdraw. Fake apps and websites imitate real brokers. Deepfake videos show well-known people apparently endorsing a scheme. The defence is the guarantee test and the registration check.</p>
+    <h3>[[phishing|Phishing]]</h3>
+    <p>Messages or emails that imitate your bank, a courier, the electricity board or the tax department, pushing you to click a link, install an app or call a number. Their goal is your login details, card details, OTP or remote access to your phone. Language and design are now often flawless, partly because AI tools write them; poor spelling is no longer a reliable warning sign.</p>
+    <h3>[[impersonation|Impersonation]] and "digital arrest"</h3>
+    <p>Callers pose as police, the CBI, the Narcotics Control Bureau, customs, the RBI or a courier firm, claim you are implicated in a crime, keep you on a video call for hours, and demand money to "verify" or "clear" your accounts. India's Ministry of Home Affairs has described these "digital arrest" scams in Parliament. <strong>No legitimate agency arrests anyone over a video call or asks for money to be transferred for verification.</strong> Relatives' voices can also be cloned with AI to request urgent money; call them back on a number you already have.</p>
+    <div class="block block--lens">
+      <p class="block-label">{{i:robot}} AI lens</p>
+      <p>AI lowers the cost of convincing fraud: flawless messages in any language, cloned voices, and fake video endorsements. It also helps defenders, for example by flagging suspicious transactions. The practical conclusion is the same as everywhere in this course: a convincing presentation is not evidence. Verify through a channel you control. Level 18 turns this into a verification loop for AI-assisted research.</p>
+    </div>
+  </section>
+
+  <section id="l11-security" aria-labelledby="l11-security-h">
+    <h2 id="l11-security-h">Account security: a checklist</h2>
+    <ul class="checklist">
+      <li>{{i:check}} <span><strong>Never share an OTP, PIN, CVV or password</strong>, with anyone, including someone claiming to be from your bank. Banks do not ask for them.</span></li>
+      <li>{{i:check}} <span><strong>You never need a UPI PIN to receive money.</strong> A request that asks for your PIN is a request to pay.</span></li>
+      <li>{{i:check}} <span><strong>Use unique passwords</strong> with a password manager, and turn on [[two-factor|two-factor authentication]], preferring an authenticator app to SMS where offered.</span></li>
+      <li>{{i:check}} <span><strong>Watch for [[sim-swap|SIM-swap]] signs:</strong> if your phone suddenly loses network for no reason, contact your mobile operator and bank immediately.</span></li>
+      <li>{{i:check}} <span><strong>Never install screen-sharing or "support" apps</strong> at a caller's request.</span></li>
+      <li>{{i:check}} <span><strong>Keep devices and apps updated</strong>, and install banking and broker apps only from official app stores via the institution's own website.</span></li>
+      <li>{{i:check}} <span><strong>Set transaction limits and alerts</strong> on cards and UPI apps, and review statements monthly.</span></li>
+    </ul>
+    <h3>Broker and investment-account security</h3>
+    <p>Level 1 explains what a [[broker|broker]] and a [[demat|demat account]] are. For now, a few habits protect any investment account:</p>
+    <ul>
+      <li>Never hand over your trading login to anyone who offers to "manage" or "handle" your account for a share of profits.</li>
+      <li>Pay only into accounts that belong to the registered intermediary itself. Since 1 October 2025, SEBI-registered intermediaries collecting money from investors use <strong>validated UPI handles</strong> ending in <code>@valid</code> with a category tag (for example <code>name.brk@validbank</code> for a broker or <code>name.mf@validbank</code> for a mutual fund), shown with a green thumbs-up in a triangle in UPI apps. SEBI's <strong>SEBI Check</strong> tool lets you verify a UPI handle or bank account against registered intermediaries.</li>
+      <li>Read the contract notes and statements sent by the exchange and depository, not only those from the broker's app, and question anything you did not authorise.</li>
+    </ul>
+  </section>
+
+  <section id="l11-report" aria-labelledby="l11-report-h">
+    <h2 id="l11-report-h">Verify and report</h2>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:siren}} If money has been taken</p>{{tag:curr:29 Sep 2026}}</div>
+      <ol>
+        <li><strong>Call 1930 immediately</strong>, the National Cyber Crime Helpline (toll-free, 24 hours). Speed matters: fast reporting improves the chance that funds can be frozen before they are moved on.</li>
+        <li><strong>Report at <span class="mono">cybercrime.gov.in</span></strong>, the National Cyber Crime Reporting Portal.</li>
+        <li><strong>Call your bank</strong> using the number on its official website or your card, and ask it to block cards, UPI and net banking.</li>
+        <li>Keep evidence: screenshots, numbers, transaction references.</li>
+      </ol>
+      <p>To check or report an unauthorised deposit-taking scheme, use the RBI's <strong>Sachet</strong> portal (<span class="mono">sachet.rbi.org.in</span>). To verify a securities-market intermediary, use SEBI's registration search and SEBI Check.</p>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Sources: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2085609&amp;reg=3&amp;lang=2" rel="noopener" target="_blank">PIB, Ministry of Home Affairs on the 1930 helpline and portal (18 Dec 2024)</a> · <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2082761" rel="noopener" target="_blank">PIB, digital arrest scams (10 Dec 2024)</a> · <a href="https://www.scconline.com/blog/post/2025/10/04/sebi-introduces-verified-upi-handles-and-sebi-check-to-safeguard-investors/" rel="noopener" target="_blank">SCC Online on SEBI's validated UPI handles and SEBI Check</a></p>
+    </div>
+  </section>
+
+  <section id="l11-drill" aria-labelledby="l11-drill-h">
+    <h2 id="l11-drill-h">Red-flag drill</h2>
+    <p>Each message below is constructed for practice; any resemblance to a specific real message is illustrative. Decide what to do before checking.</p>
+<!--quiz id=q11-1 comp=Application label="Scenario 1"-->
+? A WhatsApp group you were added to posts daily stock "calls" and screenshots of members' profits. The admin invites you to a "VIP" group for ₹25,000 and a trading app "with guaranteed 5% weekly returns." What is the best response?
+- Join with a small amount to test it || Scam apps often show fake gains on small deposits to encourage larger ones, then block withdrawals.
++ Leave the group and do not install the app; guaranteed weekly returns fail the guarantee test and the app is not a verified broker || 5% a week is over 1,100% a year, and a guarantee confirms it is not real.
+- Ask the admin for their SEBI registration number, and join if they give one || A number can be fake or stolen. Verify on SEBI's site yourself, and a guarantee of 5% a week is disqualifying regardless.
+<!--/quiz-->
+<!--quiz id=q11-2 comp=Application label="Scenario 2"-->
+? A video caller in uniform says a parcel in your name contained drugs, that you are under "digital arrest", and that you must stay on the call and transfer your savings to a "government verification account" until cleared. What do you do?
++ Hang up, do not transfer anything, and report the call on 1930 or cybercrime.gov.in || No agency arrests over video calls or asks for money for verification.
+- Transfer a small amount to show good faith || Any payment confirms you are a target and leads to larger demands.
+- Stay on the call but refuse to pay || Staying on the call keeps you under pressure and isolated; the call itself is the scam.
+<!--/quiz-->
+<!--quiz id=q11-3 comp=Application label="Scenario 3"-->
+? You are paying your broker to add money to your trading account. The UPI app shows the payee as <code>kavyastocks.brk@validhdfc</code> with a green thumbs-up in a triangle. What does that tell you?
+- That the investment is safe and returns are assured || A validated handle confirms the payee's identity, not the quality or safety of any investment.
++ That the payee is a SEBI-registered broker's validated handle; you can also confirm it with SEBI Check || The @valid handle and the icon identify a registered intermediary's collection account.
+- Nothing; all UPI handles look like that || Ordinary handles do not end in @valid with a category tag, and do not show the validation icon.
+<!--/quiz-->
+<!--quiz id=q11-4 comp=Interpretation label="Scenario 4"-->
+? A well-dressed agent from your neighbourhood, whom your parents trust, offers a "plot booking plan" paying 18% a year, guaranteed, with monthly instalments collected in cash. Which question best cuts to the risk?
+- Is the agent trustworthy? || Personal trust in the agent says nothing about the scheme; agents often believe in schemes they are paid to sell.
++ Which regulator has authorised this scheme to collect money from the public, and where exactly does an 18% guaranteed return come from? || Registration and the source of return are the two checks that expose schemes like Saradha.
+- How many people have already invested? || Popularity is how Ponzi schemes grow; it is not evidence of soundness.
+<!--/quiz-->
+  </section>
+
+  <section id="l11-mistakes" aria-labelledby="l11-mistakes-h">
+    <h2 id="l11-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Only gullible or greedy people get scammed.”</p>
+      <p><span class="mistake-part">Why this fails</span>Madoff's victims included large institutions and experienced investors. Scams target stress, trust and time pressure, which affect everyone. Believing you are immune removes the habit of verifying.</p>
+      <p><span class="mistake-part">Better question</span>Have I verified this through a channel the other person does not control?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“It's a registered company, so it's legitimate.”</p>
+      <p><span class="mistake-part">Why this fails</span>Registering a company is not a licence to accept deposits or run investment schemes. Those require authorisation from the RBI, SEBI or another specific regulator.</p>
+      <p><span class="mistake-part">Better question</span>Which regulator authorises this activity, and can I find it on that regulator's own website?</p>
+    </div>
+  </section>
+
+  <section id="l11-limits" aria-labelledby="l11-limits-h">
+    <h2 id="l11-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Frauds evolve.</strong> Specific scripts change monthly; the four levers and the guarantee test do not.</li>
+      <li><strong>Legitimate investments can fail.</strong> Not every loss is fraud. A real business can go bankrupt; that is risk, covered in Levels 3 to 9.</li>
+      <li><strong>Recovery is uncertain.</strong> Reporting quickly helps, but many losses are never recovered. Prevention is the only reliable defence.</li>
+      <li><strong>Reporting channels change.</strong> Helplines and portals are verified as of the date shown; check current official sources.</li>
+    </ul>
+  </section>
+
+  <section id="l11-practice" aria-labelledby="l11-practice-h">
+    <h2 id="l11-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Which of the four levers (authority, urgency, secrecy, reward or fear) appear in: "This is the RBI fraud team. Your account will be frozen in 30 minutes. Do not inform the branch; share the OTP we send to secure it."
+A: Authority (RBI), urgency (30 minutes), secrecy (do not inform the branch), fear (frozen account). Four out of four, plus a request for an OTP, which no genuine institution makes.
+# B A scheme offers "your money doubles in 18 months." Annualise it and compare it with a 7% deposit.
+A: 2<sup>1/1.5</sup> − 1 = 58.7% a year, more than eight times the deposit rate. With any guarantee attached, it fails the test.
+# C In the simulator, why does raising the withdrawal rate make collapse come sooner even when recruitment is strong?
+A: Withdrawals drain cash without any real earnings to replace them, and payouts are already consuming new money. A shock that raises withdrawals (a rumour, a crisis) can tip a scheme from positive to negative cash almost immediately, which is how Madoff's scheme ended in 2008.
+# D Your uncle wants to invest ₹5 lakh with a "forex trading expert" who shows statements with 4% monthly profits and no losing month in two years. Write the three questions you would ask him to check.
+A: (1) Who holds the money: is it in an account in the uncle's own name at a regulated institution, or does the expert control it? (2) Is the expert registered with SEBI (and is retail forex trading of this kind even permitted here), and have we verified that on the regulator's own site? (3) How can 4% a month with no losing month be possible, when real strategies have bad months? Too-smooth returns and self-custody were Madoff's signatures.
+# E Using this module, explain why a Ponzi scheme is especially likely to collapse during a broad market crisis.
+A: In a crisis, investors face their own liquidity needs (Lesson 0.7), so withdrawals spike, while new money dries up as people become cautious. The scheme's two cash drivers turn against it at once. Correlated shocks expose structures that depend on continuous inflows.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l11-notes-h">
+    <h2 id="l11-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l11">Security settings to change this week, and family members to brief</label><textarea class="input" id="notes-l11" data-notes="l11"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

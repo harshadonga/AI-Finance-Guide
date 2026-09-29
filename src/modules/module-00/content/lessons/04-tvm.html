@@ -1,0 +1,298 @@
+<article class="lesson" id="l04" data-lesson data-title="0.4 Time value of money" data-nav-title="0.4 Time value of money" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.4 · Part II · Time and purchasing power</p>
+    <h1>Time Value of Money</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>A rupee today and a rupee in ten years are different goods. Compounding makes growth depend more on time than on rate, and discounting is simply compounding run backwards.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l04-why">Why it exists</a><a href="#l04-simple">Simple interest</a><a href="#l04-compound">Compounding</a><a href="#l04-lab">Explorer</a><a href="#l04-pv">Present value</a><a href="#l04-annuity">Regular contributions</a><a href="#l04-cagr">CAGR</a><a href="#l04-annual">Annualisation</a><a href="#l04-opp">Opportunity cost</a><a href="#l04-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l04-why" aria-labelledby="l04-why-h">
+    <h2 id="l04-why-h">Why money has a time value</h2>
+    <p>Would you rather have ₹1 lakh today or ₹1 lakh in five years? Almost everyone chooses today, and for good reasons. Money today can be invested and grow. Prices may rise, so the same rupees may buy less later (Lesson 0.5). And the future is uncertain: a promise of money later might not be kept.</p>
+    <p>Because of the first reason alone, ₹1 lakh today is worth <em>more</em> than ₹1 lakh later. The question this lesson answers is: how much more? The same tools will later value bonds (Lesson 7), companies (Lesson 5) and your own future income (Lesson 0.9).</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Two pictures carry the whole lesson. <strong>A snowball:</strong> as it rolls it picks up snow, and a bigger ball picks up more snow per turn, so growth itself grows. <strong>A time machine:</strong> future value carries money forward in time by growing it; present value carries money back by shrinking it at the same rate. Every formula below is one of these two pictures.</p>
+    </aside>
+  </section>
+
+  <section id="l04-predict" aria-labelledby="l04-predict-h">
+    <h2 id="l04-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p04-->
+? You invest ₹1,00,000 at 12% a year and leave it alone for 30 years, reinvesting everything. Roughly how much do you end up with?
+- About ₹4.6 lakh || That is simple interest: ₹12,000 a year for 30 years plus the original ₹1 lakh. It ignores interest earned on interest.
+- About ₹10 lakh || Compounding does much more than this over 30 years at 12%.
++ About ₹30 lakh || ₹1,00,000 × 1.12<sup>30</sup> ≈ ₹29.96 lakh.
+- About ₹1 crore || That would need roughly 17% a year for 30 years, or 12% for about 41 years.
+> <p><strong>₹29,95,992.</strong> Six and a half times the simple-interest answer. Most people's intuition is linear; compounding is not.</p>
+> <p>Now a second, sharper question: at 12%, ₹1 lakh becomes ₹3.1 lakh in 10 years and ₹9.6 lakh in 20. Doubling the time more than quadrupled the <em>gain</em> (₹2.1 lakh to ₹8.6 lakh). That is what exponential growth means in practice.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l04-simple" aria-labelledby="l04-simple-h">
+    <h2 id="l04-simple-h">Simple interest</h2>
+    <p>[[simple-interest|Simple interest]] is paid only on the original amount. Interest is taken out, not added to the balance, so the base never grows.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Simple interest</p>
+      <div class="fx"><math display="block"><mi>I</mi><mo>=</mo><mi>P</mi><mo>×</mo><mi>r</mi><mo>×</mo><mi>n</mi><mspace width="2em"></mspace><mi>FV</mi><mo>=</mo><mi>P</mi><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mi>n</mi><mo>)</mo></math></div>
+      <dl class="vars"><dt>P</dt><dd>Principal: the amount invested or borrowed, in ₹.</dd><dt>r</dt><dd>Interest rate per period, as a decimal (12% = 0.12).</dd><dt>n</dt><dd>Number of periods (years, if r is annual).</dd><dt>I</dt><dd>Total interest, in ₹.</dd></dl>
+      <div class="fx-meta"><p><b>Worked example.</b> ₹1,00,000 at 12% for 30 years: I = 1,00,000 × 0.12 × 30 = ₹3,60,000; total ₹4,60,000.</p>
+      <p><b>Where you meet it.</b> Deposits that pay interest out monthly or quarterly instead of reinvesting it, some bonds' coupon payments, and the misleading "flat rate" loans of Lesson 0.8.</p></div>
+    </div>
+  </section>
+
+  <section id="l04-compound" aria-labelledby="l04-compound-h">
+    <h2 id="l04-compound-h">Compound interest and future value</h2>
+    <p>With [[compound-interest|compound interest]], each period's interest is added to the balance and earns interest itself. After one year ₹1,00,000 at 12% becomes ₹1,12,000. In year two, 12% is earned on ₹1,12,000, giving ₹1,25,440. The extra ₹1,440 is interest on interest, and it grows every year.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Future value</p>
+      <div class="fx"><math display="block"><mi>FV</mi><mo>=</mo><mi>PV</mi><mo>×</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>n</mi></msup></math></div>
+      <dl class="vars"><dt>FV</dt><dd>[[future-value|Future value]] after n periods, in ₹.</dd><dt>PV</dt><dd>Present value: the amount today, in ₹.</dd><dt>r</dt><dd>Return per period, as a decimal.</dd><dt>n</dt><dd>Number of periods. The exponent is what makes growth accelerate.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> ₹1,00,000 at 12%: 10 years → ₹3,10,585; 20 years → ₹9,64,629; 30 years → ₹29,95,992.</p>
+        <p><b>Sensitivity to rate.</b> At 30 years, moving from 10% to 12% raises the result from ₹17.4 lakh to ₹30.0 lakh: a 2-point change in rate, a 72% change in outcome. Small differences in return, or in fees, matter enormously over long horizons (Lesson 2.6 on expense ratios).</p>
+        <p><b>Sensitivity to time.</b> Each extra year multiplies by (1 + r), so the rupee gain from one more year is largest at the end. The final 10 of 30 years produced ₹20.3 lakh of the ₹29 lakh total gain.</p>
+        <p><b>Limitations.</b> Assumes a constant return and full reinvestment, no withdrawals, taxes or fees. Real investment returns vary year to year; Lesson 8.3 shows why the order of returns then matters.</p>
+      </div>
+    </div>
+    <h3>Compounding more often</h3>
+    <p>Rates are usually quoted per year, but interest may be added more often. Many Indian bank fixed deposits add interest quarterly. A quoted 7% a year compounded quarterly means 1.75% per quarter, which grows to (1.0175)<sup>4</sup> − 1 = <strong>7.19%</strong> over a year. That true yearly figure is the effective annual rate, covered below under annualisation.</p>
+  </section>
+
+  <section id="l04-lab" aria-labelledby="l04-lab-h" class="bench" data-lab="compound">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Compounding explorer</p>
+      <h3 id="l04-lab-h">Separate what you put in from what growth added</h3>
+      <p class="bench-purpose">Purpose: see how time turns a steady flow into a stock that is mostly growth, and how inflation changes what the final number is worth. The return is an assumption you choose, not a forecast. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="cp-p">Starting amount <output id="cp-p-o" for="cp-p"></output></label><input id="cp-p" type="range" min="0" max="2000000" step="10000" value="100000"></div>
+        <div class="field"><label for="cp-m">Monthly contribution <output id="cp-m-o" for="cp-m"></output></label><input id="cp-m" type="range" min="0" max="100000" step="1000" value="10000"></div>
+        <div class="field"><label for="cp-r">Annual return (assumed) <output id="cp-r-o" for="cp-r"></output></label><input id="cp-r" type="range" min="0" max="15" step="0.5" value="10"></div>
+        <div class="field"><label for="cp-n">Years <output id="cp-n-o" for="cp-n"></output></label><input id="cp-n" type="range" min="1" max="40" step="1" value="25"></div>
+        <div class="field"><label for="cp-i">Inflation <output id="cp-i-o" for="cp-i"></output></label><input id="cp-i" type="range" min="0" max="10" step="0.5" value="5"></div>
+        <div class="field"><span class="field-label" id="cp-mode-l">Interest is</span>
+          <div class="seg" role="group" aria-labelledby="cp-mode-l"><button type="button" aria-pressed="true" data-mode="compound">Reinvested (compound)</button><button type="button" aria-pressed="false" data-mode="simple">Paid out (simple)</button></div></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Final value</span><span class="readout-value" id="cp-fv"></span><span class="readout-sub" id="cp-fv-sub"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-2)"></i>You put in</span><span class="readout-value" id="cp-in"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-1)"></i>Growth added</span><span class="readout-value" id="cp-g"></span><span class="readout-sub" id="cp-g-sub"></span></div>
+        </div>
+        <div id="cp-chart"></div>
+        <p class="insight" id="cp-insight" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="bench-foot"><p>Try this: keep everything fixed and change only the years from 25 to 35. Then return to 25 years and raise the return from 10% to 12%. Which lever moved the final value more? Then set inflation to 7% and look at the real value.</p></div>
+  </section>
+
+  <section id="l04-pv" aria-labelledby="l04-pv-h">
+    <h2 id="l04-pv-h">Present value and discounting</h2>
+    <p>Run the time machine backwards. If ₹1 today grows to ₹(1 + r)<sup>n</sup>, then a rupee received n years from now is worth 1 ÷ (1 + r)<sup>n</sup> today. Converting a future amount into today's value is called [[discounting|discounting]], and the rate used is the [[discount-rate|discount rate]].</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Present value</p>
+      <div class="fx"><math display="block"><mi>PV</mi><mo>=</mo><mfrac><mi>FV</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>n</mi></msup></mfrac></math></div>
+      <dl class="vars"><dt>PV</dt><dd>[[present-value|Present value]]: what the future amount is worth today, in ₹.</dd><dt>FV</dt><dd>The future amount, in ₹.</dd><dt>r</dt><dd>Discount rate per period: the return you could earn elsewhere on money of similar risk.</dd><dt>n</dt><dd>Periods until the money arrives.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> You need ₹10 lakh in 8 years and can earn 7% a year safely. PV = 10,00,000 ÷ 1.07<sup>8</sup> = <strong>₹5,82,009</strong>. That is the amount to set aside today.</p>
+        <p><b>Interpretation.</b> Present value lets you compare money at different dates on one scale. It is the foundation of every valuation in this course: a bond is the present value of its payments, a company the present value of its future cash flows.</p>
+        <p><b>Sensitivity.</b> The further away the money and the higher the rate, the smaller its present value. At 12% instead of 7%, the same ₹10 lakh in 8 years is worth only ₹4,03,883 today.</p>
+        <p><b>Limitations.</b> The answer depends heavily on the discount rate, which is a judgement. Choosing it is one of the hardest problems in finance (Lessons 5.9 to 5.11).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l04-pvlab" aria-labelledby="l04-pvlab-h" class="bench" data-lab="pvdial">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Discounting dial</p>
+      <h3 id="l04-pvlab-h">What is a future amount worth today?</h3>
+      <p class="bench-purpose">Purpose: see how distance in time and the discount rate together shrink the value of future money. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="pv-f">Amount in the future <output id="pv-f-o" for="pv-f"></output></label><input id="pv-f" type="range" min="100000" max="10000000" step="100000" value="1000000"></div>
+        <div class="field"><label for="pv-n">Years until received <output id="pv-n-o" for="pv-n"></output></label><input id="pv-n" type="range" min="1" max="40" step="1" value="8"></div>
+        <div class="field"><label for="pv-r">Discount rate <output id="pv-r-o" for="pv-r"></output></label><input id="pv-r" type="range" min="1" max="15" step="0.5" value="7"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Present value</span><span class="readout-value" id="pv-v"></span><span class="readout-sub" id="pv-v-sub"></span></div>
+          <div class="readout"><span class="readout-label">Discount factor</span><span class="readout-value" id="pv-df"></span><span class="readout-sub">value today of ₹1 then</span></div>
+        </div>
+        <div id="pv-chart"></div>
+        <p class="insight" id="pv-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l04-annuity" aria-labelledby="l04-annuity-h">
+    <h2 id="l04-annuity-h">Regular contributions: the annuity formulas</h2>
+    <p>Most real saving is a flow: a fixed amount every month. A series of equal payments at regular intervals is called an [[annuity|annuity]]. A monthly SIP is one; so is an EMI. Adding up the future value of each payment gives a compact formula, needed again in Lessons 0.6 and 0.8.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Future value of a level contribution (paid at the end of each period)</p>
+      <div class="fx"><math display="block"><mi>FV</mi><mo>=</mo><mi>C</mi><mo>×</mo><mfrac><mrow><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>N</mi></msup><mo>−</mo><mn>1</mn></mrow><mi>i</mi></mfrac></math></div>
+      <dl class="vars"><dt>C</dt><dd>Contribution per period, in ₹ (for example per month).</dd><dt>i</dt><dd>Return per period (monthly rate if C is monthly).</dd><dt>N</dt><dd>Number of contributions.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Where it comes from.</b> The last payment earns nothing, the one before earns one period, and the first earns N − 1 periods: C[1 + (1+i) + … + (1+i)<sup>N−1</sup>]. That geometric series sums to the fraction shown.</p>
+        <p><b>Converting an annual rate to monthly.</b> Use i = (1 + r)<sup>1/12</sup> − 1, not r ÷ 12, when r is an effective annual return. At 10% a year, i = 0.797% a month (not 0.833%).</p>
+        <p><b>Worked example.</b> ₹10,000 a month for 25 years at 10% a year: i = 0.797%, N = 300, FV ≈ <strong>₹1.23 crore</strong>, from ₹30 lakh contributed.</p>
+        <p><b>Rearranged.</b> To reach a target FV, the contribution needed is C = FV × i ÷ ((1 + i)<sup>N</sup> − 1). Lesson 0.6 uses exactly this.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l04-cagr" aria-labelledby="l04-cagr-h">
+    <h2 id="l04-cagr-h">CAGR: one rate for a bumpy path</h2>
+    <p>Investments rarely grow at a steady rate. [[cagr|CAGR]] (compound annual growth rate) answers: what constant yearly rate would have taken the starting value to the ending value over the same period? It is the smooth path that ends in the same place as the bumpy real one.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · CAGR</p>
+      <div class="fx"><math display="block"><mi>CAGR</mi><mo>=</mo><msup><mrow><mo>(</mo><mfrac><mtext>End value</mtext><mtext>Start value</mtext></mfrac><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></math></div>
+      <dl class="vars"><dt>n</dt><dd>Number of years between the two values (can be fractional: 30 months = 2.5).</dd><dt>1/n power</dt><dd>The n-th root: "which yearly growth factor, multiplied n times, gives the total growth?"</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> A portfolio grows from ₹2,00,000 to ₹3,40,000 in 5 years. Total growth = 70%. CAGR = 1.7<sup>1/5</sup> − 1 = <strong>11.2% a year</strong>. Dividing 70% by 5 gives 14%, which overstates the yearly rate because it ignores compounding.</p>
+        <p><b>Limitations.</b> CAGR uses only two points. It says nothing about the path: a smooth 11% and a ride through a 40% crash can have the same CAGR. It also ignores money added or withdrawn along the way; for that you need XIRR (Lesson 8.5).</p>
+      </div>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My fund returned +50% and then −50%, so on average it broke even.”</p>
+      <p><span class="mistake-part">Why this fails</span>₹1,00,000 × 1.5 = ₹1,50,000; × 0.5 = ₹75,000. You lost 25%. The arithmetic average of the two returns is 0%; the compound (geometric) result is −13.4% a year. Losses need larger gains to recover: a 50% fall needs a 100% rise to get back.</p>
+      <p><span class="mistake-part">Better question</span>What was the CAGR from start to end?</p>
+    </div>
+  </section>
+
+  <section id="l04-annual" aria-labelledby="l04-annual-h">
+    <h2 id="l04-annual-h">Annualisation</h2>
+    <p>[[annualisation|Annualisation]] converts a rate for one period into its yearly equivalent so that different offers can be compared. There are two ways, and the difference is exactly compounding.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Effective annual rate</p>
+      <div class="fx"><math display="block"><mi>EAR</mi><mo>=</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>r</mi><mtext>period</mtext></msub><mo>)</mo></mrow><mi>m</mi></msup><mo>−</mo><mn>1</mn></math></div>
+      <dl class="vars"><dt>r<sub>period</sub></dt><dd>Rate for one period (a month, a quarter).</dd><dt>m</dt><dd>Number of such periods in a year (12, 4).</dd><dt>EAR</dt><dd>[[ear|Effective annual rate]]: the true yearly growth, including compounding within the year.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked examples.</b> 1% a month: simple annualisation says 12%; EAR = 1.01<sup>12</sup> − 1 = <strong>12.68%</strong>. A credit card at 3.5% a month is quoted as 42% a year, but an unpaid balance grows at 1.035<sup>12</sup> − 1 = <strong>51.1%</strong> a year.</p>
+        <p><b>Interpretation.</b> Always compare offers on the same basis. A lender quoting a monthly rate and a deposit quoting an annual rate compounded quarterly can only be compared after converting both to EARs.</p>
+      </div>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution · Annualising short periods</p>
+      <p>A fund that rose 10% in three months has an annualised return of 1.1<sup>4</sup> − 1 = 46.4%. That number is arithmetically correct and practically meaningless: it assumes the next nine months will repeat the best quarter. Treat any annualised figure from less than a year of data as a curiosity, not evidence. Lesson 15 returns to this with backtests.</p>
+    </div>
+  </section>
+
+  <section id="l04-opp" aria-labelledby="l04-opp-h">
+    <h2 id="l04-opp-h">Opportunity cost</h2>
+    <p>The [[opportunity-cost|opportunity cost]] of a choice is the value of the best alternative you give up. With money, the alternative is usually "investing it instead", which is why the discount rate in present-value problems is often called the opportunity cost of capital.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · The ₹2 lakh upgrade</p>{{tag:hyp}}</div>
+      <p>At 29, Meera considers spending ₹2,00,000 on a car upgrade. If she invested it instead at an assumed 10% a year for 20 years, it would become 2,00,000 × 1.1<sup>20</sup> = <strong>₹13.45 lakh</strong> at 49. With 5% inflation, that is worth about 2,00,000 × (1.10 ÷ 1.05)<sup>20</sup> ≈ <strong>₹5.07 lakh</strong> in today's money.</p>
+      <p><strong>Interpretation.</strong> This does not mean she should never buy anything. It means the real price of the upgrade is not ₹2 lakh but about ₹5 lakh of future purchasing power, and that is the number to weigh against the pleasure and usefulness of the car. Opportunity cost makes the trade-off visible; it does not make the choice.</p>
+    </div>
+    <p>You will meet opportunity cost again in each lesson that follows: the cost of holding an emergency fund in low-yielding deposits (Lesson 0.7), the choice between prepaying a loan and investing (Lesson 0.8), and a company's choice of how to use its cash (Lesson 4.13).</p>
+    <details class="block block--advanced">
+      <summary>{{i:book-open}} Advanced note · The rule of 72 {{i:caret-right}}</summary>
+      <div class="adv-body">
+        <p>Money doubles in roughly 72 ÷ (rate in %) years: about 7.2 years at 10%, 6 years at 12%, 10 years at 7.2%. It works because (1 + r)<sup>n</sup> = 2 when n = ln 2 ÷ ln(1 + r) ≈ 0.693 ÷ r, and 72 is a convenient number near 69.3 × 1.04 that corrects for the approximation at typical rates.</p>
+        <p>It is accurate within a few months between about 6% and 12%. At 1% it says 72 years (true answer 69.7); at 36% it says 2 years (true answer 2.25). Use it for mental estimates, never for decisions. Logarithms are covered formally in Lesson 12.3.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="l04-annlab" aria-labelledby="l04-annlab-h" class="bench" data-lab="annualise">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Annualisation converter</p>
+      <h3 id="l04-annlab-h">Quoted rate vs true yearly rate</h3>
+      <p class="bench-purpose">Purpose: see how the gap between simple and compound annualisation grows with the rate and the compounding frequency.</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="an-r">Rate per period <output id="an-r-o" for="an-r"></output></label><input id="an-r" type="range" min="0.1" max="5" step="0.05" value="3.5"></div>
+        <div class="field"><label for="an-m">Period</label><select class="input" id="an-m"><option value="12" selected>Per month (12 a year)</option><option value="4">Per quarter (4 a year)</option><option value="2">Per half-year (2 a year)</option><option value="52">Per week (52 a year)</option></select></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Simple annualisation (quoted)</span><span class="readout-value" id="an-s"></span></div>
+          <div class="readout"><span class="readout-label">Effective annual rate</span><span class="readout-value" id="an-e"></span></div>
+          <div class="readout"><span class="readout-label">Gap from compounding</span><span class="readout-value" id="an-g"></span></div>
+        </div>
+        <p class="insight" id="an-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l04-mistakes" aria-labelledby="l04-mistakes-h">
+    <h2 id="l04-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Starting 5 years later only costs me 5 years of contributions.”</p>
+      <p><span class="mistake-part">Why this fails</span>It costs the last 5 years of compounding, which are the largest. In the explorer's default case, cutting 25 years to 20 lowers the final value from about ₹1.34 crore to ₹79 lakh, while contributions fall only from ₹31 lakh to ₹25 lakh.</p>
+      <p><span class="mistake-part">Better question</span>What is the smallest amount I can start with now?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“2% a month and 24% a year are the same.”</p>
+      <p><span class="mistake-part">Why this fails</span>2% a month compounds to 26.8% a year. The gap is larger for higher rates and more frequent compounding. Lenders prefer quoting the smaller-looking number; savers should convert everything to effective annual rates.</p>
+      <p><span class="mistake-part">Better question</span>What is the effective annual rate?</p>
+    </div>
+  </section>
+
+  <section id="l04-limits" aria-labelledby="l04-limits-h">
+    <h2 id="l04-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Constant returns are fiction.</strong> Risky investments do not earn a fixed rate. The formulas describe an average path; actual outcomes spread widely around it, and the spread grows with time (Lesson 14.20 simulates this).</li>
+      <li><strong>Nominal vs real.</strong> A ₹1.23 crore future value is in future rupees. Lesson 0.5 shows how to convert it into today's purchasing power.</li>
+      <li><strong>Taxes and costs.</strong> Tax on returns and annual fees reduce the effective compounding rate every year (Lesson 0.10).</li>
+      <li><strong>The discount rate is a choice.</strong> Present values can be pushed around by changing it. Always ask what rate was used and why.</li>
+    </ul>
+  </section>
+
+  <section id="l04-check" aria-labelledby="l04-check-h">
+    <h2 id="l04-check-h">Knowledge check</h2>
+<!--numeric id=q04-1 comp=Calculation answer=9.14 tol=0.1 text="9.14%" label="CAGR (% a year)"-->
+? An index fund investment grew from ₹5,00,000 to ₹12,00,000 over 10 years. What was its CAGR, to two decimal places?
+= CAGR = (12,00,000 ÷ 5,00,000)<sup>1/10</sup> − 1 = 2.4<sup>0.1</sup> − 1 = <strong>9.14% a year</strong>. Dividing the 140% total gain by 10 gives 14%, which is wrong because it ignores compounding.
+<!--/numeric-->
+<!--numeric id=q04-2 comp=Calculation answer=4.52 tol=0.02 text="₹4.52 lakh" label="Present value (₹ lakh)"-->
+? A relative promises you ₹8 lakh in 6 years. If you could earn 10% a year elsewhere at similar risk, what is the promise worth today, in ₹ lakh (two decimals)?
+= PV = 8,00,000 ÷ 1.1<sup>6</sup> = 8,00,000 ÷ 1.7716 = <strong>₹4,51,579, about ₹4.52 lakh</strong>. The promise is worth a little over half its face value today, before even considering the risk that it is not kept.
+<!--/numeric-->
+<!--quiz id=q04-3 comp=Interpretation-->
+? A loan app charges "only 2.5% per month". Which statement is correct?
+- That is 30% a year || 30% is simple annualisation. An unpaid balance compounds.
++ The effective annual rate is about 34.5% || 1.025<sup>12</sup> − 1 = 34.5%.
+- That is cheaper than a credit card at 42% a year, so it is a good deal || Compare like with like: 3.5% a month (the card) compounds to 51%, and 2.5% a month to 34.5%. Both are extremely expensive for anything but a very short bridge.
+<!--/quiz-->
+<!--quiz id=q04-4 comp=Application-->
+? Two sisters invest ₹5,000 a month at the same assumed 10% a year. Isha invests from 25 to 35 and then stops, leaving the money invested. Tara starts at 35 and invests until 60. At 60, who has more?
++ Isha, despite contributing ₹6 lakh against Tara's ₹15 lakh || Isha's money compounds for 35 years; Tara's for at most 25. Time beats amount here.
+- Tara, because she contributed two and a half times as much || Contributions matter, but Isha's early money has 25 extra years to compound.
+- They end up about the same || Isha ends with roughly ₹1.08 crore and Tara with roughly ₹62 lakh under these assumptions.
+= Isha: ₹5,000 × [(1.00797)<sup>120</sup> − 1] ÷ 0.00797 ≈ ₹10.0 lakh at 35, then × 1.1<sup>25</sup> ≈ ₹1.08 crore at 60. Tara: 300 months ≈ ₹62 lakh. These are illustrations with a constant assumed return, not forecasts.
+<!--/quiz-->
+  </section>
+
+  <section id="l04-practice" aria-labelledby="l04-practice-h">
+    <h2 id="l04-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Which of these grows faster over 20 years: ₹1 lakh at 8% simple interest, or ₹1 lakh at 6% compound interest?
+A: Simple 8%: ₹1 lakh × (1 + 0.08 × 20) = ₹2.6 lakh. Compound 6%: ₹1 lakh × 1.06<sup>20</sup> = ₹3.21 lakh. Compounding at the lower rate wins over 20 years; over 5 years the simple 8% would win (₹1.40 lakh vs ₹1.34 lakh).
+# B A bank offers a 5-year FD at 7.1% a year compounded quarterly. What is ₹3,00,000 worth at maturity, and what is the effective annual rate?
+A: Quarterly rate = 1.775%, 20 quarters. FV = 3,00,000 × 1.01775<sup>20</sup> = <strong>₹4,26,524</strong>. EAR = 1.01775<sup>4</sup> − 1 = <strong>7.29%</strong>. (Tax on the interest is ignored here; see Lesson 0.10.)
+# C A mutual-fund advertisement shows "3-year return: 62%". Convert this to something comparable with a 7% FD and explain what the number does not tell you.
+A: CAGR = 1.62<sup>1/3</sup> − 1 = 17.4% a year. It does not tell you how bumpy the path was, whether that period was unusually good, how the fund compares with its benchmark, or what fees and taxes did. Three years of past returns say little about the next three (Lesson 2.6 and Lesson 9.27 on survivorship).
+# D You will receive ₹5 lakh bonuses at the end of each of the next 3 years. At a 9% discount rate, what are they worth today in total?
+A: 5 ÷ 1.09 + 5 ÷ 1.09<sup>2</sup> + 5 ÷ 1.09<sup>3</sup> = 4.587 + 4.208 + 3.861 = <strong>₹12.66 lakh</strong>, not ₹15 lakh. (Equivalently, the present value of a 3-payment annuity.)
+# E A scheme says: "Invest ₹1 lakh, get ₹2 lakh in 3 years, guaranteed." Compute the implied CAGR and explain why that number alone should make you suspicious.
+A: CAGR = 2<sup>1/3</sup> − 1 = 26% a year, guaranteed. Government securities and bank deposits, the safest rupee assets, pay far less. A guaranteed rate several times the safe rate implies either huge hidden risk or no real investment at all. Lesson 0.11 shows how such schemes pay early investors and then collapse.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l04-notes-h">
+    <h2 id="l04-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l04">A purchase you are considering, and its opportunity cost in 20 years</label><textarea class="input" id="notes-l04" data-notes="l04"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

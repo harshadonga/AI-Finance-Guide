@@ -1,0 +1,225 @@
+<article class="lesson" id="l05" data-lesson data-title="0.5 Inflation" data-nav-title="0.5 Inflation" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.5 · Part II · Time and purchasing power</p>
+    <h1>Inflation</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>What matters is not how many rupees you have but how much they buy. A return below inflation is a slow loss, however safe it looks.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l05-why">Why it matters</a><a href="#l05-cpi">What CPI measures</a><a href="#l05-india">India's CPI today</a><a href="#l05-erosion">Erosion</a><a href="#l05-real">Real returns</a><a href="#l05-lab">Explorer</a><a href="#l05-expect">Expectations</a><a href="#l05-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l05-why" aria-labelledby="l05-why-h">
+    <h2 id="l05-why-h">Why inflation changes every calculation</h2>
+    <p>Lesson 0.4 grew money in rupees. But nobody wants rupees for their own sake; they want what rupees buy. If a plate of idli that costs ₹60 today costs ₹100 in ten years, then ₹100 in ten years is the same plate of idli. [[inflation|Inflation]] is the rate at which the general price level rises, and it quietly converts every future rupee into a smaller one.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Think of every rupee as a ticket that can be exchanged for a fixed share of a shopping basket. Inflation shrinks the share each ticket buys. Growing your number of tickets is only useful if it outpaces the shrinking. The real question for any investment is: <em>does it grow my share of the basket?</em></p>
+    </aside>
+  </section>
+
+  <section id="l05-predict" aria-labelledby="l05-predict-h">
+    <h2 id="l05-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p05-->
+? A fixed deposit pays 7% a year. Prices rise 5% over the same year. What is your real return, the growth in what your money can buy?
+- Exactly 2% || Subtraction is a close approximation at low rates, but it is not exact.
++ About 1.9% || (1.07 ÷ 1.05) − 1 = 1.905%. You have 7% more rupees, but each buys 1/1.05 as much.
+- 12% || That adds inflation instead of removing it.
+- 7%, because the deposit is safe || Safe from default is not safe from inflation. Your rupees are protected; their purchasing power is not.
+> <p><strong>1.9%.</strong> The small gap from 2% seems pedantic, but it grows with the rates involved. At 20% nominal and 15% inflation, subtraction says 5%; the true real return is <strong>4.35%</strong>. The next sections show why, and Lesson 0.10 adds tax, which usually matters more.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l05-cpi" aria-labelledby="l05-cpi-h">
+    <h2 id="l05-cpi-h">What the Consumer Price Index measures</h2>
+    <p>You cannot measure "the price level" directly. Statisticians instead price a fixed [[cpi|basket]] of goods and services that a typical household buys, every month, in many markets, and express the cost of the basket as an index. The period whose cost is set to 100 is the [[base-year|base year]].</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · A three-item basket</p>{{tag:hyp}}</div>
+      <div class="table-wrap">
+        <table>
+          <caption>Monthly basket for one household</caption>
+          <thead><tr><th scope="col">Item</th><th scope="col" class="r">Quantity</th><th scope="col" class="r">Price, base year</th><th scope="col" class="r">Cost, base year</th><th scope="col" class="r">Price, next year</th><th scope="col" class="r">Cost, next year</th></tr></thead>
+          <tbody>
+            <tr><td>Rice (kg)</td><td class="r">10</td><td class="r">₹60</td><td class="r">₹600</td><td class="r">₹63</td><td class="r">₹630</td></tr>
+            <tr><td>Rent (month)</td><td class="r">1</td><td class="r">₹15,000</td><td class="r">₹15,000</td><td class="r">₹15,900</td><td class="r">₹15,900</td></tr>
+            <tr><td>Mobile plan</td><td class="r">1</td><td class="r">₹400</td><td class="r">₹400</td><td class="r">₹440</td><td class="r">₹440</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3">Basket cost</td><td class="r">₹16,000</td><td></td><td class="r">₹16,970</td></tr></tfoot>
+        </table>
+      </div>
+      <p>Index, base year = 100. Next year = 100 × 16,970 ÷ 16,000 = <strong>106.1</strong>. Inflation = 106.1 ÷ 100 − 1 = <strong>6.1%</strong>.</p>
+      <p><strong>Interpretation.</strong> Mobile prices rose 10% but barely moved the index; rent rose 6% and dominated it. Weights matter: an item's effect on inflation is its price change multiplied by its share of spending.</p>
+    </div>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Inflation from an index</p>
+      <div class="fx"><math display="block"><msub><mi>π</mi><mi>t</mi></msub><mo>=</mo><mfrac><msub><mi>CPI</mi><mi>t</mi></msub><msub><mi>CPI</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub></mfrac><mo>−</mo><mn>1</mn></math></div>
+      <dl class="vars"><dt>π<sub>t</sub></dt><dd>Inflation rate over the period (the Greek letter pi is the usual symbol).</dd><dt>CPI<sub>t</sub></dt><dd>Index level at the end of the period. For "year-on-year" inflation, compare a month with the same month a year earlier.</dd></dl>
+      <div class="fx-meta"><p><b>Limitations.</b> A fixed basket misses substitution (people switch to cheaper goods when prices rise), quality changes (a ₹15,000 phone today is not last decade's ₹15,000 phone) and new products. Statistical agencies correct for some of this and periodically update the basket.</p></div>
+    </div>
+  </section>
+
+  <section id="l05-india" aria-labelledby="l05-india-h">
+    <h2 id="l05-india-h">India's CPI today</h2>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current facts</p>{{tag:curr:29 Sep 2026}}</div>
+      <ul>
+        <li><strong>New base year.</strong> The Ministry of Statistics and Programme Implementation (MoSPI) moved the all-India CPI to a new series with <strong>2024 = 100</strong>, first published on 12 February 2026 (for January 2026). The basket grew from 299 to <strong>358</strong> items, and food and beverages now carry a <strong>36.75%</strong> weight, lower than in the older 2012-base series. Prices are collected from 1,465 rural and 1,395 urban markets, plus online prices in 12 large cities.</li>
+        <li><strong>Latest verified reading.</strong> All-India CPI inflation for <strong>July 2026 was 4.45%</strong> year-on-year (provisional; rural 4.84%, urban 3.96%; food 5.52%), released 12 August 2026. A newer monthly release may be available; check MoSPI.</li>
+        <li><strong>The target.</strong> The Government has set the RBI's inflation target at <strong>4% CPI inflation, with a tolerance band of 2% to 6%</strong>, for April 2026 to March 2031 (notified 25 March 2026).</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Sources: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227012&amp;reg=3&amp;lang=1" rel="noopener" target="_blank">PIB/MoSPI, CPI base 2024 first release</a> · <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298247&amp;reg=48&amp;lang=2" rel="noopener" target="_blank">PIB/MoSPI, CPI July 2026</a> · <a href="https://www.business-standard.com/economy/news/govt-asks-rbi-maintain-retail-inflation-at-4-pc-till-mar-2031-126032501318_1.html" rel="noopener" target="_blank">Business Standard on the 2026 target notification</a></p>
+    </div>
+    <p>Why a new base matters to you: long historical comparisons now cross two series with different baskets and weights. Official releases link them, but a chart that simply joins old and new index levels without a linking factor is wrong. That is a data-quality lesson you will meet again with adjusted prices in Lesson 1.13 and point-in-time data in Lesson 15.5.</p>
+  </section>
+
+  <section id="l05-erosion" aria-labelledby="l05-erosion-h">
+    <h2 id="l05-erosion-h">Purchasing-power erosion</h2>
+    <p>Inflation compounds just as returns do. If prices rise at π a year, the price level after n years is (1 + π)<sup>n</sup> times today's, and a fixed sum of money buys 1 ÷ (1 + π)<sup>n</sup> as much.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Purchasing power and real value</p>
+      <div class="fx"><math display="block"><mtext>Real value</mtext><mo>=</mo><mfrac><mtext>Nominal value in year </mtext><mrow><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>π</mi><mo>)</mo></mrow><mi>n</mi></msup></mrow></mfrac></math></div>
+      <dl class="vars"><dt>Nominal value</dt><dd>Rupees in year n.</dd><dt>π</dt><dd>Average annual inflation over the period.</dd><dt>Real value</dt><dd>The same amount expressed in today's rupees (today's purchasing power).</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> At 5% inflation, ₹1 crore in 25 years has the purchasing power of 1,00,00,000 ÷ 1.05<sup>25</sup> = <strong>₹29.5 lakh</strong> today. A retirement target that sounds large can be surprisingly modest in real terms.</p>
+        <p><b>Rule of thumb.</b> At 6% inflation, prices double in about 12 years; at 4%, in about 18.</p>
+      </div>
+    </div>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:chart-line}} Historical data · Six years of Indian inflation</p>{{tag:hist:2014-15 to 2019-20}}</div>
+      <div id="l05-hist" data-lab="cpihist"></div>
+      <p class="chart-desc">What to notice: inflation of 3.4% to 5.9% a year sounds mild, yet over six years the price level rose about 30%. Cash kept under a mattress from April 2014 bought roughly 23% less by March 2020.</p>
+      <p class="source-note">Annual CPI-Combined (2012 = 100 series) inflation: 5.9%, 4.9%, 4.5%, 3.6%, 3.4%, 4.8% for 2014-15 to 2019-20. Source: <a href="https://www.indiabudget.gov.in/budget2021-22/economicsurvey/doc/vol2chapter/echap05_vol2.pdf" rel="noopener" target="_blank">Economic Survey 2020-21, Vol. 2, Ch. 5, Table 1</a>. Compounding annual averages is an approximation of the month-to-month index path.</p>
+    </div>
+  </section>
+
+  <section id="l05-real" aria-labelledby="l05-real-h">
+    <h2 id="l05-real-h">Nominal and real returns</h2>
+    <p>A [[nominal|nominal]] return is the growth in rupees. A [[real-return|real return]] is the growth in purchasing power. The relationship is multiplicative, not additive, because inflation shrinks the value of the <em>whole</em> end balance, including the return itself.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Real return (the Fisher relation)</p>
+      <div class="fx"><math display="block"><mn>1</mn><mo>+</mo><msub><mi>r</mi><mtext>real</mtext></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><msub><mi>r</mi><mtext>nominal</mtext></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>π</mi></mrow></mfrac><mspace width="2em"></mspace><msub><mi>r</mi><mtext>real</mtext></msub><mo>≈</mo><msub><mi>r</mi><mtext>nominal</mtext></msub><mo>−</mo><mi>π</mi></math></div>
+      <dl class="vars"><dt>r<sub>nominal</sub></dt><dd>Return in rupees over the period.</dd><dt>π</dt><dd>Inflation over the same period.</dd><dt>r<sub>real</sub></dt><dd>Return in purchasing power.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Why.</b> ₹100 becomes ₹100(1 + r<sub>nominal</sub>) rupees, and each rupee then buys 1 ÷ (1 + π) of what it used to. Real growth factor = (1 + r<sub>nominal</sub>) ÷ (1 + π).</p>
+        <p><b>The approximation.</b> Expanding shows r<sub>real</sub> = (r<sub>nominal</sub> − π) ÷ (1 + π). Subtraction ignores the division by (1 + π), so it overstates the real return by roughly (r<sub>nominal</sub> − π) × π.</p>
+        <p><b>Worked examples.</b> 7% and 5%: 1.905% (approximation 2%). 12% and 6%: 5.66% (approximation 6%). 20% and 15%: 4.35% (approximation 5%).</p>
+        <p><b>Interpretation.</b> At Indian inflation rates of recent years the error is small, but it compounds over decades. In high-inflation settings (India in the early 1990s, or countries with double-digit inflation today) the approximation is misleading.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l05-lab" aria-labelledby="l05-lab-h" class="bench" data-lab="realret">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Real-return explorer</p>
+      <h3 id="l05-lab-h">Grow rupees, then check what they buy</h3>
+      <p class="bench-purpose">Purpose: separate growth in rupees from growth in purchasing power, and see when "safe" returns quietly lose value. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="rr-amt">Amount invested today <output id="rr-amt-o" for="rr-amt"></output></label><input id="rr-amt" type="range" min="10000" max="5000000" step="10000" value="500000"></div>
+        <div class="field"><label for="rr-n">Nominal return per year <output id="rr-n-o" for="rr-n"></output></label><input id="rr-n" type="range" min="0" max="25" step="0.25" value="7"></div>
+        <div class="field"><label for="rr-i">Inflation per year <output id="rr-i-o" for="rr-i"></output></label><input id="rr-i" type="range" min="0" max="20" step="0.25" value="5"></div>
+        <div class="field"><label for="rr-y">Years <output id="rr-y-o" for="rr-y"></output></label><input id="rr-y" type="range" min="1" max="40" step="1" value="20"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Real return per year</span><span class="readout-value" id="rr-real"></span><span class="readout-sub" id="rr-approx"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-1)"></i>Rupees at the end</span><span class="readout-value" id="rr-nom"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-2)"></i>What they buy, in today's rupees</span><span class="readout-value" id="rr-rv"></span></div>
+        </div>
+        <div id="rr-chart"></div>
+        <p class="insight" id="rr-insight" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="bench-foot"><p>Try this: set the nominal return to 3.5% (roughly what many savings accounts pay) and inflation to 5%. The rupee line rises every year while the purchasing-power line falls. Both lines are true; only one describes what you can buy.</p></div>
+  </section>
+
+  <section id="l05-expect" aria-labelledby="l05-expect-h">
+    <h2 id="l05-expect-h">Inflation expectations</h2>
+    <p>[[inflation-expectations|Inflation expectations]] are what people believe future inflation will be. They matter even before any price changes, because decisions made today embed them:</p>
+    <ul>
+      <li><strong>Interest rates.</strong> Lenders and depositors care about real returns, so the rate on a 5-year deposit reflects the inflation expected over those 5 years. Locking in a fixed rate is a bet that inflation will not rise much above what the rate already assumes.</li>
+      <li><strong>Wages and prices.</strong> If workers expect 8% inflation they bargain for raises that cover it, and firms set prices expecting higher costs. Expectations can partly fulfil themselves.</li>
+      <li><strong>Your plans.</strong> Every goal in Lesson 0.6 needs an inflation assumption. It is an expectation, and it should be revisited, not treated as a fact.</li>
+    </ul>
+    <p>This is why central banks work hard to <em>anchor</em> expectations. India's [[inflation-target|inflation target]] of 4% (tolerance band 2% to 6%) gives households and firms a reference point. How the RBI uses its policy rate to steer inflation, and how markets react to data relative to expectations, is the subject of Lessons 6.6 to 6.8 and 6.23.</p>
+    <div class="block block--lens">
+      <p class="block-label">{{i:binoculars}} Investor lens · Your personal inflation</p>
+      <p>CPI is an average basket. Your own inflation depends on what you buy. Households spending heavily on private education, health care or urban rent often experience faster price rises than the headline number; a household whose biggest costs are food and fuel feels those swings more sharply. For long-term goals, planners often use a higher inflation assumption for education and medical costs than for general spending. That is an assumption to justify, not a rule.</p>
+    </div>
+  </section>
+
+  <section id="l05-mistakes" aria-labelledby="l05-mistakes-h">
+    <h2 id="l05-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Inflation has fallen, so prices will come down.”</p>
+      <p><span class="mistake-part">Why this fails</span>Inflation is the rate of change of prices. Falling inflation from 6% to 4% means prices are still rising, just more slowly. Prices falling across the board (deflation) is rare and usually a sign of economic trouble.</p>
+      <p><span class="mistake-part">Better question</span>How much higher will prices be in a year, and is my income keeping up?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My savings account is safe, so my money is safe.”</p>
+      <p><span class="mistake-part">Why this fails</span>A deposit is protected against default (up to deposit-insurance limits, Lesson 0.7) but not against inflation. A 3% account during 5% inflation loses about 1.9% of purchasing power a year, roughly 17% over ten years.</p>
+      <p><span class="mistake-part">Better question</span>What is the real return, and is this money meant for the short term (where stability matters most) or the long term (where purchasing power matters most)?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“CPI inflation was 4.5%, so my costs rose 4.5%.”</p>
+      <p><span class="mistake-part">Why this fails</span>CPI prices an average basket. Your rent, school fees or medicines may rise at very different rates.</p>
+      <p><span class="mistake-part">Better question</span>What did my own largest expenses cost a year ago?</p>
+    </div>
+  </section>
+
+  <section id="l05-limits" aria-labelledby="l05-limits-h">
+    <h2 id="l05-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Averages hide spread.</strong> Food inflation can run far above or below headline inflation in a given month, and rural and urban rates differ.</li>
+      <li><strong>Series changes.</strong> The 2024 base revision changed weights and items. Linking old and new series needs the official linking factor.</li>
+      <li><strong>Quality and new goods.</strong> Price indices struggle with products that improve or did not exist in the base year.</li>
+      <li><strong>Expectations are not forecasts.</strong> A 5% assumption over 20 years is a planning choice. Actual inflation will differ, sometimes by a lot, so plans need margins and reviews.</li>
+    </ul>
+  </section>
+
+  <section id="l05-check" aria-labelledby="l05-check-h">
+    <h2 id="l05-check-h">Knowledge check</h2>
+<!--numeric id=q05-1 comp=Calculation answer=3.81 tol=0.02 text="3.81%" label="Real return (% a year)"-->
+? An investment returned 9% in a year when inflation was 5%. What was the real return, to two decimal places?
+= (1.09 ÷ 1.05) − 1 = 1.038095 − 1 = <strong>3.81%</strong>. Subtraction would say 4%, slightly overstating it.
+<!--/numeric-->
+<!--quiz id=q05-2 comp=Interpretation-->
+? CPI inflation falls from 6.2% to 4.1% over a year. What happened to the price level?
+- It fell by about 2% || That confuses the rate of change with the level.
++ It kept rising, but more slowly || 4.1% inflation still means prices are 4.1% higher than a year earlier.
+- It stayed the same || Unchanged prices would be 0% inflation.
+<!--/quiz-->
+<!--quiz id=q05-3 comp=Application-->
+? A retirement calculator tells Arjun, 35, that he needs ₹3 crore at 60. Assuming 5% inflation, roughly what is that worth in today's purchasing power?
+- ₹3 crore || That ignores 25 years of rising prices.
++ About ₹89 lakh || 3,00,00,000 ÷ 1.05<sup>25</sup> ≈ ₹88.6 lakh.
+- About ₹2.25 crore || That subtracts 5% × 5 years or similar; inflation compounds over 25 years.
+- About ₹1.5 crore || That halves it, which corresponds to about 14 years at 5%, not 25.
+<!--/quiz-->
+  </section>
+
+  <section id="l05-practice" aria-labelledby="l05-practice-h">
+    <h2 id="l05-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A True or false: (a) CPI measures the prices of shares and property. (b) A base year has an index value of 100. (c) If CPI goes from 120 to 126, inflation was 6%.
+A: (a) False: CPI prices consumer goods and services (housing enters through rent, not property prices). (b) True. (c) False: 126 ÷ 120 − 1 = 5%. The index rose 6 points, not 6%.
+# B Using the Economic Survey rates for 2014-15 to 2019-20, what would a salary of ₹6 lakh in 2014 need to be in 2020 to keep the same purchasing power?
+A: 6,00,000 × 1.059 × 1.049 × 1.045 × 1.036 × 1.034 × 1.048 = 6,00,000 × 1.3033 ≈ <strong>₹7.82 lakh</strong>. A 30% nominal raise over six years was only enough to stand still.
+# C A 5-year deposit pays 7.25% when inflation expectations are 4.5%. Two years later, inflation settles at 6.5%. Who gained and who lost relative to expectations: the depositor or the bank?
+A: The depositor expected a real return of about 2.6% (1.0725 ÷ 1.045 − 1) but receives about 0.7% (1.0725 ÷ 1.065 − 1). The bank gained: it is repaying in rupees that buy less than expected. Unexpected inflation transfers purchasing power from lenders to borrowers.
+# D Meera's rent is ₹28,000 and rises 8% a year; her other spending rises with CPI at 5%. Estimate her personal inflation rate for next year.
+A: Rent is 28,000 of her 78,000 spending, about 36%. Personal inflation ≈ 0.36 × 8% + 0.64 × 5% ≈ <strong>6.1%</strong>, a full point above CPI. Rent, the heaviest line, dominates.
+# E A banner says: "Our fund returned 11% while inflation was only 6%, so investors earned a 5% real return." Identify two problems with the statement.
+A: (1) The real return is 1.11 ÷ 1.06 − 1 = 4.7%, not 5% (small but systematic). (2) More importantly, the figure is before tax and before any exit costs, and it describes one past period; it says nothing about risk or whether it will persist. A more careful claim: "in this period, the fund's return exceeded inflation by about 4.7% a year before taxes."
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l05-notes-h">
+    <h2 id="l05-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l05">Your largest costs and how fast each has been rising</label><textarea class="input" id="notes-l05" data-notes="l05"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

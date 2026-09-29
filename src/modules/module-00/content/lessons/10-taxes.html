@@ -1,0 +1,200 @@
+<article class="lesson" id="l10" data-lesson data-title="0.10 Taxes: the after-tax view" data-nav-title="0.10 Taxes: the after-tax view" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.10 · Part IV · Threats to the system</p>
+    <h1>Taxes: The After-Tax View</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Judge every financial decision after tax. What matters is the rate on your next rupee, not your average rate, and tax paid every year compounds into a large drag.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l10-why">Why after tax</a><a href="#l10-slabs">How slabs work</a><a href="#l10-rules">Current rules</a><a href="#l10-lab">Slab visualiser</a><a href="#l10-after">After-tax returns</a><a href="#l10-drag">Tax drag</a><a href="#l10-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l10-why" aria-labelledby="l10-why-h">
+    <h2 id="l10-why-h">Why this lesson is deliberately narrow</h2>
+    <p>Tax rules are long, change with almost every budget, and differ by type of income. Level 23 is a living module that covers them properly and is refreshed each time it is studied. This lesson teaches only what you need now: the handful of ideas that let you compare choices after tax, and that stay true however the rates change.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Picture income tax slabs as a row of buckets with rising tax rates. Your income fills the buckets in order: the first bucket, taxed at 0%, fills first; overflow goes into the 5% bucket, then the 10% bucket, and so on. Only the rupees that land in a bucket pay that bucket's rate. Earning more never makes the rupees already in lower buckets pay more.</p>
+    </aside>
+  </section>
+
+  <section id="l10-predict" aria-labelledby="l10-predict-h">
+    <h2 id="l10-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p10-->
+? Meera's raise moves her taxable income from ₹11.5 lakh to ₹14.25 lakh, crossing into the 15% slab. What happens to her tax?
+- All of her income is now taxed at 15% || Only the part above ₹12 lakh falls in the 15% slab. The lower slabs keep their rates.
++ Only the income above ₹12 lakh pays 15%; her average tax rate stays far below 15% || Her average rate is about 6.5% of gross even after the raise.
+- Her take-home falls, because she is in a higher bracket || Under slab taxation, more income always leaves more after tax, though a narrow band just above the rebate limit leaves almost nothing extra (see below).
+> <p><strong>Tax rises from nil to ₹97,500 (including cess), an average of 6.5% of her ₹15 lakh gross, while her marginal rate is 15.6%.</strong> At ₹11.5 lakh of taxable income she paid nothing because of the rebate; at ₹14.25 lakh the rebate no longer applies, which is why the jump looks large. The rates that matter for decisions are marginal, and they apply to extra income only.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l10-slabs" aria-labelledby="l10-slabs-h">
+    <h2 id="l10-slabs-h">Marginal and average rates</h2>
+    <p>Your [[marginal-tax-rate|marginal tax rate]] is the rate on your next rupee of income. Your [[average-tax-rate|average tax rate]] is total tax divided by total income. They answer different questions. The average rate describes your overall burden. The marginal rate decides whether an extra piece of work, a deduction, or a taxable investment is worth it, because those change your income at the margin.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Slab tax, average and marginal rates</p>
+      <div class="fx"><math display="block"><mi>T</mi><mo>=</mo><munder><mo>∑</mo><mi>k</mi></munder><msub><mi>t</mi><mi>k</mi></msub><mo>×</mo><mo>(</mo><mtext>income in slab </mtext><mi>k</mi><mo>)</mo><mspace width="1.5em"></mspace><mtext>average</mtext><mo>=</mo><mfrac><mi>T</mi><mi>Y</mi></mfrac><mspace width="1.5em"></mspace><mtext>marginal</mtext><mo>=</mo><mfrac><mrow><mi>Δ</mi><mi>T</mi></mrow><mrow><mi>Δ</mi><mi>Y</mi></mrow></mfrac></math></div>
+      <dl class="vars"><dt>t<sub>k</sub></dt><dd>Tax rate of slab k.</dd><dt>Y</dt><dd>Income (state whether gross or taxable).</dd><dt>T</dt><dd>Tax, then adjusted for any rebate and increased by cess.</dd><dt>ΔT / ΔY</dt><dd>Extra tax on a small increase in income.</dd></dl>
+    </div>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · Meera's tax, tax year 2026-27, new regime</p>{{tag:hyp}}</div>
+      <p>Gross salary ₹15,00,000; standard deduction for salaried employees ₹75,000; taxable income ₹14,25,000.</p>
+      <div class="table-wrap">
+        <table>
+          <caption>Tax by slab</caption>
+          <thead><tr><th scope="col">Slab (taxable income)</th><th scope="col" class="r">Rate</th><th scope="col" class="r">Income in slab</th><th scope="col" class="r">Tax</th></tr></thead>
+          <tbody>
+            <tr><td>Up to ₹4,00,000</td><td class="r">0%</td><td class="r">₹4,00,000</td><td class="r">₹0</td></tr>
+            <tr><td>₹4,00,001 to ₹8,00,000</td><td class="r">5%</td><td class="r">₹4,00,000</td><td class="r">₹20,000</td></tr>
+            <tr><td>₹8,00,001 to ₹12,00,000</td><td class="r">10%</td><td class="r">₹4,00,000</td><td class="r">₹40,000</td></tr>
+            <tr><td>₹12,00,001 to ₹16,00,000</td><td class="r">15%</td><td class="r">₹2,25,000</td><td class="r">₹33,750</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="3">Tax before cess (no rebate: income above ₹12 lakh)</td><td class="r">₹93,750</td></tr>
+          <tr class="total"><td colspan="3">Plus 4% health and education cess</td><td class="r">₹97,500</td></tr></tfoot>
+        </table>
+      </div>
+      <p><strong>Average rate:</strong> 97,500 ÷ 15,00,000 = <strong>6.5%</strong> of gross. <strong>Marginal rate:</strong> 15% × 1.04 = <strong>15.6%</strong>. Each extra ₹1,000 of salary costs her ₹156 in tax.</p>
+    </div>
+  </section>
+
+  <section id="l10-rules" aria-labelledby="l10-rules-h">
+    <h2 id="l10-rules-h">The current rules, in brief</h2>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current rules · Individuals, new regime</p>{{tag:curr:29 Sep 2026}}</div>
+      <ul>
+        <li><strong>New law.</strong> The Income-tax Act, 2025 replaced the Income-tax Act, 1961 from <strong>1 April 2026</strong>. It uses the single term <em>tax year</em> in place of "previous year" and "assessment year". Slab rates for tax year 2026-27 are unchanged from 2025-26.</li>
+        <li><strong>Default regime.</strong> The new tax regime is the default for individuals; the old regime, with its deductions and exemptions, can still be chosen.</li>
+        <li><strong>Slabs (taxable income):</strong> up to ₹4 lakh nil · ₹4 to 8 lakh 5% · ₹8 to 12 lakh 10% · ₹12 to 16 lakh 15% · ₹16 to 20 lakh 20% · ₹20 to 24 lakh 25% · above ₹24 lakh 30%.</li>
+        <li><strong>Rebate.</strong> A rebate makes tax nil when taxable income does not exceed <strong>₹12 lakh</strong>. With the <strong>₹75,000 standard deduction</strong> for salaried taxpayers, that is a gross salary of ₹12.75 lakh. Just above the limit, marginal relief caps the tax at the amount by which income exceeds ₹12 lakh.</li>
+        <li><strong>Cess.</strong> A 4% health and education cess applies to the tax. Surcharges apply at higher incomes (above ₹50 lakh) and are outside this lesson.</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Sources: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2098406&amp;reg=48&amp;lang=2" rel="noopener" target="_blank">PIB, Union Budget 2025-26: slabs, rebate and standard deduction</a> · <a href="https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1" rel="noopener" target="_blank">Income Tax Department: new regime as default</a> · <a href="https://cleartax.in/s/income-tax-changes-from-april-2026" rel="noopener" target="_blank">ClearTax summary of the Income-tax Act, 2025 changes from April 2026</a>. Level 23 revisits and re-verifies these rules.</p>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution · The one place a raise barely helps</p>
+      <p>Between a salary of ₹12.75 lakh and about ₹13.46 lakh, marginal relief means almost every extra rupee of income goes in tax (about 104% including cess, applied only to the excess). Take-home still does not fall, but it hardly rises. Above about ₹13.46 lakh, the normal slab calculation takes over and the marginal rate drops to 15.6%. The visualiser below shows this narrow spike.</p>
+    </div>
+  </section>
+
+  <section id="l10-lab" aria-labelledby="l10-lab-h" class="bench" data-lab="tax">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Slab visualiser</p>
+      <h3 id="l10-lab-h">Marginal vs average rate across incomes</h3>
+      <p class="bench-purpose">Purpose: see the gap between the rate on the next rupee and the average rate, and the narrow marginal-relief band. Simplified: new regime, salaried, standard deduction only, no surcharge or special-rate income. Not a tax calculator. {{tag:curr:29 Sep 2026}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="tx-g">Gross salary per year <output id="tx-g-o" for="tx-g"></output></label><input id="tx-g" type="range" min="300000" max="5000000" step="25000" value="1500000"></div>
+        <label class="check"><input type="checkbox" id="tx-sal" checked> Salaried (apply the ₹75,000 standard deduction)</label>
+        <div class="table-wrap"><table class="tx-table"><caption>Tax by slab</caption><thead><tr><th scope="col">Slab</th><th scope="col" class="r">Rate</th><th scope="col" class="r">Tax</th></tr></thead><tbody id="tx-rows"></tbody></table></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Tax including cess</span><span class="readout-value" id="tx-t"></span><span class="readout-sub" id="tx-t-sub"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-2)"></i>Average rate</span><span class="readout-value" id="tx-a"></span></div>
+          <div class="readout"><span class="readout-label"><i class="swatch" style="background:var(--series-1)"></i>Marginal rate</span><span class="readout-value" id="tx-m"></span></div>
+        </div>
+        <div id="tx-chart"></div>
+        <p class="insight" id="tx-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l10-after" aria-labelledby="l10-after-h">
+    <h2 id="l10-after-h">After-tax returns</h2>
+    <p>Interest from bank deposits is added to your income and taxed at your slab rate. So the return you keep from a fixed deposit depends on your marginal rate. The [[after-tax-return|after-tax return]] on a fully taxed return is simple:</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · After-tax and after-tax real return</p>
+      <div class="fx"><math display="block"><msub><mi>r</mi><mtext>after tax</mtext></msub><mo>=</mo><mi>r</mi><mo>×</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo>)</mo><mspace width="2em"></mspace><msub><mi>r</mi><mtext>real, after tax</mtext></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>r</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo>)</mo></mrow><mrow><mn>1</mn><mo>+</mo><mi>π</mi></mrow></mfrac><mo>−</mo><mn>1</mn></math></div>
+      <dl class="vars"><dt>r</dt><dd>Pre-tax return, taxed each year.</dd><dt>t</dt><dd>Marginal tax rate that applies to that return, including cess.</dd><dt>π</dt><dd>Inflation (Lesson 0.5).</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> A 7% FD. At Meera's 15.6% marginal rate: 7% × 0.844 = <strong>5.91%</strong> after tax, and (1.0591 ÷ 1.05) − 1 = <strong>0.87%</strong> real. At a 31.2% marginal rate (30% slab plus cess): 4.82% after tax, and <strong>−0.18%</strong> real. The same deposit loses purchasing power for a higher earner.</p>
+        <p><b>Limitations.</b> This applies to returns taxed every year at slab rates, such as deposit interest. Other investments are taxed differently (for example, gains taxed only when you sell, or at special rates). Those rules are in Level 23.</p>
+      </div>
+    </div>
+    <p>This finishes a thread from Lesson 0.6: the goal planner used pre-tax returns. For Meera's car goal, a 6.5% deposit taxed at 15.6% earns 5.49% after tax, so the monthly saving needed is slightly higher than the planner showed. For short goals the difference is small; for long goals it compounds.</p>
+  </section>
+
+  <section id="l10-drag" aria-labelledby="l10-drag-h">
+    <h2 id="l10-drag-h">Tax drag: why timing of tax matters</h2>
+    <p>[[tax-drag|Tax drag]] is the reduction in long-run wealth caused by paying tax on returns. It depends not only on the rate but on <em>when</em> tax is paid. Tax taken every year shrinks the amount left to compound. Tax paid once at the end lets the whole amount compound first.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · Same rate, different timing</p>{{tag:hyp}}</div>
+      <p>₹10 lakh earning 10% a year for 20 years, with a 20% tax rate on returns:</p>
+      <ul>
+        <li><strong>No tax:</strong> ₹67.3 lakh.</li>
+        <li><strong>Tax paid once at the end</strong> on the total gain: ₹10 lakh + (₹57.3 lakh × 0.8) = <strong>₹55.8 lakh</strong>.</li>
+        <li><strong>Tax paid every year:</strong> the money compounds at 8% instead of 10% = <strong>₹46.6 lakh</strong>.</li>
+      </ul>
+      <p><strong>Interpretation.</strong> Same tax rate, ₹9.2 lakh difference, purely from timing. This is why the tax treatment of an investment is part of its return, and why Level 23 matters for anyone investing for decades. The rates here are illustrative, not the rates on any specific product.</p>
+    </div>
+  </section>
+
+  <section id="l10-mistakes" aria-labelledby="l10-mistakes-h">
+    <h2 id="l10-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“A raise can push me into a higher bracket and reduce my take-home.”</p>
+      <p><span class="mistake-part">Why this fails</span>Slab rates apply only to income within each slab, so more income always leaves more after tax. The one narrow exception is the marginal-relief band just above the rebate limit, where take-home barely rises but still does not fall.</p>
+      <p><span class="mistake-part">Better question</span>What is my marginal rate on this extra income?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“It saves tax, so it must be a good investment.”</p>
+      <p><span class="mistake-part">Why this fails</span>A tax saving is one part of the return. A product with a tax benefit and a poor underlying return, a long lock-in or high costs can still be worse than a taxable alternative. Under the default new regime, many older deductions do not apply at all.</p>
+      <p><span class="mistake-part">Better question</span>What is the after-tax return, including the tax benefit, compared with the best alternative?</p>
+    </div>
+  </section>
+
+  <section id="l10-limits" aria-labelledby="l10-limits-h">
+    <h2 id="l10-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Rules change.</strong> Slabs, rebates and deductions are revised in budgets. Every figure here carries a verification date for that reason.</li>
+      <li><strong>Different income, different rules.</strong> Capital gains, dividends and some other income are taxed at special rates or in special ways; the slab model here applies to salary and deposit interest.</li>
+      <li><strong>Old vs new regime.</strong> The choice depends on deductions you can claim; comparing them is Level 23 work.</li>
+      <li><strong>Surcharge, TDS and filing.</strong> Deliberately excluded here.</li>
+    </ul>
+  </section>
+
+  <section id="l10-check" aria-labelledby="l10-check-h">
+    <h2 id="l10-check-h">Knowledge check</h2>
+<!--quiz id=q10-1 comp=Understanding-->
+? Which rate should you use to decide whether an extra ₹50,000 of freelance income is worth the effort?
++ Your marginal rate || It applies to the extra income.
+- Your average rate || The average describes your whole income, not the next rupee.
+- The highest slab rate, 30% || Only relevant if you are already in the 30% slab.
+<!--/quiz-->
+<!--numeric id=q10-2 comp=Calculation answer=0.90 tol=0.03 text="0.90%" label="Real after-tax return (%)"-->
+? A deposit pays 7.5%. Your marginal rate is 20.8% (20% slab plus cess). Inflation is 5%. What is your real after-tax return, in % to two decimals?
+= After tax: 7.5% × (1 − 0.208) = 5.94%. Real: (1.0594 ÷ 1.05) − 1 = <strong>0.90%</strong>.
+<!--/numeric-->
+<!--quiz id=q10-3 comp=Interpretation-->
+? Two investors each earn 10% a year for 25 years with a 20% tax rate on returns. One pays tax every year; the other pays once at the end. Why does the second end with more?
+- The second pays a lower rate || The rate is the same.
++ The second's money compounds on the full return for 25 years before tax is taken || Deferral lets untaxed returns earn returns.
+- Tax paid at the end is adjusted for inflation || No inflation adjustment is assumed.
+<!--/quiz-->
+  </section>
+
+  <section id="l10-practice" aria-labelledby="l10-practice-h">
+    <h2 id="l10-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A True or false under the new regime for tax year 2026-27: (a) a salaried person earning ₹12.5 lakh gross pays no income tax; (b) someone with ₹20 lakh taxable income pays 20% on all of it; (c) cess is charged on the tax, not on income.
+A: (a) True: taxable income is ₹11.75 lakh after the ₹75,000 standard deduction, within the ₹12 lakh rebate limit. (b) False: only the slice from ₹16 to 20 lakh is taxed at 20%. (c) True.
+# B Compute the tax (with cess) on a salary of ₹20 lakh gross under the simplified model, and the average and marginal rates.
+A: Taxable ₹19.25 lakh. Slabs: 20,000 + 40,000 + 60,000 (15% of ₹4 lakh) + 65,000 (20% of ₹3.25 lakh) = ₹1,85,000; with 4% cess ₹1,92,400. Average = 9.6% of gross; marginal = 20.8%.
+# C Meera is offered ₹60,000 for a weekend consulting project. Roughly how much does she keep, and what else should she consider?
+A: At her 15.6% marginal rate, tax ≈ ₹9,360, leaving about ₹50,640. She should also consider whether her employment contract allows outside work and any professional costs. The marginal rate, not the 6.5% average, is the right one.
+# D For a 20-year goal, compare a 7% investment taxed every year at 31.2% with a 7% investment taxed once at the end at 20% on the total gain, for ₹5 lakh.
+A: Annual taxation: 7% × 0.688 = 4.82%; ₹5 lakh × 1.0482<sup>20</sup> ≈ ₹12.81 lakh. Deferred: ₹5 lakh × 1.07<sup>20</sup> = ₹19.35 lakh; gain ₹14.35 lakh taxed at 20% leaves ₹16.48 lakh. Deferral and the lower rate together add about ₹3.7 lakh. (Illustrative rates; actual treatment depends on the product, Level 23.)
+# E A friend argues that because the rebate makes income up to ₹12 lakh tax-free, "taxes don't matter for middle-class investors." Evaluate this.
+A: The rebate zeroes tax on salary within the limit, but investment income adds to total income and can push it above the limit, and many investors earn more than ₹12 lakh. Even at lower incomes, the principles (marginal rates, after-tax returns, timing of tax) decide which investments are better. Taxes matter to almost everyone through their effect on long-run compounding.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l10-notes-h">
+    <h2 id="l10-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l10">Your marginal rate, and the after-tax return on your deposits</label><textarea class="input" id="notes-l10" data-notes="l10"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

@@ -1,0 +1,249 @@
+<article class="lesson" id="l09" data-lesson data-title="0.9 Insurance" data-nav-title="0.9 Insurance" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.9 · Part IV · Threats to the system</p>
+    <h1>Insurance</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Insure what you cannot afford to lose, not what is merely annoying. Insurance loses money on average, on purpose, to remove the outcomes that would ruin you.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l09-why">Why it exists</a><a href="#l09-lab">Pooling simulator</a><a href="#l09-life">Life and term cover</a><a href="#l09-how-much">How much cover</a><a href="#l09-health">Health</a><a href="#l09-vehicle">Vehicle and property</a><a href="#l09-mixing">Insurance vs investment</a><a href="#l09-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l09-why" aria-labelledby="l09-why-h">
+    <h2 id="l09-why-h">Why insurance exists: risk transfer and pooling</h2>
+    <p>Some losses are rare but enormous: a death that ends a family's main income, a hospital stay costing ₹10 lakh, a fire. No household can predict whether it will be hit. But across thousands of households, the <em>number</em> hit each year is quite predictable. Insurance exploits that difference.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>A thousand households each face a 1% chance of a ₹10 lakh medical bill this year. Alone, each faces a tiny chance of disaster. Together, they can expect about ten bills, ₹1 crore in total. If each pays ₹10,000 into a pool, the pool covers the bills and nobody faces ruin. That is [[risk-pooling|risk pooling]]. Paying a company to run the pool, and to carry the risk that more than ten bills arrive, is [[risk-transfer|risk transfer]].</p>
+    </aside>
+    <p>The pool is not free to run. Insurers pay claims, staff, distributors and capital costs, and expect a profit. So the [[premium|premium]] is set above the [[expected-loss|expected loss]]: in the example, perhaps ₹13,000 instead of ₹10,000. On average, every buyer loses ₹3,000 a year. Why is buying still rational?</p>
+  </section>
+
+  <section id="l09-predict" aria-labelledby="l09-predict-h">
+    <h2 id="l09-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p09-->
+? Is it rational to buy insurance whose premium is higher than the expected claim?
+- Never. You lose money on average, so it is always a bad deal || On average, yes. But averages hide what matters: the outcome you actually get.
++ Yes for losses that would be ruinous; usually no for small losses you could absorb || You pay a small, certain cost to remove a small chance of a catastrophic loss.
+- Yes, always, because insurance is safer || Insuring a ₹5,000 phone screen at a heavy markup is a poor trade for most people; you can absorb that loss.
+> <p><strong>It depends on whether you could survive the loss.</strong> Losing ₹10 lakh does not hurt 77 times as much as losing ₹13,000; for most households it hurts far more, because it means selling assets, borrowing at high rates, or abandoning goals. Insurance swaps a wide, dangerous range of outcomes for a narrow, predictable one, and that is worth paying for when the bad end of the range is unbearable.</p>
+> <p>The same logic tells you what <em>not</em> to insure: small losses you could pay from savings. For those, the insurer's markup is a pure cost.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l09-expected" aria-labelledby="l09-expected-h">
+    <h2 id="l09-expected-h">Expected loss and the price of cover</h2>
+  <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Expected loss and premium</p>
+      <div class="fx"><math display="block"><mtext>Expected loss</mtext><mo>=</mo><mi>p</mi><mo>×</mo><mi>L</mi><mspace width="2em"></mspace><mtext>Premium</mtext><mo>≈</mo><mi>p</mi><mo>×</mo><mi>L</mi><mo>×</mo><mo>(</mo><mn>1</mn><mo>+</mo><mi>λ</mi><mo>)</mo></math></div>
+      <dl class="vars"><dt>p</dt><dd>Probability of the loss in a period (1% = 0.01).</dd><dt>L</dt><dd>Size of the loss, in ₹.</dd><dt>λ</dt><dd>Loading: the insurer's costs and profit as a fraction of expected claims (the Greek letter lambda).</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> p = 1%, L = ₹10 lakh: expected loss ₹10,000 a year. With a 30% loading, the premium is ₹13,000. {{tag:hyp}}</p>
+        <p><b>Interpretation.</b> Insurance has a negative expected value for the buyer, by design. It is worth buying when the loss would change your life, and not worth buying when it would merely annoy you.</p>
+        <p><b>Limitations.</b> Real pricing also depends on your individual risk (age, health, driving record) and on how independent the risks are. A flood or pandemic that hits many policyholders at once is harder to pool.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l09-lab" aria-labelledby="l09-lab-h" class="bench" data-lab="pool">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Risk pooling simulator</p>
+      <h3 id="l09-lab-h">A thousand households, alone vs insured</h3>
+      <p class="bench-purpose">Purpose: see that insurance does not reduce losses on average; it narrows the range of outcomes by removing the ruinous tail. Each run simulates random losses with a fixed seed so results are reproducible. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="pl-p">Chance of the loss each year <output id="pl-p-o" for="pl-p"></output></label><input id="pl-p" type="range" min="0.5" max="10" step="0.5" value="1"></div>
+        <div class="field"><label for="pl-l">Size of the loss <output id="pl-l-o" for="pl-l"></output></label><input id="pl-l" type="range" min="100000" max="5000000" step="100000" value="1000000"></div>
+        <div class="field"><label for="pl-y">Years <output id="pl-y-o" for="pl-y"></output></label><input id="pl-y" type="range" min="1" max="30" step="1" value="20"></div>
+        <div class="field"><label for="pl-ld">Insurer's loading <output id="pl-ld-o" for="pl-ld"></output></label><input id="pl-ld" type="range" min="0" max="80" step="5" value="30"></div>
+        <button type="button" class="btn" id="pl-run">{{i:shuffle}} Run another random world</button>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Insured: every household pays</span><span class="readout-value" id="pl-ins"></span><span class="readout-sub" id="pl-ins-sub"></span></div>
+          <div class="readout"><span class="readout-label">Alone: average cost</span><span class="readout-value" id="pl-avg"></span><span class="readout-sub" id="pl-avg-sub"></span></div>
+          <div class="readout"><span class="readout-label">Alone: worst household</span><span class="readout-value" id="pl-worst"></span><span class="readout-sub" id="pl-worst-sub"></span></div>
+        </div>
+        <div id="pl-chart"></div>
+        <p class="insight" id="pl-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l09-life" aria-labelledby="l09-life-h">
+    <h2 id="l09-life-h">Life insurance and term cover</h2>
+    <p>Life insurance pays a sum when the insured person dies. Its economic purpose is to replace the <strong>human capital</strong> (Lesson 0.1) that dependants would lose: the future income that would have paid for their living costs, the home loan and the children's education. If nobody depends on your income, you have little need for life cover; Meera, today, is in that position.</p>
+    <p>[[term-insurance|Term insurance]] is the purest form: it pays the [[sum-assured|sum assured]] if death occurs during the term and nothing if you survive. Because most policyholders survive, term cover is cheap relative to the cover it provides. For a healthy non-smoker in their thirties, ₹1 crore of term cover often costs in the region of ₹10,000 to ₹20,000 a year, depending on age, health, term and insurer. {{tag:hyp}} Treat that as an illustration; get quotes.</p>
+    <div class="block block--lens">
+      <p class="block-label">{{i:binoculars}} Investor lens</p>
+      <p>Human capital shrinks as you age: fewer earning years remain, and savings grow to replace it. So the need for life cover is usually highest when children are young and loans are large, and falls towards retirement. That is why a term policy that ends around retirement matches the need well.</p>
+    </div>
+  </section>
+
+  <section id="l09-how-much" aria-labelledby="l09-how-much-h">
+    <h2 id="l09-how-much-h">How much cover: the needs-based method</h2>
+    <p>Two approaches are common. [[human-life-value|Human life value]] estimates the present value of the earner's future income. The [[needs-based-cover|needs-based]] method estimates what the dependants would actually need, which is more direct and easier to check. Both use present value from Lesson 0.4.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Needs-based life cover</p>
+      <div class="fx"><math display="block"><mtext>Cover</mtext><mo>=</mo><mi>PV</mi><mo>(</mo><mtext>family expenses</mtext><mo>)</mo><mo>+</mo><mtext>debts</mtext><mo>+</mo><mtext>goals</mtext><mo>−</mo><mtext>assets</mtext><mo>−</mo><mtext>existing cover</mtext></math></div>
+      <dl class="vars">
+        <dt>PV(family expenses)</dt><dd>Present value of the family's annual living costs (excluding the insured person's own spending) for the years support is needed, at a <em>real</em> rate, so that inflation is handled automatically.</dd>
+        <dt>Debts</dt><dd>Loans that would otherwise fall on the family, such as the home loan.</dd>
+        <dt>Goals</dt><dd>Major future commitments in today's money, such as children's education.</dd>
+        <dt>Assets, existing cover</dt><dd>What is already available: savings and investments, and any personal cover. Employer group cover usually ends with the job, so count it cautiously.</dd>
+      </dl>
+    </div>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · Cover for Anil Nair</p>{{tag:hyp}}</div>
+      <p>If Anil died, his family's living costs excluding his own would be about ₹9 lakh a year in today's money, needed for 20 years. Assume a 2% real return on the payout. The home-loan balance is ₹46.7 lakh, the daughter's education fund is ₹20 lakh in today's money, and the family has ₹6 lakh of savings.</p>
+      <ol>
+        <li>PV of expenses = ₹9 lakh × [1 − 1.02<sup>−20</sup>] ÷ 0.02 = <strong>₹1.47 crore</strong>.</li>
+        <li>Add debts and goals: 1.47 + 0.467 + 0.20 = ₹2.14 crore.</li>
+        <li>Subtract assets: 2.14 − 0.06 = <strong>about ₹2.1 crore</strong> of cover.</li>
+      </ol>
+      <p><strong>Interpretation.</strong> His take-home is about ₹18 lakh a year, so this is roughly 11.5 times income. Rules of thumb such as "10 to 15 times income" land in the same area, but the needs-based method shows <em>why</em>, and adjusts automatically when the loan is repaid or savings grow. His wife earns too, so she needs her own calculation.</p>
+    </div>
+  </section>
+
+  <section id="l09-coverlab" aria-labelledby="l09-coverlab-h" class="bench" data-lab="cover">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Cover estimator</p>
+      <h3 id="l09-coverlab-h">Estimate life cover from what dependants would need</h3>
+      <p class="bench-purpose">Purpose: see which inputs drive the cover figure, especially the years of support and the real rate. An estimate for learning, not a recommendation. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="cv-e">Family expenses per year (without you) <output id="cv-e-o" for="cv-e"></output></label><input id="cv-e" type="range" min="100000" max="5000000" step="50000" value="900000"></div>
+        <div class="field"><label for="cv-y">Years of support needed <output id="cv-y-o" for="cv-y"></output></label><input id="cv-y" type="range" min="1" max="40" step="1" value="20"></div>
+        <div class="field"><label for="cv-r">Real return on the payout <output id="cv-r-o" for="cv-r"></output></label><input id="cv-r" type="range" min="0" max="5" step="0.5" value="2"></div>
+        <div class="field"><label for="cv-d">Debts to clear <output id="cv-d-o" for="cv-d"></output></label><input id="cv-d" type="range" min="0" max="20000000" step="100000" value="4670000"></div>
+        <div class="field"><label for="cv-g">Goals, in today's money <output id="cv-g-o" for="cv-g"></output></label><input id="cv-g" type="range" min="0" max="20000000" step="100000" value="2000000"></div>
+        <div class="field"><label for="cv-a">Savings and existing personal cover <output id="cv-a-o" for="cv-a"></output></label><input id="cv-a" type="range" min="0" max="20000000" step="100000" value="600000"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Estimated cover needed</span><span class="readout-value" id="cv-need"></span></div>
+          <div class="readout"><span class="readout-label">Of which: future living costs</span><span class="readout-value" id="cv-pv"></span></div>
+          <div class="readout"><span class="readout-label">Sensitivity: 1 point lower real return</span><span class="readout-value" id="cv-sens"></span></div>
+        </div>
+        <div id="cv-chart"></div>
+        <p class="insight" id="cv-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l09-health" aria-labelledby="l09-health-h">
+    <h2 id="l09-health-h">Health insurance</h2>
+    <p>For most Indian households, a serious illness is the most likely large financial shock. Health insurance pays hospital costs up to the [[sum-insured|sum insured]] for the policy year, subject to the policy's terms. Relying only on employer group cover is risky: it ends when the job ends, is often small, and a new personal policy bought later, when you may have developed a condition, is harder to get and subject to waiting periods.</p>
+    <h3>Terms that decide what you actually receive</h3>
+    <ul>
+      <li><strong>[[waiting-period|Waiting periods]].</strong> Conditions you already have (pre-existing diseases) and some specific illnesses are covered only after a waiting period.</li>
+      <li><strong>Sub-limits and room-rent caps.</strong> Some policies cap the room rent they pay (for example at a percentage of the sum insured). Choosing a more expensive room can trigger <em>proportionate deductions</em> on related charges. Read the policy wording.</li>
+      <li><strong>[[co-payment|Co-payment]] and [[deductible|deductible]].</strong> A co-payment is a fixed share of each claim you pay; a deductible is an amount you pay before cover starts. Both lower the premium and shift small losses back to you, which is consistent with the principle of insuring only what you cannot absorb.</li>
+      <li><strong>Disclosure.</strong> Non-disclosure of existing conditions is the most common reason claims are disputed. Disclose everything.</li>
+    </ul>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current rules · India</p>{{tag:curr:29 Sep 2026}}</div>
+      <ul>
+        <li><strong>[[moratorium|Moratorium period]]: 5 years.</strong> After five continuous years of cover, a health insurer cannot contest a claim on grounds of non-disclosure or misrepresentation, except for established fraud.</li>
+        <li><strong>Pre-existing disease waiting period: at most 36 months.</strong> Specific-illness waiting periods also apply, often 24 to 36 months, as stated in the policy.</li>
+        <li><strong>[[free-look|Free-look period]]: 30 days</strong> for life and health policies, to review the terms and cancel with a refund (subject to specified deductions).</li>
+        <li><strong>Claim timelines:</strong> insurers must decide on cashless authorisation requests within 1 hour and grant final discharge authorisation within 3 hours of the hospital's request. Life death claims not requiring investigation are to be settled within 15 days.</li>
+        <li><strong>GST:</strong> individual life and individual health insurance policies are exempt from GST from 22 September 2025 (previously 18%). Group policies are still taxed.</li>
+      </ul>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Sources: IRDAI Master Circular on Health Insurance Business (29 May 2024) and Master Circular on Protection of Policyholders' Interests (2024), as summarised by <a href="https://nyvo.in/health-insurance/irdai-master-circular-2024" rel="noopener" target="_blank">Nyvo</a> and <a href="https://www.businesstoday.in/personal-finance/insurance/story/insurance-policy-irdai-issues-guidelines-on-holders-protection-rights-for-life-health-plans-check-details-444666-2024-09-05" rel="noopener" target="_blank">Business Today</a>; <a href="https://financialservices.gov.in/exemption-gst-all-individual-life-insurance-and-health-insurance-policies" rel="noopener" target="_blank">Department of Financial Services on the GST exemption</a>. Always check the current IRDAI circulars and your policy wording.</p>
+    </div>
+  </section>
+
+  <section id="l09-vehicle" aria-labelledby="l09-vehicle-h">
+    <h2 id="l09-vehicle-h">Vehicle and property insurance</h2>
+    <p><strong>Vehicle insurance</strong> has two parts. <em>Third-party</em> cover pays for injury or damage you cause to others; it is compulsory in India under the Motor Vehicles Act, because the potential liability is unlimited and falls on other people. <em>Own-damage</em> cover pays for damage to your own vehicle; a policy combining both is called comprehensive. Applying this lesson's principle: third-party cover protects against a ruinous, open-ended loss; own-damage cover on an old, low-value vehicle may cost more than it is worth.</p>
+    <p><strong>Property insurance</strong> covers a home's structure and contents against fire, theft and natural disasters. It is widely under-used in India even though a home is often a household's largest asset. For renters, contents cover can be inexpensive. Check what is excluded: flood and earthquake are sometimes add-ons rather than standard.</p>
+  </section>
+
+  <section id="l09-mixing" aria-labelledby="l09-mixing-h">
+    <h2 id="l09-mixing-h">Insurance vs investment products</h2>
+    <p>Many policies sold in India combine insurance with saving: endowment plans, money-back plans, and unit-linked insurance plans (ULIPs). They pay something back if you survive, which feels better than a term policy that "wastes" its premium. The question is whether bundling the two gives good insurance <em>and</em> a good investment. Often it gives modest amounts of each.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · An endowment plan vs term plus investing</p>{{tag:hyp}}</div>
+      <p><strong>Endowment:</strong> premium ₹1,00,000 a year for 20 years, life cover ₹10 lakh, maturity benefit ₹30 lakh. The return that makes the premiums grow into ₹30 lakh (the internal rate of return) is about <strong>3.7% a year</strong>.</p>
+      <p><strong>Term plus investing:</strong> a term policy with ₹1 crore of cover at an assumed ₹15,000 a year, and the remaining ₹85,000 invested each year. After 20 years that grows to about ₹42 lakh at 8%, ₹33 lakh at 6%, or ₹26 lakh at 4%.</p>
+      <p><strong>Interpretation.</strong> Term plus investing gives ten times the life cover. Whether it also ends with more money depends on the return achieved and on tax: it wins above about 5% a year before tax in this example, and the endowment's guarantee and possible tax treatment have real value to some buyers. The honest conclusion is not "never buy endowments" but "separate the two decisions and compare each with its best alternative". The internal rate of return used here is the same idea as XIRR, taught in Lesson 8.5.</p>
+      <p class="source-note">Benefit figures are invented for teaching. Actual policies publish a benefit illustration; compute its return before buying.</p>
+    </div>
+  </section>
+
+  <section id="l09-mistakes" aria-labelledby="l09-mistakes-h">
+    <h2 id="l09-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Term insurance is a waste because I get nothing back if I survive.”</p>
+      <p><span class="mistake-part">Why this fails</span>You got what you paid for: your family was protected for the whole term. Fire insurance on a house that never burns is not wasted either. Wanting money back is wanting an investment, which is a separate decision.</p>
+      <p><span class="mistake-part">Better question</span>What would my family need if I died this year, and what is the cheapest reliable way to guarantee it?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My employer's ₹5 lakh group health cover is enough.”</p>
+      <p><span class="mistake-part">Why this fails</span>It ends if you change or lose your job, is often shared across the family, and a serious illness can exceed it. Buying a personal policy while healthy starts the waiting and moratorium clocks early.</p>
+      <p><span class="mistake-part">Better question</span>What cover would I have if I left my job tomorrow?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“I should buy a life policy for my child.”</p>
+      <p><span class="mistake-part">Why this fails</span>Life cover replaces income that dependants rely on. A child's death is a tragedy but not usually a loss of household income. The money is better spent on the earners' cover and the child's health cover.</p>
+      <p><span class="mistake-part">Better question</span>Whose income does this household depend on, and are they covered?</p>
+    </div>
+  </section>
+
+  <section id="l09-limits" aria-labelledby="l09-limits-h">
+    <h2 id="l09-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Exclusions and wording.</strong> Coverage is whatever the policy wording says, not what the brochure implies. Read exclusions, sub-limits and waiting periods.</li>
+      <li><strong>Inflation.</strong> A sum insured that looked ample ten years ago may cover half a hospital bill today. Review cover every few years.</li>
+      <li><strong>Insurer behaviour.</strong> Claims experience varies between insurers. Look at claim-settlement practices, not just price.</li>
+      <li><strong>Correlated events.</strong> Pooling works best for independent risks. Pandemics and regional disasters strain the model; policy terms may exclude some of them.</li>
+    </ul>
+  </section>
+
+  <section id="l09-check" aria-labelledby="l09-check-h">
+    <h2 id="l09-check-h">Knowledge check</h2>
+<!--quiz id=q09-1 comp=Understanding-->
+? Which risk is the strongest candidate for insurance?
+- A 30% chance of a ₹3,000 phone repair || Likely and small: you can absorb it, and the insurer's markup is a pure cost.
++ A 0.2% chance of a ₹50 lakh loss || Rare and ruinous: exactly what pooling handles well.
+- A 90% chance of a ₹20,000 routine expense || Almost certain losses are just expenses. Insuring them means paying the cost plus a markup.
+<!--/quiz-->
+<!--numeric id=q09-2 comp=Calculation answer=1.17 tol=0.02 text="₹1.17 crore" label="Present value (₹ crore)"-->
+? A family's expenses without the earner are ₹6 lakh a year for 25 years. At a 2% real return, what is the present value of those expenses, in ₹ crore (two decimals)? Ignore debts, goals and assets.
+= PV = 6,00,000 × [1 − 1.02<sup>−25</sup>] ÷ 0.02 = 6,00,000 × 19.52 = <strong>₹1.17 crore</strong>.
+<!--/numeric-->
+<!--quiz id=q09-3 comp=Application-->
+? Meera, 29, single, no dependants, is offered a ₹1 crore term policy by a colleague who sells insurance. What is the best reasoning?
+- Buy it: everyone needs life insurance || Life cover replaces income for dependants. With none, the need is small today.
++ She has little need for life cover today; a personal health policy matters more, and she can buy term cover when someone depends on her income, accepting that premiums will be higher at an older age || Match the product to the risk. Her main exposures now are health costs and income loss, not dependants losing her income.
+- Buy an endowment instead, because it returns money || That combines a product she does not need with a low-return investment.
+<!--/quiz-->
+  </section>
+
+  <section id="l09-practice" aria-labelledby="l09-practice-h">
+    <h2 id="l09-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Match each product to its main purpose: (a) term life, (b) health, (c) third-party motor, (d) home contents. Purposes: replace income for dependants; pay hospital costs; cover damage you cause to others; replace belongings after theft or fire.
+A: (a) replace income for dependants, (b) pay hospital costs, (c) cover damage you cause to others, (d) replace belongings.
+# B An insurer covers 20,000 people against a 0.5% annual chance of a ₹8 lakh loss and charges ₹5,200 each. What is the expected loss per person, and the loading?
+A: Expected loss = 0.005 × 8,00,000 = ₹4,000. Loading = 5,200 ÷ 4,000 − 1 = <strong>30%</strong>. The pool expects about 100 claims (₹8 crore) and collects ₹10.4 crore.
+# C A health policy has a 20% co-payment. A claim of ₹3 lakh is admissible. How much does the policyholder pay, and why might someone choose a co-payment?
+A: ₹60,000 (20%). A co-payment lowers the premium and keeps the policyholder bearing small-to-medium costs they can afford, consistent with insuring only large losses. It is a poor choice for someone with no emergency fund.
+# D The Nairs repay their home loan fully in 12 years. How should Anil's cover need change over time, and what does that suggest about the policy structure?
+A: The need falls as the loan shrinks, savings grow and the years of support needed shorten. A single term policy sized for today's peak need, ending around retirement, is simple and conservative; some households use two policies of different terms so cover steps down as the loan is repaid.
+# E A salesperson says: "This money-back plan returns 110% of premiums over 20 years, so you can't lose." Critique the claim.
+A: Getting back 110% of premiums over 20 years is a very low return: even before inflation, the internal rate of return is well under 1% a year, and in real terms it loses substantial purchasing power (at 5% inflation, a rupee in 20 years is worth about 38 paise today). "Can't lose" ignores opportunity cost and inflation. Compare the life cover and the return separately with term cover and a plain investment.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l09-notes-h">
+    <h2 id="l09-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l09">Your current policies, what each actually covers, and any gaps</label><textarea class="input" id="notes-l09" data-notes="l09"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

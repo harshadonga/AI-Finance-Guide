@@ -1,0 +1,94 @@
+<article class="lesson" id="project" data-lesson data-title="Project 0: Personal financial dashboard" data-nav-title="Project 0: your dashboard" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Project 0</p>
+    <h1>Your Personal Financial Dashboard</h1>
+    <p class="lede">Build the whole system for your own household: income → expenses → assets → liabilities → net worth → savings rate → emergency fund → insurance → investments → goals. Then write a diagnosis and three actions.</p>
+    <dl class="meta-row">
+      <div><dt>Deliverable</dt><dd>A completed dashboard, a one-paragraph diagnosis, and three prioritised actions with reasons.</dd></div>
+      <div><dt>Privacy</dt><dd>Your numbers stay in this browser. Nothing is sent anywhere. Export a file to keep a copy.</dd></div>
+      <div><dt>Later</dt><dd>This becomes the first part of your Personal Investment Operating System (Level 25).</dd></div>
+    </dl>
+  </header>
+
+  <section class="wide" id="p0-app" aria-labelledby="p0-h" data-lab="project0">
+    <h2 id="p0-h" class="visually-hidden">Dashboard</h2>
+    <div class="p0-bar">
+      <p class="p0-status" id="p0-mode" aria-live="polite"></p>
+      <div class="p0-actions">
+        <button type="button" class="btn" id="p0-mine">{{i:user}} Start with my numbers</button>
+        <button type="button" class="btn btn--ghost" id="p0-sample">{{i:arrow-counter-clockwise}} Load Meera's sample</button>
+        <button type="button" class="btn btn--ghost" id="p0-export">{{i:download-simple}} Export file</button>
+        <button type="button" class="btn btn--ghost" id="p0-import-btn">{{i:upload-simple}} Import file</button>
+        <input type="file" id="p0-import" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <div class="p0-confirm" id="p0-confirm" hidden role="alertdialog" aria-labelledby="p0-confirm-t">
+      <p id="p0-confirm-t">Clear the current numbers and start with an empty dashboard? Export a file first if you want to keep them.</p>
+      <div class="p0-actions"><button type="button" class="btn btn--primary" id="p0-confirm-yes">Clear and start</button><button type="button" class="btn" id="p0-confirm-no">Keep current numbers</button></div>
+    </div>
+
+    <div class="p0-undo" id="p0-undo" hidden role="status"></div>
+    <div class="p0-export-fallback" id="p0-fallback" hidden><p class="hint">Saving files is not available in this view. Copy the text below and keep it somewhere safe; paste it back into a .json file to import later.</p><textarea class="input" id="p0-fallback-text" readonly aria-label="Dashboard data as JSON"></textarea><button type="button" class="btn" data-copy="p0-fallback-text">{{i:copy}} Copy</button></div>
+    <div class="p0-summary" id="p0-summary"></div>
+
+    <div class="p0-grid">
+      <form class="p0-form" id="p0-form" novalidate>
+        <fieldset class="p0-fs"><legend>{{i:arrow-down}} 1 · Income (per month)</legend>
+          <div class="p0-fields">
+            <div class="field"><label for="p0-takehome">Take-home pay</label><input class="input" id="p0-takehome" data-k="income.takeHome" name="p0-takehome" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-other">Other regular income</label><input class="input" id="p0-other" data-k="income.other" name="p0-other" autocomplete="off" inputmode="numeric"><span class="hint">Rent received, a partner's contribution you rely on, and so on.</span></div>
+          </div>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:arrow-up}} 2 · Expenses (per month)</legend>
+          <div class="p0-fields">
+            <div class="field"><label for="p0-fixed">Fixed, including EMIs</label><input class="input" id="p0-fixed" data-k="expenses.fixed" name="p0-fixed" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-variable">Variable but necessary</label><input class="input" id="p0-variable" data-k="expenses.variable" name="p0-variable" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-disc">Discretionary, including interest on card balances</label><input class="input" id="p0-disc" data-k="expenses.discretionary" name="p0-disc" autocomplete="off" inputmode="numeric"></div>
+          </div>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:scales}} 3 · Assets</legend>
+          <div class="p0-rows" id="p0-assets"></div>
+          <button type="button" class="btn btn--ghost" data-add="assets">{{i:plus}} Add an asset</button>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:credit-card}} 4 · Liabilities</legend>
+          <div class="p0-rows" id="p0-liabs"></div>
+          <button type="button" class="btn btn--ghost" data-add="liabilities">{{i:plus}} Add a debt</button>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:lifebuoy}} 5 · Emergency fund and insurance</legend>
+          <div class="p0-fields">
+            <div class="field"><label for="p0-months">Emergency fund target (months of essentials)</label><input class="input" id="p0-months" data-k="emergency.months" name="p0-months" autocomplete="off" inputmode="decimal"><span class="hint">Lesson 0.7: about 4 for very stable income, 6 average, 9 or more if variable.</span></div>
+            <div class="field"><label for="p0-deps">People who depend on your income</label><input class="input" id="p0-deps" data-k="insurance.dependants" name="p0-deps" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-famexp">Their yearly living costs without you</label><input class="input" id="p0-famexp" data-k="insurance.familyExpenses" name="p0-famexp" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-years">Years they would need support</label><input class="input" id="p0-years" data-k="insurance.supportYears" name="p0-years" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-life">Personal term life cover</label><input class="input" id="p0-life" data-k="insurance.lifeCover" name="p0-life" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-health">Personal health cover (sum insured)</label><input class="input" id="p0-health" data-k="insurance.healthCover" name="p0-health" autocomplete="off" inputmode="numeric"></div>
+            <div class="field"><label for="p0-healthemp">Employer group health cover</label><input class="input" id="p0-healthemp" data-k="insurance.employerHealth" name="p0-healthemp" autocomplete="off" inputmode="numeric"></div>
+          </div>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:target}} 6 · Goals</legend>
+          <p class="hint">Returns are your assumptions, pre-tax. Lesson 0.6 explains the method.</p>
+          <div class="p0-rows" id="p0-goals"></div>
+          <button type="button" class="btn btn--ghost" data-add="goals">{{i:plus}} Add a goal</button>
+        </fieldset>
+        <fieldset class="p0-fs"><legend>{{i:pencil-simple}} 7 · Diagnosis and actions</legend>
+          <div class="field"><label for="p0-diag">One-paragraph diagnosis: what is strong, what is fragile?</label><textarea class="input" id="p0-diag" data-k="notes.diagnosis"></textarea></div>
+          <div class="field"><label for="p0-act">Three prioritised actions, each with a reason</label><textarea class="input" id="p0-act" data-k="notes.actions"></textarea></div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="block block--caution col">
+      <p class="block-label">{{i:warning}} Limits of this dashboard</p>
+      <p>It uses the simplified methods of Module 0: teaching heuristics for the emergency fund, a needs-based life-cover estimate at a 2% real return, pre-tax goal returns, and no tax detail. It is a thinking tool for your own decisions, not professional financial advice.</p>
+    </div>
+    <div class="col flow">
+      <h3>Rubric</h3>
+      <ul class="checklist">
+        <li>{{i:check}} <span><strong>Complete chain:</strong> every section filled with your real numbers, or deliberately marked zero.</span></li>
+        <li>{{i:check}} <span><strong>Honest valuation:</strong> assets at realisable value (Lesson 0.3), essentials separated from choices (Lesson 0.2).</span></li>
+        <li>{{i:check}} <span><strong>Diagnosis:</strong> names the one or two biggest fragilities, using the dashboard's numbers as evidence.</span></li>
+        <li>{{i:check}} <span><strong>Actions:</strong> three, in priority order, each with a reason tied to a lesson (for example, "clear the card first: 51% effective cost, Lesson 0.8").</span></li>
+        <li>{{i:check}} <span><strong>Review date:</strong> when you will update it (every 3 to 6 months, and after any major change).</span></li>
+      </ul>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,34 @@
+<div data-module="{{MODULE_ID}}" data-module-title="{{MODULE_LABEL}}: {{MODULE_TITLE}}" id="app" hidden></div>
+<a class="skip" href="#main">Skip to lesson</a>
+<header class="topbar">
+  <button class="btn btn--ghost btn--icon menu-btn" id="menu-btn" type="button" aria-controls="rail" aria-expanded="false" aria-label="Open lesson list">{{i:list}}</button>
+  <a class="topbar-mark" href="#{{HOME_HASH}}">Finance Academy</a>
+  <span class="topbar-crumb">{{MODULE_LABEL}} · {{MODULE_TITLE}}</span>
+  <span class="topbar-spacer"></span>
+  <span class="meter" data-meter><span class="meter-track" aria-hidden="true"><span class="meter-fill"></span></span><span class="meter-label">0 of {{LESSON_COUNT}} complete</span></span>
+  <button class="btn btn--ghost" type="button" data-open-glossary aria-label="Glossary">{{i:book-open-text}}<span class="gl-btn-text">Glossary</span></button>
+  <button class="btn btn--ghost btn--icon" id="theme-btn" type="button" aria-label="Change colour theme">{{i:circle-half}}</button>
+</header>
+
+<div class="shell">
+{{MODULE_NAVIGATION}}
+  <main id="main" tabindex="-1">
+{{LESSONS}}
+    <nav class="lesson-nav" data-lesson-nav aria-label="Previous and next lesson"></nav>
+  </main>
+</div>
+
+<dialog class="panel" id="glossary-panel" aria-labelledby="glossary-title">
+  <div class="panel-head">
+    <div class="panel-head-row">
+      <h2 id="glossary-title" style="font-size:var(--t-h3)">Glossary</h2>
+      <button class="btn btn--ghost btn--icon" id="glossary-close" type="button" aria-label="Close glossary">{{i:x}}</button>
+    </div>
+    <div class="field">
+      <label for="glossary-search">Search terms <span id="glossary-count" class="val"></span></label>
+      <input class="input" id="glossary-search" type="search" autocomplete="off" placeholder="For example, real return…">
+    </div>
+  </div>
+  <div class="panel-body" id="glossary-list"></div>
+</dialog>
+

@@ -1,0 +1,232 @@
+<article class="lesson" id="l03" data-lesson data-title="0.3 Personal balance sheet" data-nav-title="0.3 Personal balance sheet" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.3 · Part I · The household as a system</p>
+    <h1>Personal Balance Sheet</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>Net worth tells you how far ahead you are. Liquid net worth tells you how long you can survive a shock. Leverage tells you how violently both can move.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l03-why">Why it matters</a><a href="#l03-sheet">Meera's balance sheet</a><a href="#l03-valuing">Valuing assets</a><a href="#l03-nw">Net worth</a><a href="#l03-liquid">Liquid net worth</a><a href="#l03-leverage">Leverage</a><a href="#l03-lab">Explorer</a><a href="#l03-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l03-why" aria-labelledby="l03-why-h">
+    <h2 id="l03-why-h">A photograph, not a video</h2>
+    <p>Lesson 0.2 measured flows over a month: a video. A balance sheet is a photograph: everything you own and everything you owe, on one date. You need both. The cash-flow statement tells you whether the tub is filling; the balance sheet tells you how full it is, what it is made of, and how much of it you could actually reach in a crisis.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Imagine you had to sell everything you own today and repay everything you owe. What would be left in your hand is your net worth. Now imagine you had one week and could not sell your home or touch your retirement account. What would be left then is closer to your liquid net worth. The difference between those two numbers is one of the most important facts about your finances.</p>
+    </aside>
+  </section>
+
+  <section id="l03-predict" aria-labelledby="l03-predict-h">
+    <h2 id="l03-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p03-->
+? Two households each own a flat worth ₹1 crore. The Kapoors own it outright. The Shahs have an ₹80 lakh home loan against it. Property prices fall 10%. What share of their equity (flat value minus loan) does each household lose?
+- Both lose 10% || Both flats lose 10% of their value, but the Shahs' loan does not shrink, so the whole ₹10 lakh loss falls on their much smaller equity.
++ The Kapoors lose 10%; the Shahs lose 50% || The Shahs' equity falls from ₹20 lakh to ₹10 lakh.
+- The Shahs lose less, because the bank shares the loss || The lender is owed the full ₹80 lakh regardless of the price. Borrowers absorb price falls first.
+> <p><strong>Kapoors: ₹1 crore → ₹90 lakh of equity, a 10% loss. Shahs: ₹20 lakh → ₹10 lakh, a 50% loss.</strong> The Shahs control a ₹1 crore asset with ₹20 lakh of their own money, a leverage of 5. Every 1% move in the flat's price is a 5% move in their equity, up or down.</p>
+> <p>A 20% price fall would wipe out the Shahs' equity entirely while leaving them with the full loan. That is the reason leverage appears in every later risk lesson (Lessons 9.11 and 9.14).</p>
+<!--/predict-->
+  </section>
+
+  <section id="l03-sheet" aria-labelledby="l03-sheet-h" class="wide">
+    <h2 id="l03-sheet-h">Meera's balance sheet, grouped by liquidity</h2>
+    <p class="col">[[asset|Assets]] are grouped by how quickly they can become cash at close to fair value, which is what [[liquidity|liquidity]] means. That grouping matters more than any other classification for a household.</p>
+    <div class="bs" aria-label="Meera's balance sheet">
+      <div class="bs-col">
+        <h3 class="bs-h">Assets {{tag:hyp}}</h3>
+        <div class="bs-band"><p class="bs-band-l">{{i:lightning}} Instant</p>
+          <div class="bs-line"><span>Savings account</span><span>1,80,000</span></div></div>
+        <div class="bs-band"><p class="bs-band-l">{{i:calendar-dots}} Within days, small cost or price risk</p>
+          <div class="bs-line"><span>Fixed deposit (premature-withdrawal penalty)</span><span>1,00,000</span></div>
+          <div class="bs-line"><span>Equity mutual funds (value moves daily)</span><span>2,40,000</span></div></div>
+        <div class="bs-band"><p class="bs-band-l">{{i:hourglass}} Weeks to months, or at a discount</p>
+          <div class="bs-line"><span>Gold jewellery (buy-back value, not purchase price)</span><span>1,50,000</span></div>
+          <div class="bs-line"><span>Rent security deposit (returned when she moves)</span><span>84,000</span></div>
+          <div class="bs-line"><span>Scooter (resale value; bought for 90,000)</span><span>45,000</span></div>
+          <div class="bs-line"><span>Laptop (resale value)</span><span>35,000</span></div></div>
+        <div class="bs-band"><p class="bs-band-l">{{i:lock}} Locked for years</p>
+          <div class="bs-line"><span>Employees' Provident Fund balance</span><span>3,10,000</span></div></div>
+        <div class="bs-line bs-total"><span>Total assets</span><span>11,44,000</span></div>
+      </div>
+      <div class="bs-col">
+        <h3 class="bs-h">Liabilities</h3>
+        <div class="bs-band"><p class="bs-band-l">{{i:lightning}} Due now</p>
+          <div class="bs-line"><span>Credit-card balance (3.5% a month, quoted as 42% a year)</span><span>85,000</span></div></div>
+        <div class="bs-band"><p class="bs-band-l">{{i:calendar-dots}} Due over years</p>
+          <div class="bs-line"><span>Education loan (EMI ₹6,800)</span><span>3,20,000</span></div></div>
+        <div class="bs-line bs-total"><span>Total liabilities</span><span>4,05,000</span></div>
+        <div class="bs-result">
+          <div class="bs-line"><span>[[net-worth|Net worth]]</span><span>7,39,000</span></div>
+          <div class="bs-line"><span>[[liquid-net-worth|Liquid net worth]]</span><span>4,35,000</span></div>
+          <div class="bs-line"><span>[[leverage|Leverage]] (assets ÷ net worth)</span><span>1.55×</span></div>
+          <div class="bs-line"><span>[[debt-to-income|EMI ÷ take-home]]</span><span>6.2%</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="source-note col">All figures in ₹. The full workings are in the formulas below.</p>
+  </section>
+
+  <section id="l03-valuing" aria-labelledby="l03-valuing-h">
+    <h2 id="l03-valuing-h">Valuing what you own: four rules</h2>
+    <ol>
+      <li><strong>Use what you could get today, not what you paid.</strong> Meera's scooter cost ₹90,000; a buyer would pay about ₹45,000. Vehicles and electronics lose value quickly, which is why most financial planners do not call them investments.</li>
+      <li><strong>Use the realisable price.</strong> Jewellery is valued at what a jeweller would pay back, which excludes the making charges and GST paid at purchase.</li>
+      <li><strong>Include what is owed to you.</strong> A rent deposit, money lent to a friend who will repay, or a pending reimbursement are assets. Be honest about the chance of getting each one back.</li>
+      <li><strong>Leave out future income.</strong> Human capital (Lesson 0.1) is real, but it is not on the balance sheet. Keeping it off stops you from borrowing as if it were certain.</li>
+    </ol>
+  </section>
+
+  <section id="l03-nw" aria-labelledby="l03-nw-h">
+    <h2 id="l03-nw-h">Net worth</h2>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Net worth</p>
+      <div class="fx"><math display="block"><mi>NW</mi><mo>=</mo><munder><mo>∑</mo><mrow></mrow></munder><mtext>assets</mtext><mo>−</mo><munder><mo>∑</mo><mrow></mrow></munder><mtext>liabilities</mtext></math></div>
+      <dl class="vars"><dt>NW</dt><dd>Net worth, in ₹, on a stated date.</dd><dt>∑</dt><dd>"Sum of": add up every item in the list.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> Meera: 11,44,000 − 4,05,000 = <strong>₹7,39,000</strong>.</p>
+        <p><b>Interpretation.</b> Net worth is the running total of every past saving decision and every past investment result. Its <em>direction</em> over time matters more than its level at any moment: a fresh graduate with an education loan often starts negative, which is normal.</p>
+        <p><b>Limitations.</b> It depends on valuations that can be uncertain, and it says nothing about when the money could be used.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l03-liquid" aria-labelledby="l03-liquid-h">
+    <h2 id="l03-liquid-h">Liquid net worth</h2>
+    <p>Most of what goes wrong in household finance goes wrong through liquidity, not net worth. A family with ₹2 crore of property and ₹40,000 in the bank can be forced into a 40% credit-card balance by one hospital bill.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Liquid net worth</p>
+      <div class="fx"><math display="block"><mi>LNW</mi><mo>=</mo><mtext>liquid assets</mtext><mo>−</mo><mtext>liabilities due within a year</mtext></math></div>
+      <dl class="vars"><dt>Liquid assets</dt><dd>Assets you could turn into cash within about a week without a large loss: bank balances, deposits, most mutual funds.</dd><dt>Short-term liabilities</dt><dd>Debts due now or soon: card balances, overdue bills, loans maturing within the year.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> Meera: (1,80,000 + 1,00,000 + 2,40,000) − 85,000 = <strong>₹4,35,000</strong>. Only ₹1,95,000 of that is in instruments whose value cannot fall; the mutual-fund part could be worth less exactly when she needs it.</p>
+        <p><b>Interpretation.</b> Divided by essential monthly spending (₹55,000 from Lesson 0.2), ₹4.35 lakh is almost 8 months of runway, and the stable part alone is about 3.5 months. Lesson 0.7 turns this into a proper emergency-fund target.</p>
+      </div>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution</p>
+      <p>Meera holds ₹1,80,000 at a few percent interest while carrying ₹85,000 at 3.5% a month (quoted as 42% a year). Using ₹85,000 of savings to clear the card would leave her net worth unchanged on day one and raise it by roughly ₹36,000 or more over a year in interest avoided. Her liquid net worth would also be unchanged, because the card is itself a short-term liability. This is the most common, and most valuable, balance-sheet fix.</p>
+    </div>
+  </section>
+
+  <section id="l03-leverage" aria-labelledby="l03-leverage-h">
+    <h2 id="l03-leverage-h">Leverage: the lever that works both ways</h2>
+    <p>[[leverage|Leverage]] means controlling more assets than you have equity, using borrowed money. Because debt stays fixed while asset values move, every change in asset value lands entirely on your equity.</p>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Leverage and its effect on equity</p>
+      <div class="fx"><math display="block"><mi>L</mi><mo>=</mo><mfrac><mi>A</mi><mi>E</mi></mfrac><mspace width="2em"></mspace><mfrac><mrow><mi>Δ</mi><mi>E</mi></mrow><mi>E</mi></mfrac><mo>=</mo><mi>L</mi><mo>×</mo><mfrac><mrow><mi>Δ</mi><mi>A</mi></mrow><mi>A</mi></mfrac></math></div>
+      <dl class="vars">
+        <dt>A</dt><dd>Value of the asset (or total assets), in ₹.</dd>
+        <dt>E</dt><dd>Equity: A minus debt, in ₹. Your own stake.</dd>
+        <dt>L</dt><dd>Leverage ratio, a pure number. 1 means no debt.</dd>
+        <dt>ΔA / A</dt><dd>Percentage change in asset value.</dd>
+      </dl>
+      <div class="fx-meta">
+        <p><b>Why it works.</b> With debt unchanged, every rupee of change in A is a rupee of change in E: ΔE = ΔA. Dividing both sides by E and multiplying the right side by A/A gives the result.</p>
+        <p><b>Worked example.</b> The Shahs: A = ₹1 crore, E = ₹20 lakh, L = 5. A 10% fall gives a 50% fall in equity; a 10% rise gives a 50% gain.</p>
+        <p><b>Wipe-out point.</b> Equity reaches zero when the asset falls by 1/L. At L = 5, a 20% fall. At L = 10, a 10% fall.</p>
+        <p><b>Limitations.</b> The simple formula ignores interest cost (which drains equity every month regardless of prices), and the fact that you cannot always choose when to sell. A leveraged position can be forced to sell at the worst time (Lesson 10.20 on margin).</p>
+      </div>
+    </div>
+    <p>A second, more everyday measure is the share of income committed to loan repayments. Meera's ₹6,800 EMI is 6.2% of take-home, a comfortable level. Lenders in India commonly look at the total EMI-to-income ratio when approving new loans; as a teaching heuristic, obligations above roughly 40% to 50% of take-home leave little room for any shock (Lesson 0.8).</p>
+  </section>
+
+  <section id="l03-lab" aria-labelledby="l03-lab-h" class="bench" data-lab="leverage">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Leverage explorer</p>
+      <h3 id="l03-lab-h">Move the asset price and watch the equity</h3>
+      <p class="bench-purpose">Purpose: feel how borrowing amplifies both gains and losses on your own money, and find the fall that wipes out your equity. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="lv-a">Asset value today <output id="lv-a-o" for="lv-a"></output></label><input id="lv-a" type="range" min="1000000" max="20000000" step="500000" value="10000000"></div>
+        <div class="field"><label for="lv-ltv">Loan as % of asset value <output id="lv-ltv-o" for="lv-ltv"></output></label><input id="lv-ltv" type="range" min="0" max="95" step="5" value="80"><span class="hint">Loan-to-value (LTV). 0% means no debt.</span></div>
+        <div class="field"><label for="lv-move">Change in asset price <output id="lv-move-o" for="lv-move"></output></label><input id="lv-move" type="range" min="-50" max="50" step="1" value="-10"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Leverage</span><span class="readout-value" id="lv-L"></span></div>
+          <div class="readout"><span class="readout-label">Your equity: before → after</span><span class="readout-value" id="lv-e"></span></div>
+          <div class="readout"><span class="readout-label">Change in your equity</span><span class="readout-value" id="lv-pct"></span><span class="readout-sub" id="lv-pct-sub"></span></div>
+          <div class="readout"><span class="readout-label">Price fall that wipes out equity</span><span class="readout-value" id="lv-wipe"></span></div>
+        </div>
+        <div id="lv-chart"></div>
+        <p class="insight" id="lv-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l03-mistakes" aria-labelledby="l03-mistakes-h">
+    <h2 id="l03-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My car is an asset, so buying a more expensive one builds wealth.”</p>
+      <p><span class="mistake-part">Why this fails</span>A car is an asset on the balance sheet, but a depreciating one: it typically loses a large share of its value in the first few years, and costs fuel, insurance and maintenance to hold. Buying it converts cash (which holds value) into an asset that shrinks.</p>
+      <p><span class="mistake-part">Better question</span>What will this be worth in five years, and what will it cost me each year to own?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My EPF is ₹3 lakh, so I have ₹3 lakh available.”</p>
+      <p><span class="mistake-part">Why this fails</span>Retirement accounts are designed to be hard to withdraw from. Withdrawals are restricted to specific purposes and conditions. They count fully towards net worth and not at all towards liquidity.</p>
+      <p><span class="mistake-part">Better question</span>Which of my assets could I use within a week without a penalty or a forced sale?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“Negative net worth means I have failed.”</p>
+      <p><span class="mistake-part">Why this fails</span>An education loan taken to raise future earnings creates a liability today and a larger human-capital asset that the balance sheet does not show. Direction matters: net worth rising each year from −₹4 lakh is a healthy path.</p>
+      <p><span class="mistake-part">Better question</span>Is my net worth rising, and are my debts funding things that raise future income?</p>
+    </div>
+  </section>
+
+  <section id="l03-limits" aria-labelledby="l03-limits-h">
+    <h2 id="l03-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Valuation uncertainty.</strong> The price of a flat or a stake in a family business can be uncertain by 20% or more. Use conservative values and note which lines are estimates.</li>
+      <li><strong>Hidden liabilities.</strong> Standing as guarantor for a relative's loan is a contingent liability: it appears nowhere until it is called. So are promises to fund a sibling's wedding or a parent's care.</li>
+      <li><strong>Joint and family assets.</strong> Ancestral property or jointly held assets may not be yours to sell. Count only what you control.</li>
+      <li><strong>A single date.</strong> A balance sheet taken the day after bonus day looks better than one taken before rent is due. Compare like with like, for example every 31 March.</li>
+    </ul>
+  </section>
+
+  <section id="l03-check" aria-labelledby="l03-check-h">
+    <h2 id="l03-check-h">Knowledge check</h2>
+<!--numeric id=q03-1 comp=Calculation answer=14.5 tol=0.05 text="₹14.5 lakh" label="Net worth (₹ lakh)"-->
+? The Nairs jointly own a flat worth ₹95 lakh with a sibling who holds half of it. The Nairs alone owe the ₹42 lakh home loan on their share. They also have ₹6 lakh in deposits and funds, a car worth ₹4 lakh, and ₹1 lakh of credit-card debt. What is the Nairs' net worth, in ₹ lakh?
+= Count only what they own: half the flat, ₹47.5 lakh. Assets = 47.5 + 6 + 4 = ₹57.5 lakh. Liabilities = 42 + 1 = ₹43 lakh. Net worth = 57.5 − 43 = <strong>₹14.5 lakh</strong>. The most common error is counting the whole ₹95 lakh flat, which gives ₹62 lakh.
+<!--/numeric-->
+<!--quiz id=q03-2 comp=Interpretation-->
+? Household A has a net worth of ₹80 lakh, almost all in a flat and EPF, and ₹50,000 in the bank. Household B has a net worth of ₹25 lakh, including ₹6 lakh in deposits. Monthly essentials are similar. Which is better placed to handle a six-month job loss?
+- A, because its net worth is more than three times larger || Net worth that cannot be reached quickly does not pay for groceries during a job loss.
++ B, because its liquid net worth covers the gap without borrowing or selling the home || Liquidity, not net worth, determines survival through a short shock.
+- They are equally placed, because both have positive net worth || Positive net worth is necessary but not sufficient; the composition matters.
+<!--/quiz-->
+<!--quiz id=q03-3 comp=Application-->
+? An investor buys ₹10 lakh of shares using ₹5 lakh of his own money and ₹5 lakh borrowed. The shares fall 30%. Ignoring interest, what happens to his equity?
+- It falls 30% || That would be true with no borrowing. His leverage is 2.
++ It falls 60%, from ₹5 lakh to ₹2 lakh || The ₹3 lakh loss falls entirely on his ₹5 lakh stake: L × ΔA/A = 2 × −30%.
+- It falls 15%, because the lender takes half the loss || The lender is owed ₹5 lakh whatever happens to the price.
+<!--/quiz-->
+  </section>
+
+  <section id="l03-practice" aria-labelledby="l03-practice-h">
+    <h2 id="l03-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Place each item in a liquidity band (instant, days, weeks-months, years): (a) PPF balance, (b) savings account, (c) listed shares, (d) a plot of land, (e) a recurring deposit.
+A: (a) years (lock-in), (b) instant, (c) days, with price risk, (d) weeks to months, often longer, with uncertain price, (e) days, usually with a small penalty for early closure.
+# B Compute Meera's leverage and her equity change if all her assets fell 10% in value with her debts unchanged.
+A: L = 11,44,000 ÷ 7,39,000 = <strong>1.55</strong>. A 10% fall in assets (₹1,14,400) is a 15.5% fall in net worth, to ₹6,24,600.
+# C Meera's net worth rose from ₹7.4 lakh to ₹9.1 lakh in a year, but her liquid net worth fell from ₹4.35 lakh to ₹2.2 lakh. What could explain this, and is it a problem?
+A: She probably moved liquid money into less liquid assets (for example a large EPF top-up or a down payment on a car or land) or took on short-term debt. Net worth rose, so she is richer, but her runway fell to about 4 months of essentials. Whether that is a problem depends on her emergency-fund target (Lesson 0.7).
+# D A family is choosing between a ₹1.2 crore flat with ₹24 lakh down (80% loan) and a ₹90 lakh flat with ₹24 lakh down. For each, what price fall wipes out their equity, and how many rupees of loan does each carry?
+A: ₹1.2 crore flat: loan ₹96 lakh, L = 5, wipe-out at a 20% fall. ₹90 lakh flat: loan ₹66 lakh, L = 3.75, wipe-out at about a 26.7% fall. The larger flat also carries ₹30 lakh more debt and a much larger EMI, which matters even if prices never fall.
+# E A friend argues: "Leverage is good because property always goes up in the long run." Give three reasons this reasoning is incomplete.
+A: (1) "Always" relies on survivorship and on specific places and periods; property prices can stagnate or fall for years (Japan after 1990 is a famous case, Lesson 24). (2) Even if prices recover, a household may be forced to sell during a fall because of job loss, rate resets or a rising EMI. (3) The comparison ignores interest cost: leverage helps only if the asset's return exceeds the after-tax borrowing rate. Leverage magnifies whatever happens; it does not improve the odds.
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l03-notes-h">
+    <h2 id="l03-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l03">Your own assets by liquidity band, and any hidden liabilities</label><textarea class="input" id="notes-l03" data-notes="l03"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

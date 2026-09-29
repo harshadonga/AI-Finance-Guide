@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "sourceRoot": "src/modules",
+  "outputRoot": "dist",
+  "shared": {
+    "template": "src/shared/templates/module-shell.html",
+    "styles": [
+      "src/shared/styles/tokens.css",
+      "src/shared/styles/components.css"
+    ],
+    "scripts": [
+      "src/shared/scripts/glossary.js",
+      "src/shared/scripts/core.js",
+      "src/shared/scripts/charts.js"
+    ]
+  }
+}
+

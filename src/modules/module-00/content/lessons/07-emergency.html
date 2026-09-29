@@ -1,0 +1,221 @@
+<article class="lesson" id="l07" data-lesson data-title="0.7 Emergency funds" data-nav-title="0.7 Emergency funds" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Lesson 0.7 · Part III · Plans and buffers</p>
+    <h1>Emergency Funds</h1>
+    <p class="big-idea"><span class="big-idea-label">Big idea</span>An emergency fund is insurance you pay for with lower returns. It buys time, so that a shock does not force you to sell investments at bad prices or borrow at 40% a year.</p>
+    <nav class="on-page" aria-label="In this lesson">
+      <a href="#l07-why">Why liquidity</a><a href="#l07-size">Sizing</a><a href="#l07-lab">Explorer</a><a href="#l07-cost">The cost of safety</a><a href="#l07-where">Where to keep it</a><a href="#l07-case">March 2020</a><a href="#l07-practice">Practice</a>
+    </nav>
+  </header>
+
+  <section id="l07-why" aria-labelledby="l07-why-h">
+    <h2 id="l07-why-h">Why liquidity deserves its own lesson</h2>
+    <p>Shocks arrive without warning: a layoff, a hospital admission not fully covered, an urgent trip home, a car accident. When one arrives, the question is not "how rich am I?" but "what can I pay with this week?" Lesson 0.3 called that [[liquidity|liquidity]], and showed how a household can have a large net worth and almost none of it within reach.</p>
+    <p>Without a buffer, a shock forces one of three bad options: borrow on a credit card or a quick loan at very high rates, sell investments at whatever price the market offers that week, or break long-term commitments such as an insurance policy or a retirement account. An [[emergency-fund|emergency fund]] exists to avoid all three.</p>
+    <aside class="block block--intuition">
+      <p class="block-label">{{i:lightbulb}} Intuition</p>
+      <p>Think of it as <strong>runway</strong>: the number of months you could keep paying essential bills if income stopped today. A plane with a short runway must get everything right on take-off. A household with a long runway can take a bad month, look for the right next job instead of the first one, and leave its investments alone.</p>
+    </aside>
+  </section>
+
+  <section id="l07-predict" aria-labelledby="l07-predict-h">
+    <h2 id="l07-predict-h" class="visually-hidden">Make a prediction</h2>
+<!--predict id=p07-->
+? Which household needs the larger emergency fund, measured in months of essential spending: a government employee whose spouse also works, or a single freelance designer whose income varies month to month?
+- The government employee, because their monthly costs are higher || The fund is measured in months of essential costs, so the size of the costs cancels out. What matters is how likely and how long an income gap could be.
++ The freelancer, because their income is less stable and there is no second earner || Variable income, no backup earner and a longer expected search time for new work all lengthen the runway needed.
+- Both need exactly six months, the standard rule || Six months is a common starting point, not a rule that fits every household.
+> <p><strong>The freelancer.</strong> The government employee has stable income, a second earner and strong job security: 3 to 4 months of essentials may be enough. The freelancer faces irregular income and no backup: 9 months or more is reasonable. Same rule of thumb, very different answers once you look at the risks.</p>
+<!--/predict-->
+  </section>
+
+  <section id="l07-size" aria-labelledby="l07-size-h">
+    <h2 id="l07-size-h">Sizing: a method, not a single rule</h2>
+    <p>The standard advice of "three to six months of expenses" is a reasonable starting point with two problems. It does not say <em>which</em> expenses, and it ignores the circumstances that make a household more or less exposed.</p>
+    <h3>Step 1: measure essential outflow</h3>
+    <p>Use essential costs, not total spending, because in a crisis the discretionary lines stop. From Lesson 0.2, Meera's fixed and necessary variable costs are <strong>₹55,000 a month</strong>. Add any costs a crisis would create, such as the health-insurance premium if an employer's group cover ends with the job.</p>
+    <h3>Step 2: choose the number of months</h3>
+    <div class="table-wrap">
+      <table>
+        <caption>Factors that lengthen or shorten the runway you need (teaching heuristic)</caption>
+        <thead><tr><th scope="col">Factor</th><th scope="col">Shorter runway</th><th scope="col">Longer runway</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Income stability</th><td>Government or very stable salaried role</td><td>Freelance, commission, start-up, cyclical industry</td></tr>
+          <tr><th scope="row">Other earners</th><td>A second independent income</td><td>Single earner</td></tr>
+          <tr><th scope="row">Dependants</th><td>None</td><td>Children, parents relying on you</td></tr>
+          <tr><th scope="row">Health cover</th><td>Adequate personal policy</td><td>Only employer cover, or none</td></tr>
+          <tr><th scope="row">Job search time</th><td>Skills in high demand locally</td><td>Specialised role, few employers</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="block block--formula">
+      <p class="block-label">{{i:function}} Formula · Target and runway</p>
+      <div class="fx"><math display="block"><mtext>Target</mtext><mo>=</mo><mi>m</mi><mo>×</mo><mi>E</mi><mspace width="2em"></mspace><mtext>Runway</mtext><mo>=</mo><mfrac><mi>B</mi><mrow><mi>E</mi><mo>−</mo><msub><mi>I</mi><mtext>shock</mtext></msub></mrow></mfrac></math></div>
+      <dl class="vars"><dt>E</dt><dd>Essential monthly outflow, in ₹.</dd><dt>m</dt><dd>Months of cover chosen from the factors above.</dd><dt>B</dt><dd>Current liquid, stable buffer, in ₹.</dd><dt>I<sub>shock</sub></dt><dd>Income still arriving during the shock (a spouse's salary, severance, rent received), in ₹ per month.</dd></dl>
+      <div class="fx-meta">
+        <p><b>Worked example.</b> Meera: salaried in tech, no dependants, a personal health policy, single earner. Six months × ₹55,000 = <strong>₹3.3 lakh</strong>. Her stable liquid assets today are ₹1.95 lakh after clearing the card (Lesson 0.3), a runway of about 3.5 months: she is short by about ₹1.35 lakh.</p>
+        <p><b>Interpretation.</b> Runway counts only money that is both reachable and stable in value. Equity funds are reachable but can be down 30% in exactly the month you need them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l07-lab" aria-labelledby="l07-lab-h" class="bench" data-lab="emergency">
+    <div class="bench-head">
+      <p class="block-label">{{i:sliders-horizontal}} Try it · Emergency fund sizer and shock simulator</p>
+      <h3 id="l07-lab-h">Size the fund, then live through a shock</h3>
+      <p class="bench-purpose">Purpose: see how circumstances change the target, and watch a buffer drain month by month during an income loss. The month counts follow a teaching heuristic; your own judgement should adjust them. {{tag:hyp}}</p>
+    </div>
+    <div class="bench-body">
+      <div class="bench-controls">
+        <div class="field"><label for="ef-e">Essential spending per month <output id="ef-e-o" for="ef-e"></output></label><input id="ef-e" type="range" min="10000" max="300000" step="5000" value="55000"></div>
+        <div class="field"><label for="ef-st">Income stability</label><select class="input" id="ef-st"><option value="stable">Very stable</option><option value="average" selected>Average salaried</option><option value="variable">Variable or freelance</option></select></div>
+        <div class="field"><label for="ef-dep">Dependants <output id="ef-dep-o" for="ef-dep"></output></label><input id="ef-dep" type="range" min="0" max="4" step="1" value="0"></div>
+        <label class="check"><input type="checkbox" id="ef-hc" checked> I have my own health insurance</label>
+        <label class="check"><input type="checkbox" id="ef-oi"> Another independent income in the household</label>
+        <div class="field"><label for="ef-b">Current stable buffer <output id="ef-b-o" for="ef-b"></output></label><input id="ef-b" type="range" min="0" max="2000000" step="5000" value="195000"></div>
+        <div class="field"><label for="ef-sm">Shock: months without salary <output id="ef-sm-o" for="ef-sm"></output></label><input id="ef-sm" type="range" min="1" max="12" step="1" value="6"></div>
+        <div class="field"><label for="ef-si">Income still arriving during the shock <output id="ef-si-o" for="ef-si"></output></label><input id="ef-si" type="range" min="0" max="200000" step="5000" value="0"></div>
+      </div>
+      <div class="bench-output">
+        <div class="readouts">
+          <div class="readout"><span class="readout-label">Suggested target</span><span class="readout-value" id="ef-t"></span><span class="readout-sub" id="ef-t-sub"></span></div>
+          <div class="readout"><span class="readout-label">Your runway</span><span class="readout-value" id="ef-r"></span><span class="readout-sub" id="ef-r-sub"></span></div>
+          <div class="readout"><span class="readout-label">Shortfall in this shock</span><span class="readout-value" id="ef-sf"></span><span class="readout-sub" id="ef-sf-sub"></span></div>
+        </div>
+        <div id="ef-chart"></div>
+        <p class="insight" id="ef-insight" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="l07-cost" aria-labelledby="l07-cost-h">
+    <h2 id="l07-cost-h">The cost of safety</h2>
+    <p>Safety is not free. Money kept stable and instantly available usually earns less than money invested for the long term. That difference is the [[opportunity-cost|opportunity cost]] of the fund (Lesson 0.4), and it is worth measuring rather than ignoring or exaggerating.</p>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:calculator}} Worked example · What Meera's buffer costs</p>{{tag:hyp}}</div>
+      <p>Suppose her ₹3.3 lakh fund earns 3.5 percentage points a year less than a long-term investment would (an assumption). The cost is about 3,30,000 × 0.035 = <strong>₹11,550 a year</strong> before tax, roughly ₹960 a month.</p>
+      <p>Compare that with the alternative. A three-month income gap without a fund means about ₹1.65 lakh on a credit card. At 3.5% a month, a single month of that balance costs about <strong>₹5,800</strong> in interest, and balances like that rarely clear in a month. Or she sells equity funds after a 25% market fall and locks in the loss.</p>
+      <p><strong>Interpretation.</strong> The fund's cost is small, predictable and paid in good times. The cost of not having one is large, uncertain and paid at the worst moment. That asymmetry is the same logic as insurance (Lesson 0.9).</p>
+    </div>
+    <div class="block block--caution">
+      <p class="block-label">{{i:warning}} Caution</p>
+      <p>Too large a buffer has a real cost too. A household holding three years of expenses in a savings account while inflation runs at 5% is paying a high price for safety it could get more cheaply through insurance and a moderately sized fund. Size the fund deliberately, then invest the rest for its goals.</p>
+    </div>
+  </section>
+
+  <section id="l07-where" aria-labelledby="l07-where-h">
+    <h2 id="l07-where-h">Where to keep it</h2>
+    <p>The fund has three requirements in order: its value must not fall, you must be able to reach it within a day or two, and only then should it earn as much as possible. That order rules out most growth assets. The instruments below are named here only for their liquidity and stability; their mechanics are taught in Level 2.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Common places for an emergency fund in India</caption>
+        <thead><tr><th scope="col">Instrument</th><th scope="col">Access</th><th scope="col">Stability of value</th><th scope="col">Things to know</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Savings account</th><td>Instant</td><td>Stable</td><td>Lowest return; covered by deposit insurance up to the limit below.</td></tr>
+          <tr><th scope="row">Sweep-in or auto fixed deposit</th><td>Instant to same day</td><td>Stable</td><td>Balance above a threshold moves into FDs and comes back automatically when needed; check the bank's terms.</td></tr>
+          <tr><th scope="row">Fixed deposit</th><td>Usually within a day if broken early</td><td>Stable</td><td>Breaking early usually means a penalty in the form of a lower interest rate. Laddering several smaller FDs limits the penalty.</td></tr>
+          <tr><th scope="row">Liquid or overnight mutual fund</th><td>Typically the next business day</td><td>Very stable, not guaranteed</td><td>Not a deposit and not covered by deposit insurance. Low but real risk. Explained in Lessons 2.5 and 2.6.</td></tr>
+          <tr><th scope="row">Equity funds, shares, gold</th><td>Days</td><td>Volatile</td><td>Not suitable as an emergency fund: they can be sharply down when needed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="block block--example">
+      <div class="block-head"><p class="block-label">{{i:seal-check}} Current fact · Deposit insurance</p>{{tag:curr:29 Sep 2026}}</div>
+      <p>The [[dicgc|Deposit Insurance and Credit Guarantee Corporation]] insures bank deposits (savings, fixed, recurring and current) up to <strong>₹5 lakh per depositor per bank</strong>, including principal and interest. All accounts you hold at one bank "in the same right and the same capacity" are added together for this limit, across all its branches. An emergency fund larger than ₹5 lakh can be spread across more than one bank to stay within the cover.</p>
+      <p class="verified">{{i:seal-check}} <strong>Verified 29 Sep 2026</strong> · Source: <a href="https://www.dicgc.org.in/sites/default/files/2025-02/dicgc-information-booklet.pdf" rel="noopener" target="_blank">DICGC information booklet</a></p>
+    </div>
+    <p>A practical layered structure: about one month of essentials in the savings account for instant needs, and the rest in a sweep-in deposit or a laddered set of FDs (or, once you understand them, a liquid fund).</p>
+  </section>
+
+  <section id="l07-case" aria-labelledby="l07-case-h" class="case">
+    <div class="case-head">
+      <p class="block-label">{{i:clock-counter-clockwise}} Historical case · March 2020</p>
+      <h3 id="l07-case-h">When income and markets fall together</h3>
+      {{tag:hist:2020}}
+    </div>
+    <div class="case-grid">
+      <div class="case-col">
+        <h4>{{i:eye}} What households knew at the time</h4>
+        <p>On 24 March 2020, India announced a nationwide lockdown in response to COVID-19. Stock markets in India and around the world had already fallen sharply that month. For many households, the income shock and the market shock arrived in the same weeks.</p>
+        <p>A household relying on its equity funds as a buffer faced a choice: sell after a steep fall, or borrow. Nobody knew then how long the lockdown would last, whether jobs would return, or when markets would recover.</p>
+      </div>
+      <div class="case-col">
+        <h4>{{i:clock-clockwise}} What we learned afterwards</h4>
+        <p>Markets recovered faster than many expected, and investors who were able to hold on benefited. Households that had to sell near the lows did not. The ability to wait depended heavily on having a stable buffer and secure income.</p>
+        <p>The episode is a clear example of <em>correlated risk</em>: the bad events that trigger an emergency and the bad prices that make selling costly tend to happen together.</p>
+      </div>
+    </div>
+    <div class="case-lessons">
+      <p class="block-label">{{i:lightbulb}} Lessons</p>
+      <ul><li>An emergency fund should not depend on markets being calm when you need it.</li><li>Runway buys the right to wait, which is often worth more than the return forgone.</li><li>Knowing the recovery afterwards makes the choice look easy; at the time, it was not.</li></ul>
+    </div>
+  </section>
+
+  <section id="l07-mistakes" aria-labelledby="l07-mistakes-h">
+    <h2 id="l07-mistakes-h">Common misconceptions</h2>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My credit-card limit is my emergency fund.”</p>
+      <p><span class="mistake-part">Why this fails</span>A credit limit is borrowed money at around 40% to 50% a year once balances revolve, and it can be reduced by the issuer exactly when your finances look weaker. It turns a temporary shock into long-lasting debt.</p>
+      <p><span class="mistake-part">Better question</span>How many months could I cover without borrowing anything?</p>
+    </div>
+    <div class="block block--mistake">
+      <p class="block-label">{{i:prohibit}} Common misconception</p>
+      <p class="claim">“My equity funds can be sold in two days, so they are my emergency fund.”</p>
+      <p><span class="mistake-part">Why this fails</span>Liquid is not the same as stable. Emergencies and market falls often coincide (see March 2020). You would be selling at the worst time.</p>
+      <p><span class="mistake-part">Better question</span>What would this be worth in a bad month, and would I be willing to sell then?</p>
+    </div>
+  </section>
+
+  <section id="l07-limits" aria-labelledby="l07-limits-h">
+    <h2 id="l07-limits-h">Where this breaks</h2>
+    <ul>
+      <li><strong>Rules of thumb ignore circumstances.</strong> The explorer's month counts are a teaching heuristic. A household with a chronic illness, a family business or an ageing parent may need much more.</li>
+      <li><strong>Not every shock is an income loss.</strong> A large medical bill is a one-off outflow; insurance is the main defence, and the fund covers deductibles and gaps.</li>
+      <li><strong>The fund gets raided.</strong> Sales, holidays and gadgets are not emergencies. Keeping the fund in a separate account with a boring name helps.</li>
+      <li><strong>Inflation erodes it.</strong> Essential costs rise every year; revisit the target annually.</li>
+    </ul>
+  </section>
+
+  <section id="l07-check" aria-labelledby="l07-check-h">
+    <h2 id="l07-check-h">Knowledge check</h2>
+<!--numeric id=q07-1 comp=Calculation answer=5 tol=0.05 text="5 months" label="Runway (months)"-->
+? The Nairs' essential spending is ₹1,20,000 a month. If one of them loses a job, the other's take-home of ₹60,000 continues. Their stable buffer is ₹3 lakh. What is their runway in months?
+= Monthly gap = 1,20,000 − 60,000 = ₹60,000. Runway = 3,00,000 ÷ 60,000 = <strong>5 months</strong>. Counting the second income doubles their runway compared with a total loss of income.
+<!--/numeric-->
+<!--quiz id=q07-2 comp=Understanding-->
+? What is the correct order of priorities for an emergency fund's home?
++ Stability of value, then quick access, then return || A fund that can fall in value or cannot be reached quickly fails at its only job.
+- Return, then access, then stability || Chasing return is how emergency funds end up in volatile assets.
+- Access, then return, then stability || Access matters, but a quickly reachable asset that has halved in value is not a buffer.
+<!--/quiz-->
+<!--quiz id=q07-3 comp=Application-->
+? Kavya holds ₹9 lakh in one bank's savings account as her emergency fund. Her essentials are ₹60,000 a month and her job is very stable. What would you suggest?
+- Nothing; more is always safer || Fifteen months is far above what a very stable earner typically needs, and the excess loses purchasing power.
++ Keep about 4 to 6 months (₹2.4 to 3.6 lakh) as the fund, keep deposits within insurance limits per bank, and invest the rest for her goals || This sizes the buffer to her risk and puts the remainder to work, while respecting the ₹5 lakh per-bank deposit-insurance limit.
+- Move all of it into equity funds, because they can be sold in two days || That removes the buffer entirely.
+<!--/quiz-->
+  </section>
+
+  <section id="l07-practice" aria-labelledby="l07-practice-h">
+    <h2 id="l07-practice-h">Practice ladder</h2>
+<!--ladder-->
+# A Which of these can form part of an emergency fund: (a) a sweep-in FD, (b) PPF, (c) a savings account, (d) listed shares, (e) a liquid mutual fund?
+A: (a) yes, (b) no (locked in for years), (c) yes, (d) no (volatile), (e) yes, once understood, with the caveat that it is not deposit-insured.
+# B A freelancer's essentials are ₹45,000 a month. Using nine months, what is her target? She has ₹1.8 lakh; how long would it take to reach the target saving ₹25,000 a month?
+A: Target = 9 × 45,000 = <strong>₹4.05 lakh</strong>. Gap = ₹2.25 lakh. At ₹25,000 a month: 9 months (ignoring interest).
+# C Meera's runway is 3.5 months. A friend says, "You'll get another job in a month, don't bother." How would you evaluate that?
+A: One month might be the typical case, but the fund exists for the bad case: a slow hiring market, a health issue, a correlated downturn. The cost of holding 6 months is about ₹11,550 a year; the cost of running out is high-interest debt or a forced sale. Planning for the typical case is how buffers fail.
+# D A couple has one stable government salary and one start-up salary, essentials of ₹1.1 lakh, and a child. Suggest a target and a structure.
+A: Two incomes lower the risk of a total loss; the start-up role raises the risk of one. A reasonable target is around 6 months of essentials (₹6.6 lakh), with one month in a savings account and the rest in sweep-in deposits split across two banks to stay within the ₹5 lakh insurance limit per bank. Reasoning matters more than the exact number.
+# E An app offers "an emergency fund that earns 12%!" by investing your buffer in a mix of equity and corporate bonds. Critique it.
+A: It breaks the first requirement: stability of value. A 12% expected return comes with volatility and possible credit losses, and those tend to strike in exactly the conditions that cause emergencies. The pitch optimises the least important requirement (return) at the expense of the most important (stability).
+<!--/ladder-->
+  </section>
+
+  <section class="notes" aria-labelledby="l07-notes-h">
+    <h2 id="l07-notes-h" style="font-size:var(--t-h4)">Your notes</h2>
+    <div class="field"><label for="notes-l07">Your essentials, your chosen months, and where the fund will live</label><textarea class="input" id="notes-l07" data-notes="l07"></textarea></div>
+    <p class="hint" data-notes-status>Stored only in this browser.</p>
+  </section>
+</article>

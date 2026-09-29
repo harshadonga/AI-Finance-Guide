@@ -1,0 +1,139 @@
+<article class="lesson" id="synthesis" data-lesson data-title="Module 0 synthesis" data-nav-title="Module synthesis" hidden>
+  <header class="lesson-head">
+    <p class="kicker">Integration · Module 0</p>
+    <h1>Module Synthesis</h1>
+    <p class="big-idea"><span class="big-idea-label">The whole module in one sentence</span>Your finances are a system of stocks and flows. Time turns flows into stocks through compounding. Inflation, taxes and expensive debt drain that conversion. Liquidity and insurance protect it from shocks, and fraud attacks it directly.</p>
+    <nav class="on-page" aria-label="In this section">
+      <a href="#syn-know">What you now understand</a><a href="#syn-rel">Key relationships</a><a href="#syn-eq">Essential equations</a><a href="#syn-ai">AI lab</a><a href="#syn-qs">Questions you can answer</a><a href="#syn-next">Where this leads</a>
+    </nav>
+  </header>
+
+  <section id="syn-know" aria-labelledby="syn-know-h">
+    <h2 id="syn-know-h">What you now understand</h2>
+    <ul class="checklist">
+      <li>{{i:check}} <span><strong>Structure.</strong> A household has flows (income, spending, saving) and stocks (assets, liabilities, net worth). The cash-flow statement is the video; the balance sheet is the photograph.</span></li>
+      <li>{{i:check}} <span><strong>Time.</strong> Money compounds, so time matters more than rate, and future money must be discounted to be compared with money today.</span></li>
+      <li>{{i:check}} <span><strong>Purchasing power.</strong> Returns that matter are real (after inflation) and after tax. A "safe" deposit can lose purchasing power.</span></li>
+      <li>{{i:check}} <span><strong>Plans.</strong> Goals are future costs in future rupees; the start date is the strongest lever; the horizon decides how much volatility you can accept.</span></li>
+      <li>{{i:check}} <span><strong>Buffers.</strong> Liquidity buys time; insurance removes ruinous outcomes. Both cost money on average, and both are worth it for the right risks.</span></li>
+      <li>{{i:check}} <span><strong>Threats.</strong> Expensive debt is compounding against you; tax drag compounds too; fraud offers returns without risk, which do not exist.</span></li>
+    </ul>
+  </section>
+
+  <section id="syn-rel" aria-labelledby="syn-rel-h" class="wide">
+    <h2 id="syn-rel-h">Key relationships</h2>
+    <div class="relations">
+      <div class="relation"><div class="chain"><span>Spending grows faster than income</span><span>↓</span><span>Savings rate falls every year</span></div></div>
+      <div class="relation"><div class="chain"><span>Leverage L</span><span>↓</span><span>Equity moves L × asset moves</span></div></div>
+      <div class="relation"><div class="chain"><span>More years of compounding</span><span>↓</span><span>Growth rises faster than linearly</span></div></div>
+      <div class="relation"><div class="chain"><span>Higher discount rate or later date</span><span>↓</span><span>Lower present value</span></div></div>
+      <div class="relation"><div class="chain"><span>Nominal return below inflation</span><span>↓</span><span>Real wealth shrinks</span></div></div>
+      <div class="relation"><div class="chain"><span>Delay a goal's start</span><span>↓</span><span>Monthly saving needed rises sharply</span></div></div>
+      <div class="relation"><div class="chain"><span>Early in an amortising loan</span><span>↓</span><span>Most of each EMI is interest</span></div></div>
+      <div class="relation"><div class="chain"><span>Rare, ruinous loss</span><span>↓</span><span>Insure it; absorb small losses yourself</span></div></div>
+      <div class="relation"><div class="chain"><span>Guaranteed high return</span><span>↓</span><span>Something is hidden: verify or walk away</span></div></div>
+    </div>
+  </section>
+
+  <section id="syn-eq" aria-labelledby="syn-eq-h">
+    <h2 id="syn-eq-h">Essential equations</h2>
+    <div class="table-wrap">
+      <table class="eq-table">
+        <caption>The formulas worth keeping, with where each was taught</caption>
+        <thead><tr><th scope="col">Idea</th><th scope="col">Formula</th><th scope="col">Lesson</th></tr></thead>
+        <tbody>
+          <tr><td>Savings rate</td><td><math><mi>s</mi><mo>=</mo><mo>(</mo><mi>Y</mi><mo>−</mo><mi>C</mi><mo>)</mo><mo>/</mo><mi>Y</mi></math></td><td><a href="#l02-rate">0.2</a></td></tr>
+          <tr><td>Net worth, leverage</td><td><math><mi>NW</mi><mo>=</mo><mi>A</mi><mo>−</mo><mi>L</mi><mo>;</mo><mspace width="0.5em"></mspace><mi>Δ</mi><mi>E</mi><mo>/</mo><mi>E</mi><mo>=</mo><mo>(</mo><mi>A</mi><mo>/</mo><mi>E</mi><mo>)</mo><mo>×</mo><mi>Δ</mi><mi>A</mi><mo>/</mo><mi>A</mi></math></td><td><a href="#l03-leverage">0.3</a></td></tr>
+          <tr><td>Future and present value</td><td><math><mi>FV</mi><mo>=</mo><mi>PV</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>n</mi></msup></math></td><td><a href="#l04-compound">0.4</a></td></tr>
+          <tr><td>CAGR</td><td><math><msup><mrow><mo>(</mo><mtext>End</mtext><mo>/</mo><mtext>Start</mtext><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></math></td><td><a href="#l04-cagr">0.4</a></td></tr>
+          <tr><td>Effective annual rate</td><td><math><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>r</mi><mtext>period</mtext></msub><mo>)</mo></mrow><mi>m</mi></msup><mo>−</mo><mn>1</mn></math></td><td><a href="#l04-annual">0.4</a></td></tr>
+          <tr><td>Level contributions</td><td><math><mi>FV</mi><mo>=</mo><mi>C</mi><mo>[</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>N</mi></msup><mo>−</mo><mn>1</mn><mo>]</mo><mo>/</mo><mi>i</mi></math></td><td><a href="#l04-annuity">0.4</a></td></tr>
+          <tr><td>Real return</td><td><math><mo>(</mo><mn>1</mn><mo>+</mo><msub><mi>r</mi><mtext>nom</mtext></msub><mo>)</mo><mo>/</mo><mo>(</mo><mn>1</mn><mo>+</mo><mi>π</mi><mo>)</mo><mo>−</mo><mn>1</mn></math></td><td><a href="#l05-real">0.5</a></td></tr>
+          <tr><td>EMI</td><td><math><mi>P</mi><mi>i</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>/</mo><mo>[</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>−</mo><mn>1</mn><mo>]</mo></math></td><td><a href="#l08-emi">0.8</a></td></tr>
+          <tr><td>Expected loss</td><td><math><mi>p</mi><mo>×</mo><mi>L</mi></math></td><td><a href="#l09-expected">0.9</a></td></tr>
+          <tr><td>After-tax return</td><td><math><mi>r</mi><mo>(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo>)</mo></math></td><td><a href="#l10-after">0.10</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Every term used in this module is in the <button type="button" class="linklike" data-open-glossary>glossary</button>, with the lesson where it was introduced.</p>
+  </section>
+
+  <section id="syn-ai" aria-labelledby="syn-ai-h" class="wide">
+    <h2 id="syn-ai-h">AI lab · Audit an AI's personal-finance answer</h2>
+    <div class="col flow">
+      <p><strong>Financial objective.</strong> Use AI as a tutor without trusting it blindly. Language models write fluent, confident answers; they can also be out of date, compute incorrectly, and state guesses as facts. This lab trains the habit you will use throughout the course: every factual claim needs a source you check, and every number needs recomputing.</p>
+      <p>Below is a <strong>constructed example</strong> of the kind of answer a chatbot might give. It was written for this lab and is not output from any real product. It contains six problems. Find them before opening each check.</p>
+    </div>
+    <div class="chat">
+      <p class="chat-q"><span class="chat-who">{{i:user}} Question</span>I take home ₹1.1 lakh a month on a ₹15 lakh salary. I have a credit card balance, no emergency fund and a home loan. Should I prepay my home loan or invest? And how much tax do I pay?</p>
+      <div class="chat-a"><span class="chat-who">{{i:robot}} Constructed AI answer</span>
+        <p><mark>[1]</mark> Great question! Under the new tax regime, income up to ₹7 lakh is tax-free, so you pay tax on ₹8 lakh.</p>
+        <p><mark>[2]</mark> The smartest move is to prepay your home loan first, since being debt-free is the best investment, and then build an emergency fund.</p>
+        <p><mark>[3]</mark> If you invest instead, index funds guarantee around 12% a year over the long run.</p>
+        <p><mark>[4]</mark> With 8% returns and 6% inflation, your real return is exactly 2%.</p>
+        <p><mark>[5]</mark> For example, ₹10,000 a month for 20 years at 10% gives about ₹24 lakh.</p>
+        <p><mark>[6]</mark> For your credit card, a 12% flat-rate personal loan to pay it off would cost you 12% a year.</p>
+      </div>
+    </div>
+    <div class="ladder col">
+      <details class="ladder-item"><summary><span class="ladder-level">1</span><span><span class="ladder-kind">Outdated rule</span>"Income up to ₹7 lakh is tax-free"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>Out of date. The ₹7 lakh rebate limit applied in earlier years. For tax year 2026-27, the rebate covers taxable income up to ₹12 lakh (₹12.75 lakh salary with the standard deduction), and slabs are not "tax on everything above the limit". <em>Source to check:</em> the Income Tax Department or the latest Budget (Lesson 0.10). Recomputed: ₹97,500 with cess.</p></div></details>
+      <details class="ladder-item"><summary><span class="ladder-level">2</span><span><span class="ladder-kind">Wrong priority</span>"Prepay the home loan first, then build an emergency fund"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>Backwards, and it ignores the most expensive debt. Emergency fund first (Lesson 0.7), then clear the credit card at around 42% to 51% a year (Lesson 0.8), then weigh prepaying a low-rate home loan against investing. Prepaid money cannot be used in an emergency.</p></div></details>
+      <details class="ladder-item"><summary><span class="ladder-level">3</span><span><span class="ladder-kind">Fabricated guarantee</span>"Index funds guarantee around 12% a year"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>No market investment guarantees a return. Historical averages are not promises, and equity returns vary widely year to year (Levels 2 and 8). A guarantee claim is the red flag from Lesson 0.11, even when it comes from a helpful-sounding assistant.</p></div></details>
+      <details class="ladder-item"><summary><span class="ladder-level">4</span><span><span class="ladder-kind">Approximation stated as exact</span>"Real return is exactly 2%"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>1.08 ÷ 1.06 − 1 = <strong>1.89%</strong>. Subtraction is an approximation (Lesson 0.5).</p></div></details>
+      <details class="ladder-item"><summary><span class="ladder-level">5</span><span><span class="ladder-kind">Arithmetic error</span>"₹10,000 a month for 20 years at 10% gives about ₹24 lakh"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>₹24 lakh is just the contributions (₹10,000 × 240). With compounding, the annuity formula gives about <strong>₹71.8 lakh</strong> (Lesson 0.4). Always recompute numbers an AI gives you.</p></div></details>
+      <details class="ladder-item"><summary><span class="ladder-level">6</span><span><span class="ladder-kind">Misleading rate</span>"A 12% flat-rate loan costs 12% a year"</span><span class="ladder-show">Check</span></summary><div class="ladder-answer"><p>Over 3 years, a 12% flat rate is equivalent to about <strong>21.2%</strong> on a reducing balance (Lesson 0.8). Still cheaper than the card, but not 12%.</p></div></details>
+    </div>
+    <div class="col flow">
+      <h3>Try it with a real assistant</h3>
+      <p>Ask any AI assistant a personal-finance question about your own situation using the prompt below, then apply the loop: for each claim, name the source that could confirm it, check that source, and recompute every number yourself.</p>
+      <pre class="code" id="syn-prompt"><code>You are helping me learn personal finance in India. Answer the question below.
+For every factual claim about current rules or rates, say what official source
+would confirm it and how recent your information is. Show every calculation
+step so I can check it. Say clearly where you are unsure.
+
+Question: [your question here]</code></pre>
+      <p><button type="button" class="btn" data-copy="syn-prompt">{{i:copy}} Copy prompt</button></p>
+      <div class="loop" aria-label="The verification loop">
+        <span>AI makes a claim</span><span aria-hidden="true">{{i:arrow-right}}</span><span>Identify the source needed</span><span aria-hidden="true">{{i:arrow-right}}</span><span>Check the original source</span><span aria-hidden="true">{{i:arrow-right}}</span><span>Recompute the numbers</span><span aria-hidden="true">{{i:arrow-right}}</span><span>Only then use it</span>
+      </div>
+      <p class="source-note">Failure modes to expect: training data with a cut-off date (rules and rates change), confident arithmetic mistakes, invented citations, and advice that ignores your full situation. Levels 18 and 19 go much deeper.</p>
+    </div>
+  </section>
+
+  <section id="syn-qs" aria-labelledby="syn-qs-h">
+    <h2 id="syn-qs-h">Questions you should now be able to answer</h2>
+    <ol class="key-qs">
+      <li>Why can a household with a ₹40 lakh salary have less wealth than one with ₹12 lakh?</li>
+      <li>What is my liquid net worth, and how many months of essentials would it cover?</li>
+      <li>Why does starting to save five years later often double the monthly amount needed?</li>
+      <li>What is a 7% deposit worth to me after tax and inflation?</li>
+      <li>How much would my goals cost in the years I will pay for them?</li>
+      <li>Why is most of a new home loan's EMI interest, and what does a prepayment really save?</li>
+      <li>Which risks should I insure, and roughly how much life cover would my dependants need?</li>
+      <li>Why must every guaranteed high-return scheme eventually fail?</li>
+    </ol>
+  </section>
+
+  <section id="syn-next" aria-labelledby="syn-next-h">
+    <h2 id="syn-next-h">Where this leads</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>How Module 0 ideas return later, deepened</caption>
+        <thead><tr><th scope="col">Idea from Module 0</th><th scope="col">Returns in</th></tr></thead>
+        <tbody>
+          <tr><td>Present value and discounting</td><td>Bond pricing (Level 7) and company valuation by DCF (Level 5)</td></tr>
+          <tr><td>CAGR and annualisation</td><td>Arithmetic vs geometric returns and XIRR (Lessons 8.3 to 8.5); backtest metrics (Level 15)</td></tr>
+          <tr><td>Inflation, CPI and expectations</td><td>Macroeconomics and monetary policy (Level 6); real yields (Level 7)</td></tr>
+          <tr><td>Leverage</td><td>Leverage risk and risk of ruin (Level 9); margin trading (Level 10)</td></tr>
+          <tr><td>Expected loss and risk transfer</td><td>Expected value (Level 12); derivatives as risk-transfer tools (Level 11)</td></tr>
+          <tr><td>Goal horizons</td><td>Asset allocation and lifecycle investing (Level 8); your Investment Policy Statement (Gate C)</td></tr>
+          <tr><td>Emergency-fund instruments</td><td>Money-market instruments and mutual funds (Level 2)</td></tr>
+          <tr><td>After-tax returns</td><td>The living tax and regulation module (Level 23)</td></tr>
+          <tr><td>Fraud and verification</td><td>Behavioural biases (Level 9), financial crises (Level 24), AI verification (Level 18)</td></tr>
+          <tr><td>Your Project 0 dashboard</td><td>The Personal Investment Operating System (Level 25)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Next, test yourself with the <a href="#mastery">mastery assessment</a>, then build <a href="#project">your own dashboard</a>. Module 1 (how financial markets work) builds on the foundations here; in particular, you will use present value, real returns and the verification habit throughout.</p>
+  </section>
+</article>
