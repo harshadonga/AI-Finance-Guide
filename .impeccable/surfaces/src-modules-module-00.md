@@ -13,14 +13,14 @@ Audience and job: a technically comfortable adult learner with limited formal fi
 
 ## Direction contract
 
-THESIS: Module 0 is an analyst's field guide to one household system, not a stack of generic lesson cards. The opening proves the curriculum's central relationship immediately: flows build stocks while time, inflation, debt, tax, insurance, and fraud alter the path.
+THESIS: Module 0 is a Swiss-style textbook where every Part owns a saturated colour field, so the learner always knows which part of the household system they are in. It refuses the grey documentation shell and the stack of identical soft cards.
 
-OWN-WORLD: Use the established cool ledger neutrals, ink-blue interaction color, workhorse sans typography, tabular numerals, precise rules, and compact financial notation. Replace repetitive boxed surfaces with open ledgers, ruled bands, strong scale contrast, and clearly differentiated learning instruments.
+OWN-WORLD: Near-white cool paper, off-black ink, Geist and Geist Mono, sharp corners, strict grid. Part fields: I signal yellow, II cobalt, III forest, IV vermilion, overview and integration in ink. The current Part's colour becomes the page's single interaction accent. Rules, not shadows.
 
-STORY: Orient the learner, reveal the household system, let them enter any concept, then maintain a calm reading rhythm that periodically widens into a working financial bench. The next useful action should always be obvious without turning study into gamification.
+STORY: Arrive at a colour-field map of the module, see four Parts as four fields, enter a lesson through its full-bleed chapter plate, read in a calm white column, and step into labs that carry the Part colour in their header band. The next lesson is always a coloured block.
 
-FIRST VIEWPORT: A wide asymmetric opening pairs the module title and promise with a compact structural record, then places the stocks-flows-forces thesis in a bold ink panel that points directly into the system map. On lesson pages, a chapter plate pairs the lesson title with its big idea and keeps the local contents visibly attached.
+FIRST VIEWPORT: Overview: oversized title left, a stacked five-field Part index right sized by lesson count, each field linking to its lessons. Lesson: a full-width Part field with a giant lesson numeral, title and big idea, the local contents as a ruled strip directly below.
 
-FORM: Use the third grounded structure from surface seed `8f1ed664`: a progressive household-system ledger, ranked third specifically to escape the safe documentation layout. The signature interaction remains functional: the persistent lesson rail, stateful progress, and live laboratories visibly connect navigation, reasoning, and calculation.
+FORM: Swiss textbook colour fields (user-selected over the assigned transit-map roll), seed c00d81c9.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

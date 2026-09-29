@@ -1,211 +1,468 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-29T14:00:31Z",
+  "generatedAt": "2026-09-29T15:42:35Z",
   "title": "Design System: Finance Academy",
   "extensions": {
     "colorMeta": {
-      "ledger-paper": {
+      "paper": {
         "role": "neutral",
-        "displayName": "Ledger Paper",
-        "canonical": "#e9eeeb",
-        "tonalRamp": ["color-mix(in srgb, #e9eeeb 35%, black)", "color-mix(in srgb, #e9eeeb 55%, black)", "color-mix(in srgb, #e9eeeb 75%, black)", "#e9eeeb", "color-mix(in srgb, #e9eeeb 80%, white)", "color-mix(in srgb, #e9eeeb 60%, white)", "color-mix(in srgb, #e9eeeb 40%, white)", "color-mix(in srgb, #e9eeeb 18%, white)"]
+        "displayName": "Paper",
+        "canonical": "#f3f4f5",
+        "tonalRamp": [
+          "color-mix(in srgb, #f3f4f5 35%, black)",
+          "color-mix(in srgb, #f3f4f5 55%, black)",
+          "color-mix(in srgb, #f3f4f5 75%, black)",
+          "#f3f4f5",
+          "color-mix(in srgb, #f3f4f5 80%, white)",
+          "color-mix(in srgb, #f3f4f5 60%, white)",
+          "color-mix(in srgb, #f3f4f5 40%, white)",
+          "color-mix(in srgb, #f3f4f5 18%, white)"
+        ]
       },
       "reading-paper": {
         "role": "neutral",
         "displayName": "Reading Paper",
-        "canonical": "#fbfdfc",
-        "tonalRamp": ["color-mix(in srgb, #fbfdfc 35%, black)", "color-mix(in srgb, #fbfdfc 55%, black)", "color-mix(in srgb, #fbfdfc 75%, black)", "#fbfdfc", "color-mix(in srgb, #fbfdfc 80%, white)", "color-mix(in srgb, #fbfdfc 60%, white)", "color-mix(in srgb, #fbfdfc 40%, white)", "color-mix(in srgb, #fbfdfc 18%, white)"]
+        "canonical": "#fcfcfd",
+        "tonalRamp": [
+          "color-mix(in srgb, #fcfcfd 35%, black)",
+          "color-mix(in srgb, #fcfcfd 55%, black)",
+          "color-mix(in srgb, #fcfcfd 75%, black)",
+          "#fcfcfd",
+          "color-mix(in srgb, #fcfcfd 80%, white)",
+          "color-mix(in srgb, #fcfcfd 60%, white)",
+          "color-mix(in srgb, #fcfcfd 40%, white)",
+          "color-mix(in srgb, #fcfcfd 18%, white)"
+        ]
       },
-      "recessed-paper": {
+      "well-paper": {
         "role": "neutral",
-        "displayName": "Recessed Paper",
-        "canonical": "#eef2f0",
-        "tonalRamp": ["color-mix(in srgb, #eef2f0 35%, black)", "color-mix(in srgb, #eef2f0 55%, black)", "color-mix(in srgb, #eef2f0 75%, black)", "#eef2f0", "color-mix(in srgb, #eef2f0 80%, white)", "color-mix(in srgb, #eef2f0 60%, white)", "color-mix(in srgb, #eef2f0 40%, white)", "color-mix(in srgb, #eef2f0 18%, white)"]
+        "displayName": "Well Paper",
+        "canonical": "#eef0f2",
+        "tonalRamp": [
+          "color-mix(in srgb, #eef0f2 35%, black)",
+          "color-mix(in srgb, #eef0f2 55%, black)",
+          "color-mix(in srgb, #eef0f2 75%, black)",
+          "#eef0f2",
+          "color-mix(in srgb, #eef0f2 80%, white)",
+          "color-mix(in srgb, #eef0f2 60%, white)",
+          "color-mix(in srgb, #eef0f2 40%, white)",
+          "color-mix(in srgb, #eef0f2 18%, white)"
+        ]
       },
       "band-paper": {
         "role": "neutral",
         "displayName": "Band Paper",
-        "canonical": "#e2e8e5",
-        "tonalRamp": ["color-mix(in srgb, #e2e8e5 35%, black)", "color-mix(in srgb, #e2e8e5 55%, black)", "color-mix(in srgb, #e2e8e5 75%, black)", "#e2e8e5", "color-mix(in srgb, #e2e8e5 80%, white)", "color-mix(in srgb, #e2e8e5 60%, white)", "color-mix(in srgb, #e2e8e5 40%, white)", "color-mix(in srgb, #e2e8e5 18%, white)"]
+        "canonical": "#e3e6e9",
+        "tonalRamp": [
+          "color-mix(in srgb, #e3e6e9 35%, black)",
+          "color-mix(in srgb, #e3e6e9 55%, black)",
+          "color-mix(in srgb, #e3e6e9 75%, black)",
+          "#e3e6e9",
+          "color-mix(in srgb, #e3e6e9 80%, white)",
+          "color-mix(in srgb, #e3e6e9 60%, white)",
+          "color-mix(in srgb, #e3e6e9 40%, white)",
+          "color-mix(in srgb, #e3e6e9 18%, white)"
+        ]
       },
-      "household-ink": {
+      "ink": {
         "role": "neutral",
-        "displayName": "Household Ink",
-        "canonical": "#15201c",
-        "tonalRamp": ["color-mix(in srgb, #15201c 35%, black)", "color-mix(in srgb, #15201c 55%, black)", "color-mix(in srgb, #15201c 75%, black)", "#15201c", "color-mix(in srgb, #15201c 80%, white)", "color-mix(in srgb, #15201c 60%, white)", "color-mix(in srgb, #15201c 40%, white)", "color-mix(in srgb, #15201c 18%, white)"]
+        "displayName": "Ink",
+        "canonical": "#111418",
+        "tonalRamp": [
+          "color-mix(in srgb, #111418 35%, black)",
+          "color-mix(in srgb, #111418 55%, black)",
+          "color-mix(in srgb, #111418 75%, black)",
+          "#111418",
+          "color-mix(in srgb, #111418 80%, white)",
+          "color-mix(in srgb, #111418 60%, white)",
+          "color-mix(in srgb, #111418 40%, white)",
+          "color-mix(in srgb, #111418 18%, white)"
+        ]
       },
       "secondary-ink": {
         "role": "neutral",
         "displayName": "Secondary Ink",
-        "canonical": "#3f4b47",
-        "tonalRamp": ["color-mix(in srgb, #3f4b47 35%, black)", "color-mix(in srgb, #3f4b47 55%, black)", "color-mix(in srgb, #3f4b47 75%, black)", "#3f4b47", "color-mix(in srgb, #3f4b47 80%, white)", "color-mix(in srgb, #3f4b47 60%, white)", "color-mix(in srgb, #3f4b47 40%, white)", "color-mix(in srgb, #3f4b47 18%, white)"]
+        "canonical": "#3b4148",
+        "tonalRamp": [
+          "color-mix(in srgb, #3b4148 35%, black)",
+          "color-mix(in srgb, #3b4148 55%, black)",
+          "color-mix(in srgb, #3b4148 75%, black)",
+          "#3b4148",
+          "color-mix(in srgb, #3b4148 80%, white)",
+          "color-mix(in srgb, #3b4148 60%, white)",
+          "color-mix(in srgb, #3b4148 40%, white)",
+          "color-mix(in srgb, #3b4148 18%, white)"
+        ]
       },
       "supporting-ink": {
         "role": "neutral",
         "displayName": "Supporting Ink",
-        "canonical": "#5e6a66",
-        "tonalRamp": ["color-mix(in srgb, #5e6a66 35%, black)", "color-mix(in srgb, #5e6a66 55%, black)", "color-mix(in srgb, #5e6a66 75%, black)", "#5e6a66", "color-mix(in srgb, #5e6a66 80%, white)", "color-mix(in srgb, #5e6a66 60%, white)", "color-mix(in srgb, #5e6a66 40%, white)", "color-mix(in srgb, #5e6a66 18%, white)"]
+        "canonical": "#5b626a",
+        "tonalRamp": [
+          "color-mix(in srgb, #5b626a 35%, black)",
+          "color-mix(in srgb, #5b626a 55%, black)",
+          "color-mix(in srgb, #5b626a 75%, black)",
+          "#5b626a",
+          "color-mix(in srgb, #5b626a 80%, white)",
+          "color-mix(in srgb, #5b626a 60%, white)",
+          "color-mix(in srgb, #5b626a 40%, white)",
+          "color-mix(in srgb, #5b626a 18%, white)"
+        ]
       },
-      "ledger-rule": {
+      "rule": {
         "role": "neutral",
-        "displayName": "Ledger Rule",
-        "canonical": "#d3dad7",
-        "tonalRamp": ["color-mix(in srgb, #d3dad7 35%, black)", "color-mix(in srgb, #d3dad7 55%, black)", "color-mix(in srgb, #d3dad7 75%, black)", "#d3dad7", "color-mix(in srgb, #d3dad7 80%, white)", "color-mix(in srgb, #d3dad7 60%, white)", "color-mix(in srgb, #d3dad7 40%, white)", "color-mix(in srgb, #d3dad7 18%, white)"]
+        "displayName": "Rule",
+        "canonical": "#d9dde1",
+        "tonalRamp": [
+          "color-mix(in srgb, #d9dde1 35%, black)",
+          "color-mix(in srgb, #d9dde1 55%, black)",
+          "color-mix(in srgb, #d9dde1 75%, black)",
+          "#d9dde1",
+          "color-mix(in srgb, #d9dde1 80%, white)",
+          "color-mix(in srgb, #d9dde1 60%, white)",
+          "color-mix(in srgb, #d9dde1 40%, white)",
+          "color-mix(in srgb, #d9dde1 18%, white)"
+        ]
       },
       "strong-rule": {
         "role": "neutral",
         "displayName": "Strong Rule",
-        "canonical": "#aeb8b4",
-        "tonalRamp": ["color-mix(in srgb, #aeb8b4 35%, black)", "color-mix(in srgb, #aeb8b4 55%, black)", "color-mix(in srgb, #aeb8b4 75%, black)", "#aeb8b4", "color-mix(in srgb, #aeb8b4 80%, white)", "color-mix(in srgb, #aeb8b4 60%, white)", "color-mix(in srgb, #aeb8b4 40%, white)", "color-mix(in srgb, #aeb8b4 18%, white)"]
+        "canonical": "#b1b7bd",
+        "tonalRamp": [
+          "color-mix(in srgb, #b1b7bd 35%, black)",
+          "color-mix(in srgb, #b1b7bd 55%, black)",
+          "color-mix(in srgb, #b1b7bd 75%, black)",
+          "#b1b7bd",
+          "color-mix(in srgb, #b1b7bd 80%, white)",
+          "color-mix(in srgb, #b1b7bd 60%, white)",
+          "color-mix(in srgb, #b1b7bd 40%, white)",
+          "color-mix(in srgb, #b1b7bd 18%, white)"
+        ]
       },
       "control-gray": {
         "role": "neutral",
         "displayName": "Control Gray",
-        "canonical": "#858f8b",
-        "tonalRamp": ["color-mix(in srgb, #858f8b 35%, black)", "color-mix(in srgb, #858f8b 55%, black)", "color-mix(in srgb, #858f8b 75%, black)", "#858f8b", "color-mix(in srgb, #858f8b 80%, white)", "color-mix(in srgb, #858f8b 60%, white)", "color-mix(in srgb, #858f8b 40%, white)", "color-mix(in srgb, #858f8b 18%, white)"]
+        "canonical": "#858c93",
+        "tonalRamp": [
+          "color-mix(in srgb, #858c93 35%, black)",
+          "color-mix(in srgb, #858c93 55%, black)",
+          "color-mix(in srgb, #858c93 75%, black)",
+          "#858c93",
+          "color-mix(in srgb, #858c93 80%, white)",
+          "color-mix(in srgb, #858c93 60%, white)",
+          "color-mix(in srgb, #858c93 40%, white)",
+          "color-mix(in srgb, #858c93 18%, white)"
+        ]
       },
-      "instrument-blue": {
+      "part-0-ink": {
         "role": "primary",
-        "displayName": "Instrument Blue",
-        "canonical": "#2344a6",
-        "tonalRamp": ["color-mix(in srgb, #2344a6 35%, black)", "color-mix(in srgb, #2344a6 55%, black)", "color-mix(in srgb, #2344a6 75%, black)", "#2344a6", "color-mix(in srgb, #2344a6 80%, white)", "color-mix(in srgb, #2344a6 60%, white)", "color-mix(in srgb, #2344a6 40%, white)", "color-mix(in srgb, #2344a6 18%, white)"]
+        "displayName": "Part 0 Ink",
+        "canonical": "#15181c",
+        "tonalRamp": [
+          "color-mix(in srgb, #15181c 35%, black)",
+          "color-mix(in srgb, #15181c 55%, black)",
+          "color-mix(in srgb, #15181c 75%, black)",
+          "#15181c",
+          "color-mix(in srgb, #15181c 80%, white)",
+          "color-mix(in srgb, #15181c 60%, white)",
+          "color-mix(in srgb, #15181c 40%, white)",
+          "color-mix(in srgb, #15181c 18%, white)"
+        ]
       },
-      "instrument-blue-ink": {
+      "part-1-yellow": {
         "role": "primary",
-        "displayName": "Instrument Blue Ink",
-        "canonical": "#ffffff",
-        "tonalRamp": ["color-mix(in srgb, #ffffff 35%, black)", "color-mix(in srgb, #ffffff 55%, black)", "color-mix(in srgb, #ffffff 75%, black)", "#ffffff", "color-mix(in srgb, #ffffff 80%, white)", "color-mix(in srgb, #ffffff 60%, white)", "color-mix(in srgb, #ffffff 40%, white)", "color-mix(in srgb, #ffffff 18%, white)"]
+        "displayName": "Part 1 Yellow",
+        "canonical": "#f2c12e",
+        "tonalRamp": [
+          "color-mix(in srgb, #f2c12e 35%, black)",
+          "color-mix(in srgb, #f2c12e 55%, black)",
+          "color-mix(in srgb, #f2c12e 75%, black)",
+          "#f2c12e",
+          "color-mix(in srgb, #f2c12e 80%, white)",
+          "color-mix(in srgb, #f2c12e 60%, white)",
+          "color-mix(in srgb, #f2c12e 40%, white)",
+          "color-mix(in srgb, #f2c12e 18%, white)"
+        ]
       },
-      "instrument-blue-soft": {
+      "part-1-text": {
         "role": "primary",
-        "displayName": "Instrument Blue Soft",
-        "canonical": "#e4e9f7",
-        "tonalRamp": ["color-mix(in srgb, #e4e9f7 35%, black)", "color-mix(in srgb, #e4e9f7 55%, black)", "color-mix(in srgb, #e4e9f7 75%, black)", "#e4e9f7", "color-mix(in srgb, #e4e9f7 80%, white)", "color-mix(in srgb, #e4e9f7 60%, white)", "color-mix(in srgb, #e4e9f7 40%, white)", "color-mix(in srgb, #e4e9f7 18%, white)"]
+        "displayName": "Part 1 Text",
+        "canonical": "#7d5b00",
+        "tonalRamp": [
+          "color-mix(in srgb, #7d5b00 35%, black)",
+          "color-mix(in srgb, #7d5b00 55%, black)",
+          "color-mix(in srgb, #7d5b00 75%, black)",
+          "#7d5b00",
+          "color-mix(in srgb, #7d5b00 80%, white)",
+          "color-mix(in srgb, #7d5b00 60%, white)",
+          "color-mix(in srgb, #7d5b00 40%, white)",
+          "color-mix(in srgb, #7d5b00 18%, white)"
+        ]
       },
-      "instrument-blue-line": {
+      "part-2-cobalt": {
         "role": "primary",
-        "displayName": "Instrument Blue Line",
-        "canonical": "#8ea0d8",
-        "tonalRamp": ["color-mix(in srgb, #8ea0d8 35%, black)", "color-mix(in srgb, #8ea0d8 55%, black)", "color-mix(in srgb, #8ea0d8 75%, black)", "#8ea0d8", "color-mix(in srgb, #8ea0d8 80%, white)", "color-mix(in srgb, #8ea0d8 60%, white)", "color-mix(in srgb, #8ea0d8 40%, white)", "color-mix(in srgb, #8ea0d8 18%, white)"]
+        "displayName": "Part 2 Cobalt",
+        "canonical": "#2340d0",
+        "tonalRamp": [
+          "color-mix(in srgb, #2340d0 35%, black)",
+          "color-mix(in srgb, #2340d0 55%, black)",
+          "color-mix(in srgb, #2340d0 75%, black)",
+          "#2340d0",
+          "color-mix(in srgb, #2340d0 80%, white)",
+          "color-mix(in srgb, #2340d0 60%, white)",
+          "color-mix(in srgb, #2340d0 40%, white)",
+          "color-mix(in srgb, #2340d0 18%, white)"
+        ]
       },
-      "working-green": {
-        "role": "secondary",
-        "displayName": "Working Green",
-        "canonical": "#132c25",
-        "tonalRamp": ["color-mix(in srgb, #132c25 35%, black)", "color-mix(in srgb, #132c25 55%, black)", "color-mix(in srgb, #132c25 75%, black)", "#132c25", "color-mix(in srgb, #132c25 80%, white)", "color-mix(in srgb, #132c25 60%, white)", "color-mix(in srgb, #132c25 40%, white)", "color-mix(in srgb, #132c25 18%, white)"]
+      "part-3-forest": {
+        "role": "primary",
+        "displayName": "Part 3 Forest",
+        "canonical": "#0b6a47",
+        "tonalRamp": [
+          "color-mix(in srgb, #0b6a47 35%, black)",
+          "color-mix(in srgb, #0b6a47 55%, black)",
+          "color-mix(in srgb, #0b6a47 75%, black)",
+          "#0b6a47",
+          "color-mix(in srgb, #0b6a47 80%, white)",
+          "color-mix(in srgb, #0b6a47 60%, white)",
+          "color-mix(in srgb, #0b6a47 40%, white)",
+          "color-mix(in srgb, #0b6a47 18%, white)"
+        ]
       },
-      "working-green-ink": {
-        "role": "secondary",
-        "displayName": "Working Green Ink",
-        "canonical": "#f1f6f3",
-        "tonalRamp": ["color-mix(in srgb, #f1f6f3 35%, black)", "color-mix(in srgb, #f1f6f3 55%, black)", "color-mix(in srgb, #f1f6f3 75%, black)", "#f1f6f3", "color-mix(in srgb, #f1f6f3 80%, white)", "color-mix(in srgb, #f1f6f3 60%, white)", "color-mix(in srgb, #f1f6f3 40%, white)", "color-mix(in srgb, #f1f6f3 18%, white)"]
+      "part-4-vermilion": {
+        "role": "primary",
+        "displayName": "Part 4 Vermilion",
+        "canonical": "#c2410c",
+        "tonalRamp": [
+          "color-mix(in srgb, #c2410c 35%, black)",
+          "color-mix(in srgb, #c2410c 55%, black)",
+          "color-mix(in srgb, #c2410c 75%, black)",
+          "#c2410c",
+          "color-mix(in srgb, #c2410c 80%, white)",
+          "color-mix(in srgb, #c2410c 60%, white)",
+          "color-mix(in srgb, #c2410c 40%, white)",
+          "color-mix(in srgb, #c2410c 18%, white)"
+        ]
       },
-      "working-green-muted": {
-        "role": "secondary",
-        "displayName": "Working Green Muted",
-        "canonical": "#b8c9c2",
-        "tonalRamp": ["color-mix(in srgb, #b8c9c2 35%, black)", "color-mix(in srgb, #b8c9c2 55%, black)", "color-mix(in srgb, #b8c9c2 75%, black)", "#b8c9c2", "color-mix(in srgb, #b8c9c2 80%, white)", "color-mix(in srgb, #b8c9c2 60%, white)", "color-mix(in srgb, #b8c9c2 40%, white)", "color-mix(in srgb, #b8c9c2 18%, white)"]
-      },
-      "working-green-rule": {
-        "role": "secondary",
-        "displayName": "Working Green Rule",
-        "canonical": "#38584e",
-        "tonalRamp": ["color-mix(in srgb, #38584e 35%, black)", "color-mix(in srgb, #38584e 55%, black)", "color-mix(in srgb, #38584e 75%, black)", "#38584e", "color-mix(in srgb, #38584e 80%, white)", "color-mix(in srgb, #38584e 60%, white)", "color-mix(in srgb, #38584e 40%, white)", "color-mix(in srgb, #38584e 18%, white)"]
+      "part-4-text": {
+        "role": "primary",
+        "displayName": "Part 4 Text",
+        "canonical": "#b53a0a",
+        "tonalRamp": [
+          "color-mix(in srgb, #b53a0a 35%, black)",
+          "color-mix(in srgb, #b53a0a 55%, black)",
+          "color-mix(in srgb, #b53a0a 75%, black)",
+          "#b53a0a",
+          "color-mix(in srgb, #b53a0a 80%, white)",
+          "color-mix(in srgb, #b53a0a 60%, white)",
+          "color-mix(in srgb, #b53a0a 40%, white)",
+          "color-mix(in srgb, #b53a0a 18%, white)"
+        ]
       },
       "positive": {
         "role": "tertiary",
         "displayName": "Positive",
         "canonical": "#1b6e40",
-        "tonalRamp": ["color-mix(in srgb, #1b6e40 35%, black)", "color-mix(in srgb, #1b6e40 55%, black)", "color-mix(in srgb, #1b6e40 75%, black)", "#1b6e40", "color-mix(in srgb, #1b6e40 80%, white)", "color-mix(in srgb, #1b6e40 60%, white)", "color-mix(in srgb, #1b6e40 40%, white)", "color-mix(in srgb, #1b6e40 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #1b6e40 35%, black)",
+          "color-mix(in srgb, #1b6e40 55%, black)",
+          "color-mix(in srgb, #1b6e40 75%, black)",
+          "#1b6e40",
+          "color-mix(in srgb, #1b6e40 80%, white)",
+          "color-mix(in srgb, #1b6e40 60%, white)",
+          "color-mix(in srgb, #1b6e40 40%, white)",
+          "color-mix(in srgb, #1b6e40 18%, white)"
+        ]
       },
       "positive-soft": {
         "role": "tertiary",
         "displayName": "Positive Soft",
         "canonical": "#e3f1e8",
-        "tonalRamp": ["color-mix(in srgb, #e3f1e8 35%, black)", "color-mix(in srgb, #e3f1e8 55%, black)", "color-mix(in srgb, #e3f1e8 75%, black)", "#e3f1e8", "color-mix(in srgb, #e3f1e8 80%, white)", "color-mix(in srgb, #e3f1e8 60%, white)", "color-mix(in srgb, #e3f1e8 40%, white)", "color-mix(in srgb, #e3f1e8 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #e3f1e8 35%, black)",
+          "color-mix(in srgb, #e3f1e8 55%, black)",
+          "color-mix(in srgb, #e3f1e8 75%, black)",
+          "#e3f1e8",
+          "color-mix(in srgb, #e3f1e8 80%, white)",
+          "color-mix(in srgb, #e3f1e8 60%, white)",
+          "color-mix(in srgb, #e3f1e8 40%, white)",
+          "color-mix(in srgb, #e3f1e8 18%, white)"
+        ]
       },
       "negative": {
         "role": "tertiary",
         "displayName": "Negative",
         "canonical": "#b3261e",
-        "tonalRamp": ["color-mix(in srgb, #b3261e 35%, black)", "color-mix(in srgb, #b3261e 55%, black)", "color-mix(in srgb, #b3261e 75%, black)", "#b3261e", "color-mix(in srgb, #b3261e 80%, white)", "color-mix(in srgb, #b3261e 60%, white)", "color-mix(in srgb, #b3261e 40%, white)", "color-mix(in srgb, #b3261e 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #b3261e 35%, black)",
+          "color-mix(in srgb, #b3261e 55%, black)",
+          "color-mix(in srgb, #b3261e 75%, black)",
+          "#b3261e",
+          "color-mix(in srgb, #b3261e 80%, white)",
+          "color-mix(in srgb, #b3261e 60%, white)",
+          "color-mix(in srgb, #b3261e 40%, white)",
+          "color-mix(in srgb, #b3261e 18%, white)"
+        ]
       },
       "negative-soft": {
         "role": "tertiary",
         "displayName": "Negative Soft",
         "canonical": "#f9e6e4",
-        "tonalRamp": ["color-mix(in srgb, #f9e6e4 35%, black)", "color-mix(in srgb, #f9e6e4 55%, black)", "color-mix(in srgb, #f9e6e4 75%, black)", "#f9e6e4", "color-mix(in srgb, #f9e6e4 80%, white)", "color-mix(in srgb, #f9e6e4 60%, white)", "color-mix(in srgb, #f9e6e4 40%, white)", "color-mix(in srgb, #f9e6e4 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #f9e6e4 35%, black)",
+          "color-mix(in srgb, #f9e6e4 55%, black)",
+          "color-mix(in srgb, #f9e6e4 75%, black)",
+          "#f9e6e4",
+          "color-mix(in srgb, #f9e6e4 80%, white)",
+          "color-mix(in srgb, #f9e6e4 60%, white)",
+          "color-mix(in srgb, #f9e6e4 40%, white)",
+          "color-mix(in srgb, #f9e6e4 18%, white)"
+        ]
       },
       "caution": {
         "role": "tertiary",
         "displayName": "Caution",
         "canonical": "#845400",
-        "tonalRamp": ["color-mix(in srgb, #845400 35%, black)", "color-mix(in srgb, #845400 55%, black)", "color-mix(in srgb, #845400 75%, black)", "#845400", "color-mix(in srgb, #845400 80%, white)", "color-mix(in srgb, #845400 60%, white)", "color-mix(in srgb, #845400 40%, white)", "color-mix(in srgb, #845400 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #845400 35%, black)",
+          "color-mix(in srgb, #845400 55%, black)",
+          "color-mix(in srgb, #845400 75%, black)",
+          "#845400",
+          "color-mix(in srgb, #845400 80%, white)",
+          "color-mix(in srgb, #845400 60%, white)",
+          "color-mix(in srgb, #845400 40%, white)",
+          "color-mix(in srgb, #845400 18%, white)"
+        ]
       },
       "caution-soft": {
         "role": "tertiary",
         "displayName": "Caution Soft",
         "canonical": "#f8eed8",
-        "tonalRamp": ["color-mix(in srgb, #f8eed8 35%, black)", "color-mix(in srgb, #f8eed8 55%, black)", "color-mix(in srgb, #f8eed8 75%, black)", "#f8eed8", "color-mix(in srgb, #f8eed8 80%, white)", "color-mix(in srgb, #f8eed8 60%, white)", "color-mix(in srgb, #f8eed8 40%, white)", "color-mix(in srgb, #f8eed8 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #f8eed8 35%, black)",
+          "color-mix(in srgb, #f8eed8 55%, black)",
+          "color-mix(in srgb, #f8eed8 75%, black)",
+          "#f8eed8",
+          "color-mix(in srgb, #f8eed8 80%, white)",
+          "color-mix(in srgb, #f8eed8 60%, white)",
+          "color-mix(in srgb, #f8eed8 40%, white)",
+          "color-mix(in srgb, #f8eed8 18%, white)"
+        ]
       },
       "chart-blue": {
         "role": "tertiary",
         "displayName": "Chart Blue",
         "canonical": "#2a78d6",
-        "tonalRamp": ["color-mix(in srgb, #2a78d6 35%, black)", "color-mix(in srgb, #2a78d6 55%, black)", "color-mix(in srgb, #2a78d6 75%, black)", "#2a78d6", "color-mix(in srgb, #2a78d6 80%, white)", "color-mix(in srgb, #2a78d6 60%, white)", "color-mix(in srgb, #2a78d6 40%, white)", "color-mix(in srgb, #2a78d6 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #2a78d6 35%, black)",
+          "color-mix(in srgb, #2a78d6 55%, black)",
+          "color-mix(in srgb, #2a78d6 75%, black)",
+          "#2a78d6",
+          "color-mix(in srgb, #2a78d6 80%, white)",
+          "color-mix(in srgb, #2a78d6 60%, white)",
+          "color-mix(in srgb, #2a78d6 40%, white)",
+          "color-mix(in srgb, #2a78d6 18%, white)"
+        ]
       },
       "chart-orange": {
         "role": "tertiary",
         "displayName": "Chart Orange",
         "canonical": "#eb6834",
-        "tonalRamp": ["color-mix(in srgb, #eb6834 35%, black)", "color-mix(in srgb, #eb6834 55%, black)", "color-mix(in srgb, #eb6834 75%, black)", "#eb6834", "color-mix(in srgb, #eb6834 80%, white)", "color-mix(in srgb, #eb6834 60%, white)", "color-mix(in srgb, #eb6834 40%, white)", "color-mix(in srgb, #eb6834 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #eb6834 35%, black)",
+          "color-mix(in srgb, #eb6834 55%, black)",
+          "color-mix(in srgb, #eb6834 75%, black)",
+          "#eb6834",
+          "color-mix(in srgb, #eb6834 80%, white)",
+          "color-mix(in srgb, #eb6834 60%, white)",
+          "color-mix(in srgb, #eb6834 40%, white)",
+          "color-mix(in srgb, #eb6834 18%, white)"
+        ]
       },
       "chart-aqua": {
         "role": "tertiary",
         "displayName": "Chart Aqua",
         "canonical": "#1baf7a",
-        "tonalRamp": ["color-mix(in srgb, #1baf7a 35%, black)", "color-mix(in srgb, #1baf7a 55%, black)", "color-mix(in srgb, #1baf7a 75%, black)", "#1baf7a", "color-mix(in srgb, #1baf7a 80%, white)", "color-mix(in srgb, #1baf7a 60%, white)", "color-mix(in srgb, #1baf7a 40%, white)", "color-mix(in srgb, #1baf7a 18%, white)"]
-      },
-      "chart-muted": {
-        "role": "neutral",
-        "displayName": "Chart Muted",
-        "canonical": "#a9b3af",
-        "tonalRamp": ["color-mix(in srgb, #a9b3af 35%, black)", "color-mix(in srgb, #a9b3af 55%, black)", "color-mix(in srgb, #a9b3af 75%, black)", "#a9b3af", "color-mix(in srgb, #a9b3af 80%, white)", "color-mix(in srgb, #a9b3af 60%, white)", "color-mix(in srgb, #a9b3af 40%, white)", "color-mix(in srgb, #a9b3af 18%, white)"]
-      },
-      "chart-grid": {
-        "role": "neutral",
-        "displayName": "Chart Grid",
-        "canonical": "#e1e6e4",
-        "tonalRamp": ["color-mix(in srgb, #e1e6e4 35%, black)", "color-mix(in srgb, #e1e6e4 55%, black)", "color-mix(in srgb, #e1e6e4 75%, black)", "#e1e6e4", "color-mix(in srgb, #e1e6e4 80%, white)", "color-mix(in srgb, #e1e6e4 60%, white)", "color-mix(in srgb, #e1e6e4 40%, white)", "color-mix(in srgb, #e1e6e4 18%, white)"]
-      },
-      "chart-axis": {
-        "role": "neutral",
-        "displayName": "Chart Axis",
-        "canonical": "#b9c2be",
-        "tonalRamp": ["color-mix(in srgb, #b9c2be 35%, black)", "color-mix(in srgb, #b9c2be 55%, black)", "color-mix(in srgb, #b9c2be 75%, black)", "#b9c2be", "color-mix(in srgb, #b9c2be 80%, white)", "color-mix(in srgb, #b9c2be 60%, white)", "color-mix(in srgb, #b9c2be 40%, white)", "color-mix(in srgb, #b9c2be 18%, white)"]
+        "tonalRamp": [
+          "color-mix(in srgb, #1baf7a 35%, black)",
+          "color-mix(in srgb, #1baf7a 55%, black)",
+          "color-mix(in srgb, #1baf7a 75%, black)",
+          "#1baf7a",
+          "color-mix(in srgb, #1baf7a 80%, white)",
+          "color-mix(in srgb, #1baf7a 60%, white)",
+          "color-mix(in srgb, #1baf7a 40%, white)",
+          "color-mix(in srgb, #1baf7a 18%, white)"
+        ]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Module and lesson titles, with the overview allowed one larger chapter-plate expression." },
-      "headline": { "displayName": "Headline", "purpose": "Major lesson sections and the largest instructional landmarks." },
-      "title": { "displayName": "Title", "purpose": "Subsections, laboratory titles, and compact teaching structures." },
-      "body": { "displayName": "Body", "purpose": "Sustained reading in the 68ch lesson measure." },
-      "label": { "displayName": "Label", "purpose": "Information types, tags, metadata, and chart axes; never smaller than 13px." },
-      "value": { "displayName": "Value", "purpose": "Tabular financial values, formula variables, lesson numbers, and control outputs." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Module and lesson titles, with the overview allowed one larger chapter-plate expression."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major lesson sections and the largest instructional landmarks."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Subsections, laboratory titles, and compact teaching structures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sustained reading in the 68ch lesson measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Information types, tags, metadata, and chart axes; never smaller than 13px."
+      },
+      "value": {
+        "displayName": "Value",
+        "purpose": "Tabular financial values, formula variables, lesson numbers, and control outputs."
+      }
     },
     "shadows": [
-      { "name": "popover-light", "value": "0 1px 2px rgb(21 32 28 / 0.08), 0 8px 28px rgb(21 32 28 / 0.14)", "purpose": "The single light-theme elevation for popovers, dialogs, tooltips, the mobile rail, and toasts." },
-      { "name": "popover-dark", "value": "0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.45)", "purpose": "The designed dark-theme counterpart to the popover elevation." }
+      {
+        "name": "popover",
+        "value": "0 1px 2px rgb(17 20 24 / 0.08), 0 12px 32px rgb(17 20 24 / 0.16)",
+        "purpose": "Overlays only: popovers, dialog, tooltips, drawer, toast. Dark: 0 1px 2px rgb(0 0 0 / 0.4), 0 14px 36px rgb(0 0 0 / 0.5)."
+      }
     ],
     "motion": [
-      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Orientation, reveal, and structural state transitions." },
-      { "name": "duration-fast", "value": "140ms", "purpose": "Control color changes and the 1px press response." },
-      { "name": "duration-mid", "value": "260ms", "purpose": "Lesson entry, reveal panels, progress, and the mobile rail." }
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Orientation, reveal, and structural state transitions."
+      },
+      {
+        "name": "duration-fast",
+        "value": "140ms",
+        "purpose": "Control color changes and the 1px press response."
+      },
+      {
+        "name": "duration-mid",
+        "value": "260ms",
+        "purpose": "Lesson entry, reveal panels, progress, and the mobile rail."
+      },
+      {
+        "name": "duration-plate",
+        "value": "520ms",
+        "purpose": "Chapter plate wipe when a lesson opens."
+      }
     ],
     "breakpoints": [
-      { "name": "bench-stack", "value": "1080px" },
-      { "name": "rail-drawer", "value": "900px" },
-      { "name": "single-column", "value": "560px" }
+      {
+        "name": "bench-stack",
+        "value": "1080px"
+      },
+      {
+        "name": "rail-drawer",
+        "value": "900px"
+      },
+      {
+        "name": "single-column",
+        "value": "560px"
+      }
     ]
   },
   "components": [
@@ -237,7 +494,7 @@
       "name": "Lesson Rail Item",
       "kind": "nav",
       "refersTo": "navigation-item",
-      "description": "A numbered ledger row that preserves lesson position and makes the current destination unmistakable.",
+      "description": "A numbered Part field row that preserves lesson position and makes the current destination unmistakable.",
       "html": "<a class=\"ds-rail-item\" href=\"#l04\" aria-current=\"page\"><span class=\"ds-rail-no\">0.4</span><span class=\"ds-rail-copy\">Compounding</span><span class=\"ds-rail-status\" aria-label=\"Complete\">✓</span></a>",
       "css": ".ds-rail-item { display:grid; grid-template-columns:2.25rem 1fr auto; align-items:baseline; gap:var(--s1); min-height:2.5rem; padding:var(--s2) var(--s3); border-radius:var(--r-control); color:var(--ink-2); font:400 var(--t-small)/1.35 var(--font-body); text-decoration:none; } .ds-rail-item:hover { background:var(--surface-2); color:var(--ink); } .ds-rail-item[aria-current=\"page\"] { background:var(--accent-soft); color:var(--ink); font-weight:600; box-shadow:inset 0 0 0 1px var(--accent-line); } .ds-rail-item:focus-visible { outline:2px solid var(--accent); outline-offset:2px; } .ds-rail-no { color:var(--ink-3); font:400 var(--t-micro)/1.35 var(--font-mono); } .ds-rail-item[aria-current=\"page\"] .ds-rail-no { color:var(--accent); } .ds-rail-status { color:var(--pos); }"
     },
@@ -275,41 +532,7 @@
     }
   ],
   "narrative": {
-    "northStar": "The Household Ledger",
-    "overview": "Finance Academy is guided by The Household Ledger: a calm, analytical, precise, editorial environment for serious adult learning. It feels trustworthy and exacting without institutional coldness, combining ledger-paper neutrals, Household Ink, tabular numerals, and structural rules with open space for sustained reading.\n\nThe system behaves like an analyst's field guide to one household system rather than a collection of generic cards. Open ledgers, ruled bands, working benches, and one high-contrast teaching panel establish hierarchy; diagrams, charts, and interactive figures carry the visual argument because every visual must teach.",
-    "keyCharacteristics": [
-      "Calm, adult editorial tone with a 68ch reading measure.",
-      "Flat, structural hierarchy built from rules, tonal surfaces, and deliberate scale.",
-      "One Instrument Blue interaction accent plus semantic colors that always carry non-color cues.",
-      "Persistent ledger navigation and wide working benches connecting reading to calculation.",
-      "Purposeful motion only: variance 6, motion 4, density 5."
-    ],
-    "rules": [
-      { "name": "The One Instrument Rule", "body": "Instrument Blue is the only interaction accent; semantic colors are never decorative and always pair with icon, text, or pattern.", "section": "colors" },
-      { "name": "The Designed Dark Rule", "body": "Dark mode is a deliberate token mapping, not an automatic inversion.", "section": "colors" },
-      { "name": "The 13-Pixel Floor Rule", "body": "Labels and axis ticks may use 13px; no text may be smaller.", "section": "typography" },
-      { "name": "The Editorial Case Rule", "body": "Module and lesson titles use title case; section headings, controls, and labels use sentence case.", "section": "typography" },
-      { "name": "The Read-Then-Operate Rule", "body": "Lessons stay within 68ch, while explorers, cases, and diagrams may widen to the 64rem bench.", "section": "layout" },
-      { "name": "The Flat Ledger Rule", "body": "Rules and tonal surfaces create hierarchy; shadows are reserved for true overlays, the mobile rail, tooltips, and toasts.", "section": "elevation" },
-      { "name": "The Three-Radius Rule", "body": "Controls use 6px, blocks use 10px, and tags use a full pill; no other radii belong in shared components.", "section": "shapes" },
-      { "name": "The Working Instrument Rule", "body": "Components must teach, control, compare, or report state; they must never become decorative card chrome.", "section": "components" },
-      { "name": "The Explained Motion Rule", "body": "Motion must explain state, feedback, or orientation; perpetual loops and decorative scroll effects do not belong.", "section": "components" }
-    ],
-    "dos": [
-      "Do use open ledgers, ruled bands, and generous measure before adding another boxed container.",
-      "Do keep lesson prose at 68ch and let genuine laboratories, cases, and diagrams widen to the 64rem bench.",
-      "Do pair every semantic color with an icon, label, border, or pattern so meaning never depends on hue alone.",
-      "Do keep controls touch-friendly at a minimum 44px and preserve visible `:focus-visible` treatment.",
-      "Do use diagrams, charts, and interactive figures when a visual clarifies a financial relationship.",
-      "Do make dark mode, reduced motion, mobile layout, 200% zoom, and data-table chart alternatives part of the component contract."
-    ],
-    "donts": [
-      "Don't add warm cream, serif editorial styling, purple gradients, neon-on-black treatments, or generic AI-generated aesthetics.",
-      "Don't use photography or raster decoration unless it directly teaches; no generated raster assets belong in this system.",
-      "Don't use shadows to make ordinary content blocks look elevated.",
-      "Don't invent radii, spacing steps, z-index values, or module-specific colors outside the shared tokens.",
-      "Don't reduce labels below 13px or body copy below 17px.",
-      "Don't turn study into gamification or animate anything that does not explain state, feedback, or orientation."
-    ]
+    "northStar": "Swiss textbook colour fields",
+    "overview": "Finance Academy reads like a disciplined modern textbook in the International Typographic tradition: one neo-grotesk family (Geist), a strict grid, flat saturated colour fields, sharp corners and rules instead of shadows. Each syllabus Part owns a colour that becomes the page accent, the chapter plate, the lab header band and the next-lesson block."
   }
 }

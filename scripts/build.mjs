@@ -292,11 +292,9 @@ function buildModule(moduleId) {
   fs.mkdirSync(outputRoot, { recursive: true });
   fs.writeFileSync(path.join(outputRoot, "index.html"), page);
   const fontFiles = [
-    "ibm-plex-sans/400.css", "ibm-plex-sans/500.css", "ibm-plex-sans/600.css", "ibm-plex-sans/700.css",
-    "ibm-plex-sans/400-italic.css", "ibm-plex-mono/400.css", "ibm-plex-mono/500.css", "ibm-plex-mono/600.css",
-    "schibsted-grotesk/500.css", "schibsted-grotesk/600.css", "schibsted-grotesk/700.css"
-  ];
-  const localFonts = fontFiles.map((font) =>
+    "geist/400.css", "geist/500.css", "geist/600.css", "geist/700.css", "geist/800.css", "geist/400-italic.css",
+    "geist-mono/400.css", "geist-mono/500.css", "geist-mono/600.css"
+  ];  const localFonts = fontFiles.map((font) =>
     `<link rel="stylesheet" href="${pathToFileURL(resolveRoot(`node_modules/@fontsource/${font}`)).href}">`
   ).join("");
   const previewPage = page.replace(/\n?<link[^>]+href="https:\/\/fonts\.(?:googleapis|gstatic)\.com[^"]*"[^>]*>/g, "");

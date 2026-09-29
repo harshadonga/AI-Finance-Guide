@@ -1,6 +1,6 @@
 # 05 · Component Library
 
-Version 1.0 · established with Module 0 · 29 Sep 2026
+Version 2.0 · Swiss textbook redesign · 29 Sep 2026 (1.0 established with Module 0)
 Styles: `src/shared/styles/components.css` · Runtime: `src/shared/scripts/core.js` (router, glossary, checks, notes, formatting) and `src/shared/scripts/charts.js` (charts) · Build: `scripts/build.mjs`
 
 Components implement Teaching Spec §24 (ConceptCard … LessonNavigation). Every module reuses them; new components are added here first, then used.
@@ -94,3 +94,11 @@ Browser storage is used only for per-viewer conveniences: theme, progress, notes
 ## 8. Accessibility checklist (release-blocking, Spec §53 and §71.6)
 
 Semantic landmarks and one h1 per lesson; no skipped heading levels; a label on every control; visible `:focus-visible` everywhere (sliders show a thumb ring and the skip-link destination is outlined); touch targets ≥ 44px; `aria-live` on feedback and insights; charts have a text description plus a data table; external new-tab links carry an icon and hidden explanatory text; no meaning carried by colour alone; reduced motion honoured; no horizontal overflow at 390px or at 200% zoom; no text below 13px.
+
+## Part scopes and chapter plates (v2.0)
+
+- **`data-part="0…4"`** on any element scopes the Part colour (see 04 §2). Put it on each lesson `<article>`, each lesson-list `<ol>` and its `.rail-part` heading, and on any map node that points at a lesson. The router copies the current lesson's Part to `<html>` and to the previous/next links.
+- **Chapter plate.** Inside `.lesson-head`, wrap the kicker, an `aria-hidden` `.plate-no` numeral, the `h1` and the big idea (or lede plus `.meta-row`) in `<div class="plate">`. Keep `.on-page` after the plate. The plate bleeds to the edges of `main` using container units.
+- **Rail Part heading.** `<p class="rail-part" data-part="N"><span class="rail-part-no" aria-hidden="true">II</span><span class="visually-hidden">Part II: </span>Name</p>`.
+- **Lab bench.** Unchanged markup; `.bench-head` renders as a Part-coloured band, so its purpose text and tags inherit the field ink.
+- **Primary button.** Uses `--mark`/`--mark-ink`, the solid Part colour.

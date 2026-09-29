@@ -111,7 +111,9 @@
     if (changed) {
       lessons.forEach((l) => (l.hidden = l !== lesson));
       current = lesson;
-      if (!FA.reducedMotion()) { lesson.setAttribute("data-entering", ""); setTimeout(() => lesson.removeAttribute("data-entering"), 320); }
+      if (lesson.dataset.part != null) document.documentElement.dataset.part = lesson.dataset.part;
+      else document.documentElement.removeAttribute("data-part");
+      if (!FA.reducedMotion()) { lesson.setAttribute("data-entering", ""); setTimeout(() => lesson.removeAttribute("data-entering"), 620); }
       document.title = `${lesson.dataset.title || "Lesson"} · ${(APP && APP.dataset.moduleTitle) || "Finance Academy"}`;
       progress.visited[lesson.id] = true; saveProgress();
       updateRail(); updateLessonNav(); updateMeter();
@@ -155,13 +157,14 @@
   }
   FA.refreshProgress = () => { updateRail(); updateMeter(); };
 
+  function partAttr(l) { return l.dataset.part != null ? ` data-part="${l.dataset.part}"` : ""; }
   function updateLessonNav() {
     const i = lessons.indexOf(current);
     $$("[data-lesson-nav]").forEach((nav) => {
       const prev = lessons[i - 1], next = lessons[i + 1];
       nav.innerHTML =
-        (prev ? `<a class="prev" href="#${prev.id}"><span>${FA.icon("arrow-left")} Previous</span><strong>${prev.dataset.navTitle || prev.dataset.title}</strong></a>` : "<span></span>") +
-        (next ? `<a class="next" href="#${next.id}"><span>Next ${FA.icon("arrow-right")}</span><strong>${next.dataset.navTitle || next.dataset.title}</strong></a>` : "");
+        (prev ? `<a class="prev"${partAttr(prev)} href="#${prev.id}"><span>${FA.icon("arrow-left")} Previous</span><strong>${prev.dataset.navTitle || prev.dataset.title}</strong></a>` : "<span></span>") +
+        (next ? `<a class="next"${partAttr(next)} href="#${next.id}"><span>Next ${FA.icon("arrow-right")}</span><strong>${next.dataset.navTitle || next.dataset.title}</strong></a>` : "");
     });
   }
 

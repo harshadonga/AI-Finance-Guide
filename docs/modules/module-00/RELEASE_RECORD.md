@@ -1,7 +1,7 @@
 # Module 0 Release Record
 
 **Module:** 0 · Personal Finance & Wealth Foundations (Syllabus Level 0, sections 0.1 to 0.11, Project 0)
-**Version:** 1.1 · redesigned and re-audited 29 Sep 2026 · facts verified 29 Sep 2026
+**Version:** 1.2 · Swiss textbook redesign and re-audit 29 Sep 2026 · facts verified 29 Sep 2026
 **Artifact:** "Personal Finance Foundations" (single standalone page; private until shared)
 **Source:** `src/shared/` (shared system) + `src/modules/module-00/` (content, engine, labs) → `scripts/build.mjs` → `dist/module-00/index.html`
 
@@ -33,6 +33,7 @@
 4. **Lesson IDs match syllabus IDs** (`#l04` = 0.4) for traceability. Syllabus order is kept; concepts that need later tools are taught as intuition first and quantified later (human capital: 0.1 → 0.9).
 5. **Accessibility tokens.** A `--control` border token was added to meet WCAG 1.4.11 (non-text contrast) after the audit.
 6. **Privacy.** Project data never leaves the browser. Export uses the platform downloads capability, with a copy fallback.
+8. **1.2 visual direction: Swiss textbook colour fields** (user-selected over the transit-map roll, seed c00d81c9). Each syllabus Part owns a colour (0 ink, I yellow, II cobalt, III forest, IV vermilion) that becomes the page accent, the full-bleed chapter plate, the lesson-list current row, the lab header band, section marks, "your turn" blocks and the next-lesson block. Geist and Geist Mono replace Schibsted Grotesk and IBM Plex; corners are square (controls 4px); tokens use `light-dark()`. Markup changes are structural only: `data-part` on lessons, list groups and map nodes; a `.plate` wrapper and `aria-hidden` numeral in each lesson head; a Part index and full-width thesis band on the overview. No curriculum copy, IDs, calculations or interactions changed, except "three lessons" style counts written as numerals in the new Part index.
 7. **1.1 visual direction.** Module 0 now behaves like an analyst's household-finance field guide: a stronger ledger-paper shell, a stocks/flows/buffers thesis panel, open chapter plates, structured lab benches and rule-led navigation. The change preserves the teaching sequence and every interaction while replacing the generic card-and-sidebar feel with a reusable editorial system.
 
 ## 5. QA results
@@ -47,10 +48,10 @@
 | Keyboard and focus | `tests/e2e/module-accessibility.test.cjs`: skip link, 60-stop tab walk with a visible-focus check, slider arrows, chart arrow reading, quiz by keyboard, glossary popover with Escape, focus to h1 on navigation | Pass |
 | Mobile | Drawer rail open/close/Escape, touch targets ≥ 40px measured, no horizontal overflow at 390px | Pass |
 | Project 0 flows | Add and delete with undo, start-empty confirmation, sample-load confirmation, live recompute, reload persistence, export fallback, import of a valid file and rejection of a malformed one | Pass |
-| web-design-guidelines | Current rules fetched 29 Sep 2026 and applied to the 1.1 redesign | Fixed in 1.1: visible focus on the skip-link destination; semantic progress-bar values; external source links disclose new-tab behavior visually and to assistive technology; progress motion uses transforms. Existing justified deviations remain: sentence case (04 §3); no `theme-color` meta because the platform supplies the document head |
-| design-taste-frontend | Pre-flight: zero em and en dashes in the output, one accent, one radius system, one theme system, restrained motion, no fake UI screenshots, no hand-drawn icons, mobile and dark screenshots reviewed | Pass, with the deviations in 04 §7 |
-| Impeccable | Surface brief, code-led redesign, four-state visual review, anti-pattern detector and independent finish review | Pass; contract and screenshots retained in `.impeccable/` |
-| Colour and contrast | WCAG ratios for every token pair in both themes; chart palette through `validate_palette.js` | Text ≥ 4.7:1; controls ≥ 3:1; palette passes CVD checks in both modes (light-mode aqua relies on its legend, the table and dashing) |
+| web-design-guidelines | Rules fetched 29 Sep 2026, applied to every file changed in 1.2 | Fixed: hover motion moved from `padding` to `transform`; explicit `color` on inputs and selects; `theme-color` meta for both schemes added; counts as numerals. Justified deviations: sentence case (04 §3); 140ms colour transitions; a one-time `clip-path` plate wipe, removed under reduced motion |
+| design-taste-frontend | Pre-flight after the 1.2 build: zero em and en dashes (build check), one accent per page, one shape system (fixed tags from 2px to square), one theme per page (dark ink fields made charcoal to avoid a section flip), no fake UI, no hand-drawn icons, no eyebrow labels in uppercase tracking, explicit mobile collapse | Pass, with the deviations in 04 §7 |
+| Impeccable | Context loaded, direction contract recorded in the surface brief, code-led build, one review round plus one confirmation round (desktop and mobile, light and dark), detector run | Detector: 1 warning (hatched top band on misconceptions, kept as the required non-colour cue) and type-step advisories. The independent finish reviewer was substituted by an in-thread pass; screenshots in `.impeccable/review/` |
+| Colour and contrast | WCAG ratios for every token pair in both themes, including all Part fields; chart palette through `validate_palette.js` | Text ≥ 5.0:1 (ink-3 ≥ 5.4:1; field ink on every Part field ≥ 5.0:1; text-safe Part colours ≥ 5.1:1); controls ≥ 3:1; palette passes CVD checks in both modes (light-mode aqua relies on its legend, the table and dashing) |
 
 ## 6. Cross-links later modules must honour
 
@@ -68,7 +69,7 @@ Tax slabs, rebate, standard deduction and cess (0.10, and the tax visualiser in 
 2. No test with a real screen reader. Structure, labels, live regions and chart text alternatives were audited automatically.
 3. The platform downloads capability for Project 0 export could not be exercised in the build environment. The copy fallback was tested, and export fails over to it.
 4. Knowledge-check answers are not restored after a reload (lesson completion ticks are). Notes and Project 0 data persist per browser and are lost in private windows unless exported.
-5. Fonts come from Google Fonts. Offline, the page falls back to system fonts: usable, but less refined.
+5. Fonts (Geist, Geist Mono) come from Google Fonts. Offline, the page falls back to system fonts: usable, but less refined.
 6. The tax visualiser is deliberately simplified (new regime, standard deduction only, no surcharge or special-rate income) and labelled "not a tax calculator".
 7. Emergency-fund month counts and the life-cover method are teaching heuristics, labelled as such in the page.
 
@@ -77,3 +78,4 @@ Tax slabs, rebate, standard deduction and cess (0.10, and the tax visualiser in 
 - **1.0** (29 Sep 2026): initial release.
 - **1.0 infrastructure refresh** (29 Sep 2026): source moved into the repository-wide shared/module convention; build and QA moved to a portable root-level Node toolchain. Curriculum and learner-facing content were unchanged.
 - **1.1** (29 Sep 2026): redesigned the shared shell and Module 0 opening around a household-system ledger; strengthened responsive hierarchy, lesson chapter plates, benches, navigation and source-link accessibility; retained the complete curriculum and interaction model.
+- **1.2** (29 Sep 2026): Swiss textbook redesign. Part colour system, chapter plates, Part index overview, segmented progress meter, lab header bands, Geist type, square shape system, `light-dark()` tokens. 44/44 unit tests, all interaction, keyboard and mobile checks pass; no horizontal overflow at 390px.
