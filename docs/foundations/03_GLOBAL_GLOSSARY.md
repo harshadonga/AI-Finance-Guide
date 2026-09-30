@@ -1,6 +1,6 @@
 # 03 · Global Glossary
 
-Version 1.0 · 29 Sep 2026 · 86 terms
+Version 1.1 · 30 Sep 2026 · 117 terms
 
 The machine-readable source is `src/shared/scripts/glossary.js`, which every module page loads (hover or tap a dotted term; open the Glossary panel from the top bar). This file mirrors it for reading and review. **Add terms only through `src/shared/scripts/glossary.js`, then regenerate this file.**
 
@@ -21,7 +21,7 @@ Fields per Teaching Spec §42: concise definition, intuition, related concepts, 
 | **Asset** `asset` | Something you own that has economic value, such as cash, investments, property or a vehicle. | Ask: could this be turned into money, and how quickly? | Liability, Liquidity | 0.1 |
 | **Average tax rate** `average-tax-rate` | Total tax divided by total income. |  | Marginal tax rate | 0.10 |
 | **Base year** `base-year` | The reference period whose price level is set to 100 in an index. |  | Consumer Price Index (CPI) | 0.5 |
-| **Broker** `broker` | A registered intermediary that places buy and sell orders on an exchange for clients. Covered in Lesson 1.6. |  |  | 0.11 |
+| **Broker** `broker` | A registered intermediary that routes client buy and sell orders to a market under its membership and regulatory obligations. |  | Exchange, Market order | 0.11 |
 | **CAGR** `cagr` | Compound annual growth rate: the constant yearly rate that takes a starting value to an ending value over a period. | The smooth path that ends in the same place as the bumpy real one. | Compound interest, Annualisation | 0.4 |
 | **Cash flow** `cash-flow` | Money moving in and out over a period. |  | Income | 0.2 |
 | **Co-payment** `co-payment` | A fixed share of each claim that the policyholder pays. |  | Deductible | 0.9 |
@@ -31,7 +31,7 @@ Fields per Teaching Spec §42: concise definition, intuition, related concepts, 
 | **Consumption** `consumption` | Spending on goods and services that are used up rather than kept as a store of value. |  | Saving | 0.1 |
 | **Debt-to-income (EMI ratio)** `debt-to-income` | Total monthly loan repayments divided by monthly income. |  | EMI, Leverage | 0.3 |
 | **Deductible** `deductible` | An amount the policyholder pays before the insurer starts paying. |  | Co-payment | 0.9 |
-| **Demat account** `demat` | An account that holds securities electronically, maintained through a depository participant. Covered in Lesson 1.7. |  |  | 0.11 |
+| **Demat account** `demat` | An account that records an investor's securities electronically through a depository participant. |  | Depository, Depository participant | 0.11 |
 | **DICGC deposit insurance** `dicgc` | Insurance on bank deposits in India, currently up to ₹5 lakh per depositor per bank (principal and interest), provided by the Deposit Insurance and Credit Guarantee Corporation. |  | Emergency fund | 0.7 |
 | **Discount rate** `discount-rate` | The rate used to convert future money into present value; it reflects the return you could earn elsewhere at similar risk. |  | Present value (PV), Opportunity cost | 0.4 |
 | **Discounting** `discounting` | Converting a future amount into its present value. |  | Present value (PV) | 0.4 |
@@ -100,3 +100,34 @@ Fields per Teaching Spec §42: concise definition, intuition, related concepts, 
 | **Variable expense** `variable-expense` | A necessary cost whose amount changes with use, such as groceries, fuel or electricity. |  | Fixed expense | 0.2 |
 | **Waiting period** `waiting-period` | Time after buying a health policy during which certain conditions are not covered. |  | Moratorium period | 0.9 |
 | **Wealth** `wealth` | The value of what you own minus what you owe at a point in time. | A stock: the water level in the tub, measured on a date. | Income, Net worth | 0.1 |
+| **Adjusted price** `adjusted-price` | A historical price modified to make returns comparable across specified corporate actions. |  | Stock split, Total return | 1.13 |
+| **Best ask** `best-ask` | The lowest displayed price at which a seller is currently offering to trade. |  | Best bid, Bid-ask spread | 1.9 |
+| **Best bid** `best-bid` | The highest displayed price at which a buyer is currently offering to trade. |  | Best ask, Bid-ask spread | 1.9 |
+| **Bid-ask spread** `bid-ask-spread` | The difference between the best displayed ask and best displayed bid. |  | Best bid, Best ask, Liquidity | 1.9 |
+| **Capital formation** `capital-formation` | The process of directing saved resources into productive assets and projects. |  | Saving, Primary market | 1.1 |
+| **Clearing corporation** `clearing-corporation` | A market institution that calculates settlement obligations and manages their completion under its rules. |  | Settlement, Exchange | 1.7 |
+| **Corporate action** `corporate-action` | An issuer event that changes holders' cash, units, rights or ownership claims. |  | Dividend, Stock split, Rights issue | 1.12 |
+| **Debt** `debt` | A contractual claim for interest and repayment, subject to the borrower's ability to pay. |  | Equity, Security | 1.1 |
+| **Depository** `depository` | An institution that maintains electronic securities records and enables transfers through depository participants. |  | Demat account, Depository participant | 1.7 |
+| **Depository participant** `depository-participant` | An investor-facing intermediary that provides depository services and maintains demat accounts on behalf of a depository. |  | Depository, Demat account | 1.7 |
+| **Derivative** `derivative` | A contract whose value depends on another asset, rate, index or event. |  | Risk transfer | 1.1 |
+| **Dividend** `dividend` | A distribution of company value to eligible shareholders, usually paid in cash or shares. |  | Corporate action, Total return | 1.12 |
+| **Equity** `equity` | A residual ownership claim on a business after prior claims are met. |  | Debt, Market capitalisation | 1.1 |
+| **Exchange** `exchange` | A regulated venue that admits securities and members, matches eligible orders and publishes market information under defined rules. |  | Broker, Secondary market | 1.4 |
+| **Financial market** `financial-market` | A system in which financial claims are issued, bought, sold and priced under defined rules. |  | Security, Primary market, Secondary market | 1.1 |
+| **Free float** `free-float` | The portion of a company's shares considered available for public trading rather than held strategically. |  | Market capitalisation, Market index | 1.10 |
+| **Initial public offering (IPO)** `ipo` | The first public offer of a company's shares before or alongside their listing for public trading. |  | Primary market | 1.2 |
+| **Limit order** `limit-order` | An order that sets the worst acceptable price but does not guarantee a fill. |  | Market order, Best bid, Best ask | 1.8 |
+| **Market capitalisation** `market-cap` | The market price per share multiplied by the number of shares outstanding. |  | Equity, Free float | 1.10 |
+| **Market depth** `market-depth` | The quantity available to trade at successive bid and ask prices in an order book. |  | Liquidity, Market order | 1.9 |
+| **Market index** `market-index` | A rule-based measurement portfolio used to track a defined set of securities. |  | Free float, Total return | 1.11 |
+| **Market order** `market-order` | An order to trade promptly against available prices without a guaranteed execution price. |  | Limit order, Market depth | 1.8 |
+| **OHLCV** `ohlcv` | Open, high, low, close and volume fields that summarise trading over a defined period. |  | Adjusted price | 1.13 |
+| **Primary market** `primary-market` | The market in which an issuer creates and sells new securities to raise funds. |  | Secondary market, IPO | 1.2 |
+| **Rights issue** `rights-issue` | An offer giving eligible existing shareholders the right to buy newly issued shares under stated terms. |  | Primary market, Corporate action | 1.12 |
+| **Secondary market** `secondary-market` | The market in which investors transfer securities that have already been issued. |  | Primary market, Exchange | 1.3 |
+| **Security** `security` | A transferable financial claim, such as a share or bond, with rights defined by its terms and the law. |  | Equity, Debt | 1.1 |
+| **Settlement** `settlement` | The completion of a trade through the delivery of funds and securities according to the market's schedule and rules. |  | Clearing corporation, Demat account | 1.7 |
+| **Stock split** `stock-split` | A proportional increase in shares and decrease in price per share that does not create value mechanically. |  | Corporate action, Adjusted price | 1.12 |
+| **Stop order** `stop-order` | An instruction that activates another order after a specified trigger price is reached. |  | Market order, Limit order | 1.8 |
+| **Total return** `total-return` | The change in investment value including price movement and cash distributions over the period. |  | Dividend, Adjusted price | 1.13 |

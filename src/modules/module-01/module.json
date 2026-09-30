@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "module-01",
+  "number": "1",
+  "label": "Module 1",
+  "title": "How Financial Markets Work",
+  "shortTitle": "Financial Markets",
+  "homeHash": "m1",
+  "lessonCount": 16,
+  "head": "content/head.html",
+  "navigation": "content/navigation.html",
+  "lessonDirectory": "content/lessons",
+  "styles": [
+    "styles/module.css"
+  ],
+  "scripts": [
+    "scripts/markets.js",
+    "scripts/labs.js"
+  ]
+}

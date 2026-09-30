@@ -55,3 +55,14 @@ It never invents current data, cites a source that was not actually consulted, u
 | Madoff recoveries ≈ $15.485 billion as of 21 Aug 2026 | Madoff SIPA Trustee | 1 | 29 Sep 2026 |
 | Saradha Realty SEBI order, 23 Apr 2013: wind up, refund within 3 months, market ban | SEBI order | 1 | 29 Sep 2026 |
 | RBI Sachet portal for unauthorised deposit schemes | RBI Sachet site (listing) | 1 | 29 Sep 2026 |
+
+## 6. Module 1 verification register
+
+| Fact | Source | Tier | Checked |
+|---|---|---|---|
+| Indian cash-equity trades on NSE generally settle on T+1; an optional T+0 segment exists for eligible trades | NSE Clearing and Settlement; NSE Market Segments | 1 | 30 Sep 2026 |
+| NSDL and CDSL are India's depositories; investors use a depository participant to maintain a demat account | SEBI Investor; NSDL e-guide | 1 | 30 Sep 2026 |
+| Investors should verify a broker's registration on SEBI and exchange websites | SEBI FAQ on Stock Brokers; SEBI Recognised Intermediaries | 1 | 30 Sep 2026 |
+| Nifty 50 is calculated using free-float market capitalisation | NSE Nifty 50; NSE Investible Weight Factors | 1 | 30 Sep 2026 |
+
+All Module 1 order books, company figures, prices, index constituents and corporate-action arithmetic are hypothetical and labelled on the page.

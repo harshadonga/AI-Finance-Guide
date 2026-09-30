@@ -119,7 +119,7 @@ function renderNumeric(attributes, body) {
     `<p class="block-label">${icon("calculator")} ${attributes.labeltext || "Calculate"}</p>` +
     `<p class="q-stem">${stem}</p><div class="q-numeric"><div class="field">` +
     `<label for="${id}-in">${attributes.label || "Your answer"}</label>` +
-    `<input class="input" id="${id}-in" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>` +
+    `<input class="input" id="${id}-in" name="${id}" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>` +
     '<button type="button" class="btn btn--primary" data-check>Check answer</button>' +
     '<button type="button" class="btn btn--ghost" data-retry hidden>Try again</button></div>' +
     '<div class="q-feedback" aria-live="polite"></div>' +

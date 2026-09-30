@@ -1,0 +1,21 @@
+<article class="lesson" id="l03" data-lesson data-part="1" data-title="1.3 Secondary Markets" data-nav-title="Secondary markets">
+  <header class="lesson-head"><div class="plate"><p class="eyebrow">Part I · Capital and exchange</p><span class="plate-no" aria-hidden="true">1.3</span><h1>Secondary Markets</h1><p class="big-idea">The secondary market transfers existing claims and discovers prices through a defined matching process.</p></div></header>
+  <section aria-labelledby="l03-mechanisms"><h2 id="l03-mechanisms">Three ways a trade can form</h2><div class="role-matrix"><div><h3>Continuous order book</h3><p>Buy and sell orders compete throughout the session. Compatible orders match using the venue's priority rules.</p></div><div><h3>Call auction</h3><p>Orders collect for a period, then one clearing price is chosen to match as much quantity as possible.</p></div><div><h3>Dealer quotation</h3><p>Dealers quote prices at which they are prepared to buy or sell. This is common in markets where central books are less dominant.</p></div><div><h3>Negotiated trade</h3><p>Large or specialised transactions may be agreed under separate venue rules and reported to the market.</p></div></div></section>
+  <section aria-labelledby="l03-price"><h2 id="l03-price">Price is an event</h2><p>The displayed last price records the most recent eligible trade. It depends on the venue, session, order instructions, available depth and timing. The same security can have a best bid of ₹99.90, a best ask of ₹100.10 and a last trade of ₹100.00 at the same moment. None of those numbers means the same thing.</p><div class="block block--intuition"><p class="block-label">{{i:lightbulb}} Intuition</p><p>Think of price discovery as a sequence of agreements, not a survey that asks everyone what the asset is worth. A thin agreement can move the displayed price without making the whole company worth more in cash.</p></div></section>
+  <section aria-labelledby="l03-controls"><h2 id="l03-controls">Markets also constrain trading</h2><p>Trading sessions, price bands, circuit breakers and surveillance rules are part of the market mechanism. They can slow or pause activity when prices move sharply, but they cannot guarantee an orderly exit. A lower price band with no buyers is not liquidity.</p><div class="block block--caution"><p class="block-label">{{i:warning}} Boundary</p><p>This lesson explains what a continuous book and an auction do. Level 10 explains why order flow, urgency and size change execution quality.</p></div></section>
+  <section aria-labelledby="l03-check"><h2 id="l03-check">Knowledge check</h2>
+<!--predict id=p13-->
+? At 9:00 a market collects orders but executes none. At 9:08 it selects one price that matches the greatest quantity. What mechanism is this?
++ A call auction || Orders are pooled and cleared at one price.
+- Continuous trading || Continuous markets match compatible orders as they arrive.
+- A private placement || A private placement is an issuance route, not a secondary matching process.
+> <p>A call auction concentrates liquidity at one moment. It can help establish an opening or closing reference price.</p>
+<!--/predict-->
+<!--quiz id=q13-1 comp=Application-->
+? A share is locked at its lower price band with many sell orders and no buyers. Which statement is sound?
+- The band protects every seller from a larger loss || It constrains the next permitted price but cannot create buyers.
++ The displayed price may not be an executable exit price for the queued sellers || A quote without opposite-side depth is not liquidity.
+- The exchange will buy the excess shares || Exchanges operate the market; they do not guarantee a buyer for each order.
+<!--/quiz--></section>
+  <section class="notes" aria-labelledby="l03-notes"><h2 id="l03-notes" style="font-size:var(--t-h4)">Your notes</h2><div class="field"><label for="notes-l03">Describe one way the last price can mislead</label><textarea class="input" id="notes-l03" name="notes-l03" autocomplete="off" data-notes="l03"></textarea></div><p class="hint" data-notes-status>Stored only in this browser.</p></section>
+</article>

@@ -1,0 +1,52 @@
+/* Module 1 concept-specific diagrams. Shared shell and learning blocks remain in shared styles. */
+.market-thesis { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr); gap:var(--s7); align-items:end; }
+.market-thesis h2 { margin:0; max-width:14ch; }
+.market-thesis p { max-width:55ch; margin:0; }
+.market-loop { display:grid; grid-template-columns:repeat(3,1fr); border-block:2px solid var(--ink); margin:var(--s6) 0; }
+.market-loop > div { padding:var(--s5); border-inline-end:1px solid var(--rule-strong); }
+.market-loop > div:last-child { border-inline-end:0; }
+.market-loop b { display:block; font-size:var(--t-h3); margin-bottom:var(--s2); }
+.route-grid { display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; border:1px solid var(--rule-strong); }
+.route-grid > div { padding:var(--s5); }
+.route-arrow { display:grid; place-items:center; min-width:4rem; color:var(--part-text); border-inline:1px solid var(--rule-strong); font-size:var(--t-h3); font-weight:700; }
+.role-matrix { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px; background:var(--rule-strong); border:1px solid var(--rule-strong); }
+.role-matrix > div { background:var(--surface); padding:var(--s5); }
+.role-matrix h3 { margin-top:0; }
+.trace-line { display:grid; grid-template-columns:repeat(6,minmax(6rem,1fr)); gap:1px; background:var(--rule-strong); border:1px solid var(--rule-strong); overflow-x:auto; }
+.trace-node { min-height:5.5rem; padding:var(--s3); border:0; border-radius:0; background:var(--surface); color:var(--ink); text-align:left; font:inherit; cursor:pointer; }
+.trace-node:hover { background:var(--surface-2); }
+.trace-node.is-current { background:var(--field); color:var(--field-ink); }
+.trace-node.is-current:hover { background:var(--field); }
+.trace-node.is-done::after { content:"Completed"; display:block; font-size:var(--t-micro); font-weight:650; margin-top:var(--s2); }
+.trace-readout { border-block:2px solid var(--ink); padding:var(--s5) 0; margin-top:var(--s5); min-height:9rem; }
+.trace-readout strong { font-size:var(--t-h3); }
+.trace-actions { display:flex; gap:var(--s3); margin-top:var(--s4); }
+.book-shell { display:grid; grid-template-columns:minmax(14rem,.7fr) minmax(0,1.3fr); gap:var(--s6); }
+.book-levels { width:100%; border-collapse:collapse; border-block:2px solid var(--ink); font-variant-numeric:tabular-nums; }
+.book-levels th,.book-levels td { padding:var(--s2) var(--s3); border-bottom:1px solid var(--rule); text-align:right; }
+.book-levels th { font-size:var(--t-micro); border-color:var(--rule-strong); }
+.book-levels th:first-child,.book-levels td:first-child { text-align:left; }
+.book-levels td { font-family:var(--font-mono); }
+.book-levels tbody tr:last-child td { border-bottom:0; }
+.book-levels tr.ask { background:color-mix(in srgb,var(--neg-soft) 45%,var(--surface)); }
+.book-levels tr.bid { background:color-mix(in srgb,var(--pos-soft) 45%,var(--surface)); }
+.chain { display:flex; align-items:stretch; border-block:2px solid var(--ink); overflow-x:auto; }
+.chain-step { flex:1 0 9rem; padding:var(--s4); border-inline-end:1px solid var(--rule-strong); }
+.chain-step:last-child { border-inline-end:0; }
+.chain-step b { display:block; margin-bottom:var(--s2); }
+.compare-ledger { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--rule-strong); border:1px solid var(--rule-strong); }
+.compare-ledger > div { background:var(--surface); padding:var(--s5); }
+.compare-ledger strong { display:block; font-family:var(--font-mono); font-size:var(--t-h3); margin-top:var(--s3); }
+.tape { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--rule-strong); border:1px solid var(--rule-strong); }
+.tape div { background:var(--surface); padding:var(--s4); }
+.tape span { display:block; font-size:var(--t-micro); color:var(--ink-3); }
+.tape b { font-family:var(--font-mono); }
+@media (max-width: 760px) {
+  .market-thesis,.book-shell { grid-template-columns:1fr; }
+  .market-loop,.role-matrix,.compare-ledger { grid-template-columns:1fr; }
+  .market-loop > div { border-inline-end:0; border-bottom:1px solid var(--rule-strong); }
+  .market-loop > div:last-child { border-bottom:0; }
+  .route-grid { grid-template-columns:1fr; }
+  .route-arrow { min-height:3rem; border-inline:0; border-block:1px solid var(--rule-strong); }
+  .tape { grid-template-columns:repeat(2,1fr); }
+}

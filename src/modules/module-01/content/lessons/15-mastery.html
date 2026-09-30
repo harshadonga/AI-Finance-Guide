@@ -1,0 +1,62 @@
+<article class="lesson" id="mastery" data-lesson data-part="0" data-title="Module 1 mastery assessment" data-nav-title="Mastery assessment">
+  <header class="lesson-head"><div class="plate"><p class="eyebrow">Integration</p><span class="plate-no" aria-hidden="true">M</span><h1>Mastery Assessment</h1><p class="big-idea">Demonstrate that you can trace, calculate, interpret and challenge market-mechanics claims.</p></div></header>
+  <section aria-labelledby="mas-concepts"><h2 id="mas-concepts">Concepts and mechanisms</h2>
+<!--quiz id=qm1 comp=Understanding-->
+? Which sequence is correct after a client submits an order that eventually settles?
+- Broker, depository, issuer, exchange, clearing || The issuer and depository do not match the order.
++ Broker, exchange match, clearing obligations, settlement, demat record || This separates trading from post-trade completion.
+- Exchange, issuer, broker, index provider || An index provider is not part of settlement.
+<!--/quiz-->
+<!--quiz id=qm2 comp=Understanding-->
+? Which transaction normally sends new cash to a company?
+- One investor buying listed shares from another || That transfers an existing claim.
++ A fresh issue of shares || The company creates shares and receives the issue proceeds.
+- An index fund rebalancing || This is secondary-market trading.
+<!--/quiz-->
+<!--quiz id=qm3 comp=Interpretation-->
+? A stock has a last price of ₹250, bid ₹248 and ask ₹254. Which statement is sound?
+- ₹250 is the price at which any quantity can be sold || The available bid is ₹248 and depth is unknown.
++ The last trade, current buying offer and current selling offer are different observations || Each field records a different market state.
+- The fair value is exactly the midpoint, ₹251 || Midpoint is a quote reference, not certified value.
+<!--/quiz--></section>
+  <section aria-labelledby="mas-calc"><h2 id="mas-calc">Calculations</h2>
+<!--numeric id=qm4 answer=100.75 tol=0.001 text=₹100.75 label="Average fill, ₹" comp=Calculation-->
+? An ask book shows 40 shares at ₹100 and 80 at ₹101. What is the average fill for a 80-share market buy?
+= The order takes 40 at ₹100 and 40 at ₹101. Average = ₹8,060 ÷ 80 = <strong>₹100.75</strong>.
+<!--/numeric-->
+<!--numeric id=qm5 answer=720 tol=0.01 text=₹720 crore label="Free-float market cap, ₹ crore" comp=Calculation-->
+? A company has 6 crore shares, a price of ₹300 and 40% free float. Calculate free-float market cap.
+= Full market cap = 6 crore × ₹300 = ₹1,800 crore. Free-float market cap = 40% × ₹1,800 crore = <strong>₹720 crore</strong>.
+<!--/numeric-->
+<!--numeric id=qm6 answer=107.5 tol=0.01 text=₹107.50 label="Theoretical ex-rights price, ₹" comp=Calculation-->
+? Three old shares at ₹110 give the right to buy one new share at ₹100. Ignoring market movement, calculate the theoretical ex-rights price.
+= (3 × ₹110 + ₹100) ÷ 4 = <strong>₹107.50</strong>.
+<!--/numeric--></section>
+  <section aria-labelledby="mas-apply"><h2 id="mas-apply">Application and critique</h2>
+<!--quiz id=qm7 comp=Application-->
+? You must not pay more than ₹500, but the current ask is ₹507. Which order expresses the constraint?
+- Market buy || It can execute above ₹500.
++ Limit buy at ₹500 || It protects the maximum price and may remain unfilled.
+- Sell stop at ₹500 || Wrong direction and purpose.
+<!--/quiz-->
+<!--quiz id=qm8 comp=Application-->
+? A data vendor shows a 75% overnight price fall on a 4-for-1 split date. What is the first defensible action?
+- Treat it as a crash and sell || The series may be unadjusted.
++ Reconcile the corporate action and adjustment method || A 4-for-1 split mechanically quarters the price.
+- Replace all prices with the index return || That destroys the security's data rather than fixing it.
+<!--/quiz-->
+<!--quiz id=qm9 comp=Interpretation-->
+? A free-float-weighted index rises because its largest constituent rises, while most members fall. Which conclusion is valid?
+- Most of the market rose || Breadth says the opposite.
++ The index rose, but constituent breadth was weak || Weighted return and breadth answer different questions.
+- The index calculation is wrong || Concentration can produce this valid outcome.
+<!--/quiz-->
+<!--quiz id=qm10 comp=Application-->
+? An app claims: “Registered on an app store, therefore SEBI approved.” What is the strongest response?
+- App stores verify all financial regulation || They do not replace regulatory verification.
++ Verify the legal entity and registration on SEBI and the relevant exchange || This checks the actual intermediary, not the storefront.
+- Trust it if brokerage is low || Price does not establish authorisation.
+<!--/quiz--></section>
+  <section aria-labelledby="mas-result"><h2 id="mas-result">Your result</h2><p>Answer every item, then review the result by competency. A weak score is a route back to the relevant lesson, not a verdict on your ability.</p><div data-assessment data-revisit-Understanding="l01,l03,l04,l07" data-revisit-Calculation="l09,l10,l12,l13" data-revisit-Interpretation="l05,l09,l11,l13" data-revisit-Application="l06,l08,l12"><button class="btn btn--primary" type="button" data-score>Score my assessment</button><div class="assessment-result" data-score-out tabindex="-1" hidden></div></div></section>
+  <section class="notes" aria-labelledby="mas-notes"><h2 id="mas-notes" style="font-size:var(--t-h4)">Transfer task</h2><div class="field"><label for="notes-mastery">In 150 words, trace a market buy that partially fills, settles after a holiday and then receives a cash dividend</label><textarea class="input" id="notes-mastery" name="notes-mastery" autocomplete="off" data-notes="mastery"></textarea></div><p class="hint" data-notes-status>Stored only in this browser.</p></section>
+</article>

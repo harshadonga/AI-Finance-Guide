@@ -5,7 +5,7 @@ Version 1.0 · 29 Sep 2026 · Teaching Spec §62. One row per module. Update thi
 | Module | Status | Version | Prerequisites | Project | Current-data dependencies | Last audited |
 |---|---|---|---|---|---|---|
 | 0 · Personal Finance & Wealth Foundations | **Released** | 1.0 | None (school percentages, reading a line chart) | Project 0: Personal Financial Dashboard | Tax slabs and rebate (tax year 2026-27); CPI base 2024 and latest reading; inflation target 2026–31; DICGC limit; RBI credit-card and prepayment rules; IRDAI health rules; GST on insurance; SEBI @valid and SEBI Check; 1930 and cybercrime portal | 29 Sep 2026 |
-| 1 · How Financial Markets Work | Planned | – | Module 0 | – | Exchanges, settlement cycle, depositories, order types, index methodology | – |
+| 1 · How Financial Markets Work | **Released** | 1.0 | Module 0 | No syllabus project; mastery transfer task | Settlement cycle and optional T+0 scope; depository structure; broker verification; Nifty methodology | 30 Sep 2026 |
 | 2 · Asset Classes & Investment Products | Planned | – | Modules 0–1 | – | Fund rules, ETF data, gold products, REIT/InvIT rules | – |
 | 3–25 | Planned | – | Per syllabus | Per syllabus | Per syllabus | – |
 
@@ -29,6 +29,14 @@ Version 1.0 · 29 Sep 2026 · Teaching Spec §62. One row per module. Update thi
 - Project 0 → Level 25 Personal Investment OS (Personal Finance Dashboard)
 
 **Running examples introduced.** Meera Iyer (29, Pune, ₹15 lakh gross) and the Nairs (38, two incomes, one child, ₹50 lakh home loan). Later modules may reuse them (Spec §40) but must not change their Module 0 facts.
+
+## Module 1 detail
+
+**Concepts introduced.** Financial market, security, equity, debt and derivative as claim types; capital formation; primary and secondary markets; IPO, FPO, fresh issue, offer for sale, rights route, private placement and debt issue; exchange, call auction and continuous order book; participant mandates; broker account roles and cost stack; clearing corporation, depository, DP, clearing and settlement; market, limit, stop, stop-limit, IOC and persistent instructions; price-time priority; bid, ask, spread, depth and visible impact; full and free-float market capitalisation; index selection, weighting and maintenance; dividends, splits, bonuses, rights, buybacks, mergers and spin-offs; OHLCV, adjusted price, total return, tick data and order-book data.
+
+**Concepts reused.** Saving, investing, liquidity, risk transfer, leverage and fraud-verification habits from Module 0.
+
+**Forward cross-links.** Product claims and wrappers to Level 2; accounting effects to Level 3; capital allocation to Level 4; enterprise value to Level 5; benchmark and performance work to Level 8; liquidity risk to Level 9; order flow and execution quality to Level 10; derivative clearing to Level 11; adjusted-data analysis to Levels 13, 15 and 20; current regulation and tax to Level 23.
 
 ## Learner progress (Spec §61, file 08)
 

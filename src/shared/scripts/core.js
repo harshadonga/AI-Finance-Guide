@@ -336,7 +336,7 @@
       }).join("");
       out.innerHTML = `<p class="insight">You have answered <b>${totalAns} of ${total}</b> questions${totalAns < total ? ". Unanswered questions count as not yet secure." : "."}</p>
         <div class="table-wrap"><table><caption>Results by competency</caption><thead><tr><th>Competency</th><th class="r">Correct</th><th>Status</th><th>If not secure, revisit</th></tr></thead><tbody>${rows}</tbody></table></div>
-        <p class="source-note">Status: Secure = 80% or more, Developing = 50 to 79%, Revisit = below 50%. This is a recommendation, not a lock: you can continue to Module 1 either way.</p>`;
+        <p class="source-note">Status: Secure = 80% or more, Developing = 50 to 79%, Revisit = below 50%. This is a recommendation, not a lock: you can continue when you are ready.</p>`;
       out.hidden = false; out.focus();
     });
   });

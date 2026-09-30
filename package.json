@@ -8,8 +8,8 @@
     "build:module": "node scripts/build.mjs",
     "module:new": "node scripts/create-module.mjs",
     "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "node tests/unit/finance.test.cjs",
-    "test:e2e": "npm run build && node tests/e2e/module-interactions.test.cjs && node tests/e2e/module-accessibility.test.cjs",
+    "test:unit": "node tests/unit/finance.test.cjs && node tests/unit/markets.test.cjs",
+    "test:e2e": "npm run build && node tests/e2e/module-interactions.test.cjs && node tests/e2e/module-interactions.test.cjs module-01 && node tests/e2e/module-accessibility.test.cjs module-00 && node tests/e2e/module-accessibility.test.cjs module-01",
     "qa:interactions": "node tests/e2e/module-interactions.test.cjs",
     "qa:accessibility": "node tests/e2e/module-accessibility.test.cjs",
     "screenshot": "node scripts/screenshot.cjs"
